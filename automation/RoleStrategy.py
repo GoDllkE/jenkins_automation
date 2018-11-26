@@ -6,6 +6,7 @@ from automation.JenkinsCore import JenkinsCore
 
 # Control
 debug = True
+development = True
 
 
 class RoleStrategy:
@@ -26,23 +27,28 @@ class RoleStrategy:
             print("- Environments are: {0}".format(str(self.env_list)))
 
     def get_role(self, type: str = None, name: str = None):
-        data = dict(roleType=type, roleName=name)
+        data = dict(type=type, roleName=name)
         response = requests.post(url='{0}/getRole'.format(self.bUrl), params=data)
         return response
 
     def get_all_roles(self, type: str = None):
-        data = dict(roleType=type)
+        data = dict(type=type)
         response = requests.post(url='{0}/getAllRoles'.format(self.bUrl), params=data)
         return response
 
-    def create_role(self, type: str = None, name: str = None, pattern: str = None, perm: list = None,
-                    overwrite: bool = False):
-        data = dict(roleType=type, roleName=name, pattern=pattern, permissionsId=perm, overwrite=overwrite)
+    def create_role(self, type: str = None, name: str = None, pattern: str = None, perm: str = None, overwrite: bool = False):
+        data = dict(type=type, roleName=name, pattern=pattern, permissionIds=perm, overwrite=overwrite)
         response = requests.post(url='{0}/addRole'.format(self.bUrl), params=data)
+        if development:
+            print("Debugging:")
+            print("- Data: {0}".format(str(data)))
+            print("- requests: {0}".format(response.url))
+            print("- response: \n\t\t- Code: {0}\n\t\t- Content: {1}".format(str(response.status_code),
+                                                                             str(response.content)))
         return response
 
     def delete_role(self, type: str = None, name_list: list = None):
-        data = dict(roleType=type, roleNames=name_list)
+        data = dict(type=type, roleNames=name_list)
         response = requests.post(url='{0}/removeRoles'.format(self.bUrl), params=data)
         return response
 
@@ -57,60 +63,36 @@ class RoleStrategy:
         role_permissions = Permissions()
 
         print('Criando role de view')
-        if debug:
-            print("- Name: {0} - View".format(project))
-            print("- Pattern: ^projects(|/{0})".format(project))
-            print("- Permissions: {0}".format(str(role_permissions.view_permissions())))
-            print("- Overwrite: {0}".format(str(True)))
-
         self.create_role(
             type='projectRoles',
-            name='{0} - View'.format(project),
+            name='{0} - view'.format(project),
             pattern='^projects(|/{0})'.format(project),
             perm=role_permissions.view_permissions(),
             overwrite=True
         )
 
         print('Criando role de build')
-        if debug:
-            print("- Name: {0} - Build".format(project))
-            print("- Pattern: ^projects(|/{0}+(|/build+(.*|/docker(|/.*))))".format(project))
-            print("- Permissions: {0}".format(str(role_permissions.build_permissions())))
-            print("- Overwrite: {0}".format(str(True)))
-
         self.create_role(
             type='projectRoles',
-            name='{0} - Build'.format(project),
+            name='{0} - build'.format(project),
             pattern='^projects(|/{0}+(|/build+(.*|/docker(|/.*))))'.format(project),
             perm=role_permissions.build_permissions(),
             overwrite=True
         )
 
         print('Criando role de testes')
-        if debug:
-            print("- Name: {0} - Tests".format(project))
-            print("- Pattern: ^projects(|/{0}+(|/testes(|/.*)))".format(project))
-            print("- Permissions: {0}".format(str(role_permissions.tester_permissions())))
-            print("- Overwrite: {0}".format(str(True)))
-
         self.create_role(
             type='projectRoles',
-            name='{0} - Tests'.format(project),
+            name='{0} - tests'.format(project),
             pattern='^projects(|/{0}+(|/testes(|/.*)))'.format(project),
             perm=role_permissions.tester_permissions(),
             overwrite=True
         )
 
         print('Criando roles de deploy (1/2)')
-        if debug:
-            print("- Name: {0} - Deploy".format(project))
-            print("- Pattern: ^projects(|/{0}+(|/deploy(|/.*)))".format(project))
-            print("- Permissions: {0}".format(str(role_permissions.deploy_permissions())))
-            print("- Overwrite: {0}".format(str(True)))
-
         self.create_role(
             type='projectRoles',
-            name='{0} - Deploy'.format(project),
+            name='{0} - deploy'.format(project),
             pattern='^projects(|/{0}+(|/deploy(|/.*)))'.format(project),
             perm=role_permissions.deploy_permissions(),
             overwrite=True
@@ -118,15 +100,9 @@ class RoleStrategy:
 
         print('Criando roles de deploy (2/2)')
         for env in self.env_list:
-            if debug:
-                print("- Name: {0} - {1}".format(project, env))
-                print("- Pattern: ^projects(|/{0}+(|/deploy+(|/{1}(|/.*))))".format(project, env))
-                print("- Permissions: {0}".format(str(role_permissions.deploy_permissions())))
-                print("- Overwrite: {0}".format(str(True)))
-
             self.create_role(
                 type='projectRoles',
-                name='{0} - {1}'.format(project, env),
+                name='{0} - deploy {1}'.format(project, env),
                 pattern='^projects(|/{0}+(|/deploy+(|/{1}(|/.*))))'.format(project, env),
                 perm=role_permissions.deploy_permissions(),
                 overwrite=True
@@ -134,14 +110,9 @@ class RoleStrategy:
         return 0
 
     def delete_project_roles(self, project: str = None):
-        #
+        # Dynamic project roles generation (don't blame me)
         role_list = ['{0} - {1}'.format(project, item) for item in ['View', 'Build', 'Test', 'Deploy']]
         role_list += ['{0} - Deploy {1}'.format(project, item) for item in self.env_list]
-
-        #
-        if debug:
-            print("Debugging mode:")
-            print("- Removendo roles: {0}".format(str(role_list)))
 
         #
         response = self.delete_role(type='projectRoles', name_list=role_list)
@@ -168,50 +139,70 @@ class Permissions:
     def __init__(self):
         # Define permissoes padroes para todas as roles
         self.base_permissions = [
+            'hudson.model.View.Configure',
+            'hudson.model.View.Create',
+            'hudson.model.View.Delete',
+            'hudson.model.View.Read',
             'hudson.model.Hudson.Read',
-            'hudson.model.Item.extendedRead',
             'hudson.model.Item.Discover',
-            'hudson.model.Item.Workspace'
+            'hudson.model.Item.Workspace',
+            'hudson.model.Item.Read'
         ]
 
+    def format_permissions(self, permissions: list = None) -> str:
+        # Controle
+        data = ''
+        for index, item in enumerate(permissions):
+            if index < len(permissions):
+                data += '{0},'.format(item)
+            else:
+                data += '{0}'.format(item)
+            continue
+        #
+        return data
+
     def view_permissions(self):
-        return self.base_permissions
+        return self.format_permissions(self.base_permissions)
 
     def build_permissions(self):
-        return self.base_permissions + \
-               [
-                   'hudson.model.Item.Build',
-                   'hudson.model.Item.Cancel',
-                   'hudson.model.Item.Configure',
-                   'hudson.model.Item.Create',
-                   'hudson.model.Item.Delete',
-                   'hudson.model.Item.Read',
-                   'hudson.scm.SCM.Tag',
-                   'hudson.model.Run.Artifacts',
-                   'hudson.model.Run.Replay',
-                   'hudson.model.Run.Update'
-               ]
+        return self.format_permissions(self.base_permissions + \
+           [
+               'hudson.model.Item.Build',
+               'hudson.model.Item.Cancel',
+               'hudson.model.Item.Configure',
+               'hudson.model.Item.Create',
+               'hudson.model.Item.Delete',
+               'hudson.scm.SCM.Tag',
+               'hudson.model.Run.Artifacts',
+               'hudson.model.Run.Replay',
+               'hudson.model.Run.Update'
+           ]
+        )
 
     def deploy_permissions(self):
-        return self.base_permissions + \
-               [
-                   'hudson.model.Run.Artifacts',
-                   'hudson.model.Run.Replay',
-                   'hudson.model.Run.Update',
-                   'hudson.scm.SCM.Tag'
-               ]
+        return self.format_permissions(self.base_permissions + \
+           [
+               'hudson.model.Item.Build',
+               'hudson.model.Item.Cancel',
+               'hudson.model.Run.Artifacts',
+               'hudson.model.Run.Replay',
+               'hudson.model.Run.Update',
+               'hudson.scm.SCM.Tag'
+           ]
+        )
 
     def tester_permissions(self):
-        return self.base_permissions + \
-               [
-                   'hudson.model.Item.Build',
-                   'hudson.model.Item.Cancel',
-                   'hudson.model.Item.Configure',
-                   'hudson.model.Item.Create',
-                   'hudson.model.Item.Delete',
-                   'hudson.model.Item.Read',
-                   'hudson.scm.SCM.Tag',
-                   'hudson.model.Run.Artifacts',
-                   'hudson.model.Run.Replay',
-                   'hudson.model.Run.Update'
-               ]
+        return self.format_permissions(self.base_permissions + \
+           [
+               'hudson.model.Item.Build',
+               'hudson.model.Item.Cancel',
+               'hudson.model.Item.Configure',
+               'hudson.model.Item.Create',
+               'hudson.model.Item.Delete',
+               'hudson.model.Item.Read',
+               'hudson.scm.SCM.Tag',
+               'hudson.model.Run.Artifacts',
+               'hudson.model.Run.Replay',
+               'hudson.model.Run.Update'
+           ]
+        )
