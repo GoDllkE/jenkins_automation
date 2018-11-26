@@ -2,33 +2,39 @@
 
 
 class JenkinsCore:
-
-    def __init__(self, url: str = None, username: str = None, password: str = None):
+    """
+        Classe de definicao do Jenkins
+    """
+    def __init__(self, url: str = 'jenkins-central.pontoslivelo.com.br',
+                 username: str = 'S00000001', password: str = 'R0xbV0p7UIjNTFte'):
         #
         self.url = url
 
-        if username is None:
-            self.username = 'S00000001'
-        else:
-            self.username = username
+        # Define o usuario da instancia (padrão usuario: BOT)
+        self.username = username
+        self.password = password
 
-        if password is None:
-            self.password = 'R0xbV0p7UIjNTFte'
-        else:
-            self.password = password
+        # Define ambientes
+        self.environment = ['dev', 'sit', 'uat', 'prd']
 
         # Generate basic-auth
         self.bAuth = '{0}:{1}'.format(self.username, self.password)
-        pass
 
-    def get_url(self):
+    # =============================================================================================== #
+    #                                           Metodos
+    # =============================================================================================== #
+
+    def get_url(self) -> str:
         return self.url
 
-    def get_user(self):
+    def get_user(self) -> str:
         return self.username
 
-    def get_passwd(self):
+    def get_passwd(self) -> str:
         return self.password
 
-    def get_bAuth(self):
+    def get_bAuth(self) -> str:
         return self.bAuth
+
+    def getEnvironments(self) -> list:
+        return self.environment

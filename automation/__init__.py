@@ -1,20 +1,41 @@
 # Library imports
 import sys
-import requests
+import getopt
 
 # Internal imports
 from automation.JenkinsCore import JenkinsCore
-from automation.RoleStrategy import RoleStrategy
+from automation.RoleStrategy import RoleStrategy, Automation
 from automation.FoldersPlus import FoldersPlus
 
-# Controle de execucao
+# =============================================================================================== #
+#                                           Controle
+# =============================================================================================== #
 debug = True
 development = True
 default_action = 'create'
 default_project = 'teste'
 
+# =============================================================================================== #
+#                                           Função
+# =============================================================================================== #
+
 
 def automate():
+    try:
+        options, args = getopt.getopt(sys.argv[1:], 'p:cdr:', ['project', 'create', 'delete', 'remove'])
+    except getopt.GetoptError as error:
+        raise error
+
+    for opt, value in options:
+        if opt in ['-p', '--project']:
+            pass
+        elif opt in ['-c', '--create']:
+            pass
+        elif opt in ['-d', '--delete']:
+            pass
+        else:
+            assert False
+
     if len(sys.argv) == 3:
         action = sys.argv[1]
         project = sys.argv[2]
@@ -31,18 +52,21 @@ def automate():
         print("- Action: {0}: {1}\n\n".format(action, project))
 
     # Cria instancias
-    jnk = JenkinsCore(url='jenkins-central.pontoslivelo.com.br')
+    jnk = JenkinsCore()
     role = RoleStrategy(jenkins=jnk)
+    auto = Automation(role_manager=role)
 
     # Cria roles
-    # response = role.delete_project_roles(project=project_name)
-    response = role.create_project_roles(project=project)
-    if debug:
-        print("Retorno: {0}".format(str(response)))
+    # auto.create_project_roles(project=project)
+    # auto.delete_project_roles(project=project)
+
     print('Concluido!')
+    print('Verifique: https://jenkins-central.pontoslivelo.com.br/role-strategy/manage-roles')
 
     sys.exit(0)
 
 
-# Run it
+# =============================================================================================== #
+#                                           Inicialização
+# =============================================================================================== #
 automate()
