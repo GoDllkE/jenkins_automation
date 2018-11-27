@@ -15,6 +15,10 @@ pipeline {
         // Structural environments
         PROJECT = sh(script: "echo $JOB_NAME | cut -d '/' -f2", returnStdout: true).trim()
         COMPONENT = sh(script: "echo $JOB_NAME | cut -d '/' -f4", returnStdout: true).trim()
+
+        //
+        NAME = sh(script: "py-parser setup.py | grep name | cut -d ' ' -f2", returnStdout: true).trim()
+        VERSION = sh(script: "py-parser setup.py | grep version | cut -d ' ' -f2", returnStdout: true).trim()
     }
     stages {
         stage ('Instalando dependencias do modulo') {
@@ -32,13 +36,7 @@ pipeline {
         }
         stage('Subindo modulo para o Nexus') {
             steps {
-                script {
-                    //
-                    NAME = sh(script: "py-parser setup.py | grep name | cut -d ' ' -f2", returnStdout: true).trim()
-                    VERSION = sh(script: "py-parser setup.py | grep version | cut -d ' ' -f2", returnStdout: true).trim()
-                }
-
-                // Upload artifact into nexus
+                script { ON_STAGE = "${ON_STAGE}" }
                 nexusArtifactUploader (
                     nexusVersion: 'nexus2',
                     protocol: 'http',
@@ -55,6 +53,20 @@ pipeline {
                     ]]
                 )
                 //
+            }
+        }
+        stage('Criando TAG referente ao build') {
+            steps {
+                script {
+                    ON_STAGE = "${ON_STAGE}"
+
+                    withCredentials([usernamePassword(credentialsId: 'jenkins-stash', usernameVariable:'user', passwordVariable:'passwd')]) {
+                        sh(script: "git remote add cotag https:${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
+                        sh(script: "git fetch cotag --tags")
+                        sh(script: "git tag -f -a $VERSION -m 'Tag from CI/CD'")
+                        sh(script: "git push cotag --tags")
+                    }
+                }
             }
         }
         // Need to create this other job/image first
