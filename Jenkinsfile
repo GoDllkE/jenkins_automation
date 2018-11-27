@@ -49,7 +49,7 @@ pipeline {
                     artifacts: [[
                         artifactId: "${NAME}",
                         classifier: 'python37',
-                        file: "dist/${NAME}",
+                        file: "dist/jenkins_automation",
                         type: 'bin'
                     ]]
                 )
