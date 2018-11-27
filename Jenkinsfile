@@ -26,6 +26,7 @@ pipeline {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "pip install -r requirements.txt", returnStdout: true)
+                sh(script: "pip install --upgrade setuptools pyinstaller requests", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
