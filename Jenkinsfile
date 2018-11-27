@@ -45,7 +45,7 @@ pipeline {
                     groupId: "br.com.pontoslivelo.$PROJECT.$COMPONENT",
                     version: "${VERSION}",
                     repository: 'site-automations',
-                    credentialsId: 'jenkins-nexus',
+                    credentialsId: 'jenkins-user',
                     artifacts: [[
                         artifactId: "${NAME}",
                         classifier: 'python37',
