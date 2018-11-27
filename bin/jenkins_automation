@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+import jenkins_automation
+jenkins_automation.automate()

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: 'python3-app-builder'
+spec:
+  containers:
+  - name: builder
+    image: registry.ng.bluemix.net/livelo/stretch_python3
+    resources:
+      limits:
+        memory: 4096Mi
+    command:
+    - sh
+    tty: true
