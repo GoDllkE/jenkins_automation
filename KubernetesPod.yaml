@@ -10,6 +10,5 @@ spec:
     resources:
       limits:
         memory: 4096Mi
-    command:
-    - sh
     tty: true
+    privileged: true

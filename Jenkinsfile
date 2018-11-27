@@ -9,7 +9,7 @@ pipeline {
         }
     }
     environment {
-        ON_STAGE = "Inicializando"
+        ON_STAGE = "Inicializando CI"
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
@@ -26,7 +26,6 @@ pipeline {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "pip3 install -r requirements.txt", returnStdout: true)
-                sh(script: "pip3 install --upgrade setuptools pyinstaller requests pyyaml", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
@@ -85,11 +84,11 @@ pipeline {
     post {
 		failure {
 			slackSend channel: env.SLACK_CHANNEL, color: 'danger',
-			message: "Build failed at ${ON_STAGE}: '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Construção falhou no estágio de: ${ON_STAGE} - '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
-			message: "Build Success: '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Construido com sucesso! '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 	}
 }
