@@ -2,28 +2,43 @@
   <dictionary name="gustavo.toledo">
     <words>
       <w>abre</w>
+      <w>acao</w>
+      <w>acoes</w>
       <w>acordo</w>
+      <w>adiciona</w>
+      <w>adicionadas</w>
+      <w>adicionando</w>
       <w>adicionar</w>
       <w>agentes</w>
+      <w>agora</w>
       <w>agrupamento</w>
       <w>agrupamentos</w>
       <w>ambiente</w>
       <w>ambientes</w>
       <w>apena</w>
       <w>apenas</w>
+      <w>argumentos</w>
+      <w>arquivos</w>
       <w>assing</w>
+      <w>atualizando</w>
       <w>automacao</w>
+      <w>automations</w>
       <w>basicas</w>
       <w>buscar</w>
       <w>cada</w>
+      <w>campo</w>
       <w>caso</w>
       <w>chamada</w>
       <w>classe</w>
       <w>cloudbees</w>
       <w>codig</w>
       <w>codigo</w>
+      <w>coleta</w>
       <w>compatibilidade</w>
+      <w>complexidade</w>
+      <w>compreensao</w>
       <w>concluido</w>
+      <w>conjunto</w>
       <w>construtor</w>
       <w>construção</w>
       <w>conteudo</w>
@@ -34,78 +49,140 @@
       <w>cria</w>
       <w>criacao</w>
       <w>criando</w>
+      <w>criar</w>
+      <w>criaçao</w>
       <w>dados</w>
       <w>definicao</w>
       <w>definidas</w>
+      <w>definido</w>
       <w>definir</w>
       <w>definição</w>
+      <w>deleta</w>
       <w>deletando</w>
+      <w>deletar</w>
+      <w>dependencias</w>
+      <w>desejada</w>
       <w>desejadas</w>
       <w>deve</w>
+      <w>devido</w>
+      <w>dicionario</w>
+      <w>documentacao</w>
       <w>erro</w>
+      <w>especiais</w>
       <w>especifica</w>
       <w>especificado</w>
       <w>especificas</w>
       <w>especifico</w>
       <w>execucao</w>
       <w>execução</w>
+      <w>exemplos</w>
       <w>exista</w>
+      <w>falta</w>
+      <w>fazer</w>
+      <w>ferramenta</w>
+      <w>formata</w>
       <w>funcao</w>
+      <w>funcionais</w>
+      <w>funcionar</w>
       <w>funcoe</w>
       <w>funcoes</w>
       <w>função</w>
       <w>gerais</w>
       <w>geral</w>
+      <w>imagem</w>
+      <w>incrementaria</w>
+      <w>indica</w>
+      <w>indicador</w>
       <w>inicialização</w>
+      <w>instalando</w>
       <w>instancia</w>
       <w>instancias</w>
+      <w>interno</w>
       <w>intuito</w>
+      <w>invalidos</w>
       <w>isto</w>
+      <w>limitacoes</w>
       <w>lista</w>
+      <w>manipulacao</w>
       <w>mapeamento</w>
+      <w>melhor</w>
       <w>metodo</w>
       <w>modo</w>
+      <w>momento</w>
       <w>monta</w>
+      <w>novo</w>
       <w>objeto</w>
+      <w>obrigacoes</w>
+      <w>observacoes</w>
       <w>oliveira</w>
+      <w>onefile</w>
       <w>opcao</w>
+      <w>opcoes</w>
+      <w>outras</w>
       <w>padrao</w>
       <w>padroes</w>
       <w>padrão</w>
+      <w>parametros</w>
       <w>passwd</w>
       <w>pela</w>
       <w>pelas</w>
+      <w>permissionamento</w>
       <w>permissoes</w>
       <w>permissões</w>
       <w>pontoslivelo</w>
+      <w>possivel</w>
+      <w>possuir</w>
+      <w>procedimento</w>
+      <w>processa</w>
       <w>projeto</w>
       <w>projetos</w>
       <w>pyinstaller</w>
       <w>pyyaml</w>
+      <w>qual</w>
+      <w>realiza</w>
+      <w>realizando</w>
       <w>recebe</w>
       <w>recolhe</w>
       <w>referente</w>
       <w>remocao</w>
       <w>removendo</w>
+      <w>requer</w>
+      <w>requerido</w>
+      <w>requisita</w>
+      <w>requisitado</w>
+      <w>requisitos</w>
       <w>responsavel</w>
       <w>resquests</w>
       <w>resultado</w>
       <w>retorna</w>
       <w>retornar</w>
       <w>retorno</w>
+      <w>secundarios</w>
+      <w>siterepo</w>
       <w>sobrescrever</w>
+      <w>subindo</w>
+      <w>substituir</w>
       <w>tarefas</w>
       <w>testado</w>
       <w>teste</w>
       <w>tipo</w>
       <w>tipos</w>
+      <w>tnpo</w>
       <w>todas</w>
+      <w>tratar</w>
       <w>unassing</w>
+      <w>unica</w>
+      <w>usar</w>
       <w>usuario</w>
       <w>utilizar</w>
+      <w>validaçao</w>
+      <w>varias</w>
+      <w>varios</w>
+      <w>verifica</w>
       <w>verifique</w>
       <w>visualizacao</w>
       <w>visualização</w>
+      <w>yaml</w>
     </words>
   </dictionary>
 </component>
