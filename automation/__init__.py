@@ -3,62 +3,123 @@ import sys
 import getopt
 
 # Internal imports
+from automation.Help import Help
+from automation.FoldersPlus import FoldersPlus
 from automation.JenkinsCore import JenkinsCore
 from automation.RoleStrategy import RoleStrategy, Automation
-from automation.FoldersPlus import FoldersPlus
+
 
 # =============================================================================================== #
 #                                           Controle
 # =============================================================================================== #
-debug = True
-development = True
-default_action = 'create'
-default_project = 'teste'
+debug = False
 
 # =============================================================================================== #
 #                                           Função
 # =============================================================================================== #
 
 
+def validateFields(conteudo: dict = None) -> bool:
+    if 'create' in conteudo['acao']:
+        if 'project' in conteudo['dado'] and conteudo.get('name'):
+            return True
+        elif 'role' in conteudo['dado'] and conteudo.get('type') and conteudo.get('name') and conteudo.get('pattern'):
+            return True
+        else:
+            return False
+
+    elif 'delete' in conteudo['acao']:
+        if 'project' in conteudo['dado'] and conteudo.get('name'):
+            return True
+        elif 'role' in conteudo['dado'] and conteudo.get('type') and conteudo.get('name'):
+            return True
+        else:
+            return False
+
+    elif 'get' in conteudo['acao']:
+        if conteudo.get('type') and conteudo.get('name'):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 def automate():
+    # Controle interno
+    action = dict()
+
+    # Adiciona padrao
+    action.setdefault('overwrite', False)
+
     try:
-        options, args = getopt.getopt(sys.argv[1:], 'p:cdr:', ['project', 'create', 'delete', 'remove'])
-    except getopt.GetoptError as error:
+        # Coleta acao
+        extended_options = ['create=', 'delete=', 'type=', 'name=', 'pattern=', 'overwrite=', 'help']
+        options, args = getopt.getopt(sys.argv[1:], 'cd:tnp:oh', extended_options)
+
+        # Processa acao
+        for opt, value in options:
+            # Processa acao principal
+            if opt in ['-c', '--create']:
+                action['acao'] = 'create'
+                action['dado'] = value
+            elif opt in ['-d', '--delete']:
+                action['acao'] = 'delete'
+                action['dado'] = value
+            elif opt in ['-g', '--get']:
+                action['acao'] = 'get'
+                action['dado'] = value
+            elif opt in ['-h', '--help']:
+                Help()
+                sys.exit(0)
+            else:
+                # Processa dados secundarios
+                if opt in ['-t', '--type']:
+                    action['type'] = value
+                elif opt in ['-n', '--name']:
+                    action['name'] = value
+                elif opt in ['-p', '--pattern']:
+                    action['pattern'] = value
+                elif opt in ['-o', '--overwrite']:
+                    action['overwrite'] = True
+                else:
+                    continue
+    except (getopt.GetoptError, ValueError, KeyError, IndexError) as error:
         raise error
 
-    for opt, value in options:
-        if opt in ['-p', '--project']:
-            pass
-        elif opt in ['-c', '--create']:
-            pass
-        elif opt in ['-d', '--delete']:
-            pass
-        else:
-            assert False
+    # Validaçao de dados
+    if not validateFields(conteudo=action):
+        print("Erro: Parametros invalidos ou falta parametros requisitos para acao desejada.")
+        print("Argumentos: {0}".format(str(options)))
+        Help()
+        sys.exit(1)
 
-    if len(sys.argv) == 3:
-        action = sys.argv[1]
-        project = sys.argv[2]
-    else:
-        if development:
-            action = default_action
-            project = default_project
-        else:
-            print('Erro: ação e nome do projeto nao especificado')
-            sys.exit(1)
     #
     if debug:
         print("Using default options for development.")
-        print("- Action: {0}: {1}\n\n".format(action, project))
+        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['name']))
 
     # Cria instancias
     jnk = JenkinsCore()
     role = RoleStrategy(jenkins=jnk)
     auto = Automation(role_manager=role)
 
-    # Cria roles
-    # auto.create_project_roles(project=project)
-    # auto.delete_project_roles(project=project)
+    # Realiza procedimento de automacao
+    if 'create' in action['acao']:
+        if 'project' in action['dado']:
+            auto.create_project_roles(project=action['name'])
+        else:
+            auto.create_role(data=action)
+    elif 'delete' in action['acao']:
+        if 'project' in action['dado']:
+            auto.delete_project_roles(project=action['name'])
+        else:
+            auto.delete_role(data=action)
+    elif 'get' in action['acao']:
+        pass
+    else:
+        pass
+    #
 
     print('Concluido!')
     print('Verifique: https://jenkins-central.pontoslivelo.com.br/role-strategy/manage-roles')
