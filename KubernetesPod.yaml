@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: builder
-    image: registry.ng.bluemix.net/livelo/stretch_python3
+    image: registry.ng.bluemix.net/livelo/stretch_python3:latest
     resources:
       limits:
         memory: 4096Mi

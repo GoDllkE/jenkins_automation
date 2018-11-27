@@ -25,13 +25,13 @@ pipeline {
         stage ('Instalando dependencias do modulo') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "pip3 install -r requirements.txt", returnStdout: true)
+                sh(script: "pip install -r requirements.txt", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "./setup.py develop && ./setup.py sdist", returnStdout: true)
+                sh(script: "python setup.py develop && python setup.py sdist", returnStdout: true)
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/jenkins_automation", returnStdout: true)
             }
         }
