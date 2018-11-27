@@ -25,7 +25,7 @@ pipeline {
         stage ('Instalando dependencias do modulo') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "pip install --upgrade -r requirements.txt", returnStdout: true)
+                sh(script: "pip install -r requirements.txt", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
