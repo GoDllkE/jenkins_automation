@@ -61,7 +61,7 @@ pipeline {
                 script {
                     ON_STAGE = "${ON_STAGE}"
 
-                    withCredentials([usernamePassword(credentialsId: 'jenkins-stash', usernameVariable:'user', passwordVariable:'passwd')]) {
+                    withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable:'user', passwordVariable:'passwd')]) {
                         sh(script: "git remote add cotag https:${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
                         sh(script: "git fetch cotag --tags")
                         sh(script: "git tag -f -a $VERSION -m 'Tag from CI/CD'")
