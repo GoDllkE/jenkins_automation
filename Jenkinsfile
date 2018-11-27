@@ -35,6 +35,13 @@ pipeline {
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/jenkins_automation", returnStdout: true)
             }
         }
+        stage('Realizando testes basicos') {
+            steps {
+                script { ON_STAGE = "${ON_STAGE}" }
+                sh(script: "chmod a+x dist/jenkins_automation", returnStdout: true)
+                sh(script: "./dist/jenkins_automation -h", returnStdout: true)
+            }
+        }
         stage('Subindo modulo para o Nexus') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
