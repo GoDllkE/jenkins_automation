@@ -9,6 +9,7 @@ pipeline {
         }
     }
     environment {
+        ON_STAGE = "Inicializando"
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
