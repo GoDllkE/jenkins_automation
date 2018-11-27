@@ -196,19 +196,19 @@ class Permissions:
             :return:        Retorna lista no modo de compatibilidade
         """
         return self.format_permissions(self.base_permissions + \
-                                       [
-                                           'hudson.model.Item.Build',
-                                           'hudson.model.Item.Cancel',
-                                           'hudson.model.Item.Configure',
-                                           'hudson.model.Item.Create',
-                                           'hudson.model.Item.Delete',
-                                           'hudson.model.Item.Read',
-                                           'hudson.scm.SCM.Tag',
-                                           'hudson.model.Run.Artifacts',
-                                           'hudson.model.Run.Replay',
-                                           'hudson.model.Run.Update'
-                                       ]
-                                       )
+               [
+                   'hudson.model.Item.Build',
+                   'hudson.model.Item.Cancel',
+                   'hudson.model.Item.Configure',
+                   'hudson.model.Item.Create',
+                   'hudson.model.Item.Delete',
+                   'hudson.model.Item.Read',
+                   'hudson.scm.SCM.Tag',
+                   'hudson.model.Run.Artifacts',
+                   'hudson.model.Run.Replay',
+                   'hudson.model.Run.Update'
+               ]
+           )
 
 # =============================================================================================== #
 
@@ -292,5 +292,34 @@ class Automation:
         #
         self.role_manager.delete_role(type='projectRoles', name_list=perm.format_permissions(role_list))
         # End of function
+
+    def create_role(self, data: dict=None) -> None:
+        """
+            Interface do metodo create da RoleStrategy, que recebe um dict e formata para o metodo da RoleStrategy.
+            :param data:        Recebe um dicionario
+            :return:            Retorna nada
+        """
+        # Abre instancia
+        perm = Permissions()
+
+        #
+        self.role_manager.create_role(
+            type=data['type'],
+            name=data['name'],
+            pattern=data['pattern'],
+            perm=perm.base_permissions,
+            overwrite=data['overwrite']
+        )
+        pass
+
+    def delete_role(self, data: dict=None) -> None:
+        """
+            Interface do metodo delete da RoleStrategy, que recebe um dit e formata para o metodo da RoleStrategy
+            :param data:        Recebe um dicionario
+            :return:            Retorna nada
+        """
+        # Abre instancia
+        perm = Permissions()
+        self.role_manager.delete_role(type=data['type'], name_list=data['name'])
 
 # =============================================================================================== #
