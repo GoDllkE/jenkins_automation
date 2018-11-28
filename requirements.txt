@@ -1,3 +1,4 @@
+PyYAML
 requests
 pyinstaller
 setuptools
