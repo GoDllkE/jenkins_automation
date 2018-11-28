@@ -91,11 +91,11 @@ pipeline {
     post {
 		failure {
 			slackSend channel: env.SLACK_CHANNEL, color: 'danger',
-			message: "Construção falhou no estágio: ${env.ON_STAGE} - '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Falha na construção do modulo 'Jenkins_${NAME}', no estágio: ${env.ON_STAGE}'. <${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
-			message: "Construido com sucesso! '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Modulo 'Jenkins_${NAME}' construido com sucesso! '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 	}
 }
