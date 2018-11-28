@@ -54,7 +54,7 @@ pipeline {
                     repository: 'site-automations',
                     credentialsId: 'jenkins-user',
                     artifacts: [[
-                        artifactId: "${NAME}",
+                        artifactId: "jenkins_${NAME}",
                         classifier: 'python37',
                         file: "dist/automation",
                         type: 'bin'
