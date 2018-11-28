@@ -54,12 +54,12 @@ def automate():
 
     # Carrega configurações internas
     # Permite carregamento de diferentes configurações (ENV ou ETC ou DEFAULT/INTERNO)
-    if os.environ('JENKINS_AUTOMATION_CONFIG'):
+    if os.environ.get('JENKINS_AUTOMATION_CONFIG'):
         config = yaml.load(open(os.environ.get('JENKINS_AUTOMATION_CONFIG')))['projects']
     elif os.path.isfile('/etc/jenkins_automations/config.yaml'):
         config = yaml.load(open('/etc/jenkins_automations/config.yaml'))['projects']
     else:
-        config = yaml.load(open('resources/config.yaml'))['projects']
+        config = yaml.load(open('automation/resources/config.yaml'))['projects']
     #
 
     # Adiciona padrao
