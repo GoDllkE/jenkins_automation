@@ -37,12 +37,9 @@ pipeline {
         }
         stage('Realizando testes basicos do modulo') {
             steps {
-                script {
-                    env.ON_STAGE = "${ON_STAGE}"
-                    sh(script: "chmod a+x dist/automation", returnStdout: true)
-                    env.output = sh(script: "./dist/automation -h", returnStdout: true)
-                    echo $env.output
-                }
+                script { env.ON_STAGE = "${ON_STAGE}" }
+                sh(script: "chmod a+x dist/automation", returnStdout: true)
+                sh(script: "./dist/automation -h", returnStdout: true)
             }
         }
         stage('Subindo modulo para o Nexus') {
