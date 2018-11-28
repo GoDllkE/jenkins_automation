@@ -9,7 +9,6 @@ pipeline {
         }
     }
     environment {
-        ON_STAGE = "Inicialização do CI"
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
@@ -24,27 +23,27 @@ pipeline {
     stages {
         stage ('Instalando das dependencias do modulo') {
             steps {
-                script { env.ON_STAGE = "${ON_STAGE}" }
+                script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "pip install -r requirements.txt", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
             steps {
-                script { env.ON_STAGE = "${ON_STAGE}" }
+                script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "python setup.py develop && python setup.py sdist", returnStdout: true)
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/automation", returnStdout: true)
             }
         }
         stage('Realizando testes basicos do modulo') {
             steps {
-                script { env.ON_STAGE = "${ON_STAGE}" }
+                script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "chmod a+x dist/automation", returnStdout: true)
                 sh(script: "./dist/automation -h", returnStdout: true)
             }
         }
         stage('Subindo modulo para o Nexus') {
             steps {
-                script { env.ON_STAGE = "${ON_STAGE}" }
+                script { ON_STAGE = "${ON_STAGE}" }
                 nexusArtifactUploader (
                     nexusVersion: 'nexus2',
                     protocol: 'http',
@@ -66,7 +65,7 @@ pipeline {
         stage('Criando TAG referente ao build') {
             steps {
                 script {
-                    env.ON_STAGE = "${ON_STAGE}"
+                    ON_STAGE = "${ON_STAGE}"
 
                     withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable:'user', passwordVariable:'passwd')]) {
                         sh(script: "git remote add cotag https://${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
@@ -91,7 +90,7 @@ pipeline {
     post {
 		failure {
 			slackSend channel: env.SLACK_CHANNEL, color: 'danger',
-			message: "Falha na construção do modulo 'Jenkins_${NAME}', no estágio: ${env.ON_STAGE}'. <${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Falha na construção do modulo 'Jenkins_${NAME}', no estágio: ${ON_STAGE}'. <${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
