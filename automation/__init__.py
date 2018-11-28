@@ -12,12 +12,6 @@ from automation.JenkinsCore import JenkinsCore
 from automation.RoleStrategy import RoleStrategy
 
 # =============================================================================================== #
-#                                           Controle
-# =============================================================================================== #
-debug = False
-
-
-# =============================================================================================== #
 #                                           Função
 # =============================================================================================== #
 
@@ -50,6 +44,7 @@ def validateFields(conteudo: dict = None) -> bool:
 
 def automate():
     # Controle interno
+    debug = False
     action = dict()
 
     # Carrega configurações internas
@@ -67,7 +62,7 @@ def automate():
 
     try:
         # Coleta acao
-        extended_options = ['create=', 'delete=', 'type=', 'name=', 'pattern=', 'overwrite=', 'help']
+        extended_options = ['create=', 'delete=', 'type=', 'name=', 'pattern=', 'overwrite=', 'help', 'debug']
         options, args = getopt.getopt(sys.argv[1:], 'cd:tnp:oh', extended_options)
 
         # Processa acao
@@ -85,6 +80,8 @@ def automate():
             elif opt in ['-h', '--help']:
                 Help()
                 sys.exit(0)
+            elif opt in ['--debug']:
+                debug = True
             else:
                 # Processa dados secundarios
                 if opt in ['-t', '--type']:
@@ -109,14 +106,14 @@ def automate():
 
     #
     if debug:
-        print("Using default options for development.")
+        print("Debug: enabled.")
         print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['name']))
 
     # Cria instancias
     jnk = JenkinsCore()
-    role = RoleStrategy(jenkins=jnk)
-    folders = FoldersPlus(jenkins=jnk, configuration=config['folder_structure'])
-    auto = Automation(role_manager=role, configuration=config['role_strategy'])
+    role = RoleStrategy(jenkins=jnk, debug=debug)
+    folders = FoldersPlus(jenkins=jnk, configuration=config['folder_structure'], debug=debug)
+    auto = Automation(role_manager=role, configuration=config['role_strategy'], debug=debug)
 
     # Realiza procedimento de automacao
     if 'create' in action['acao']:
