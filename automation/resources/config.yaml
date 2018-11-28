@@ -1,14 +1,11 @@
 projects:
   folder_structure:
-    - 'project_name'
-    - 'project_name/build'
-    - 'project_name/build/docker'
-    - 'project_name/deploy'
-    - 'project_name/deploy/dev'
-    - 'project_name/deploy/sit'
-    - 'project_name/deploy/uat'
-    - 'project_name/deploy/prd'
-    - 'project_name/tests'
+    - '<project>'
+    - '<project>/build'
+    - '<project>/build/docker'
+    - '<project>/deploy'
+    - '<project>/deploy/<env>'
+    - '<project>/tests'
   role_strategy:
     view_role:
       name: '<project> - view'
