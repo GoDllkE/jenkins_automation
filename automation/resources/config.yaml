@@ -1,0 +1,71 @@
+projects:
+  folder_structure:
+    - 'project_name'
+    - 'project_name/build'
+    - 'project_name/build/docker'
+    - 'project_name/deploy'
+    - 'project_name/deploy/dev'
+    - 'project_name/deploy/sit'
+    - 'project_name/deploy/uat'
+    - 'project_name/deploy/prd'
+    - 'project_name/tests'
+  role_strategy:
+    view_role:
+      name: '<project> - view'
+      pattern: '^projects(|/<project>)'
+      permissionsIds:
+      - 'hudson.model.View.Configure'
+      - 'hudson.model.View.Create'
+      - 'hudson.model.View.Delete'
+      - 'hudson.model.View.Read'
+      - 'hudson.model.Hudson.Read'
+      - 'hudson.model.Item.Discover'
+      - 'hudson.model.Item.Workspace'
+      - 'hudson.model.Item.Read'
+    build_role:
+      name: '<project> - build'
+      pattern: '^projects(|/<project>+(|/build+(.*|/docker(|/.*))))'
+      permissionsIds:
+      - 'hudson.model.Item.Build'
+      - 'hudson.model.Item.Cancel'
+      - 'hudson.model.Item.Configure'
+      - 'hudson.model.Item.Create'
+      - 'hudson.model.Item.Delete'
+      - 'hudson.scm.SCM.Tag'
+      - 'hudson.model.Run.Artifacts'
+      - 'hudson.model.Run.Replay'
+      - 'hudson.model.Run.Update'
+    deploy_role:
+      name: '<project> - deploy'
+      pattern: '^projects(|/<project>+(|/deploy(|/.*)))'
+      permissionsIds:
+      - 'hudson.model.Item.Build'
+      - 'hudson.model.Item.Cancel'
+      - 'hudson.model.Run.Artifacts'
+      - 'hudson.model.Run.Replay'
+      - 'hudson.model.Run.Update'
+      - 'hudson.scm.SCM.Tag'
+    deploy_role_env:
+      name: '<project> - deploy <env>'
+      pattern: '^projects(|/<project>+(|/deploy+(|/<env>(|/.*))))'
+      permissionsIds:
+      - 'hudson.model.Item.Build'
+      - 'hudson.model.Item.Cancel'
+      - 'hudson.model.Run.Artifacts'
+      - 'hudson.model.Run.Replay'
+      - 'hudson.model.Run.Update'
+      - 'hudson.scm.SCM.Tag'
+    tests_role:
+      name: '<project> - testes'
+      pattern: '^projects(|/<project>+(|/testes(|/.*)))'
+      permissionsIds:
+      - 'hudson.model.Item.Build'
+      - 'hudson.model.Item.Cancel'
+      - 'hudson.model.Item.Configure'
+      - 'hudson.model.Item.Create'
+      - 'hudson.model.Item.Delete'
+      - 'hudson.model.Item.Read'
+      - 'hudson.scm.SCM.Tag'
+      - 'hudson.model.Run.Artifacts'
+      - 'hudson.model.Run.Replay'
+      - 'hudson.model.Run.Update'
