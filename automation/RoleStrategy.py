@@ -5,11 +5,6 @@ import requests
 from automation.JenkinsCore import JenkinsCore
 
 # =============================================================================================== #
-#                                           Controle
-# =============================================================================================== #
-debug = False
-
-# =============================================================================================== #
 #                                           Classe
 # =============================================================================================== #
 
@@ -18,11 +13,13 @@ class RoleStrategy:
     """
         Classe de mapeamento da API do plugin role-strategy
     """
-    def __init__(self, jenkins: JenkinsCore):
+    def __init__(self, jenkins: JenkinsCore, debug=False):
         """
             Metodo construtor
+            :param debug:
             :param jenkins:     Recebe uma instancia da classe JenkinsCore
         """
+        self.debug = debug
         self.jenkins = jenkins
         self.environments = self.jenkins.getEnvironments()
         self.bUrl = 'http://{0}@{1}/role-strategy/strategy'.format(self.jenkins.get_bAuth(), self.jenkins.get_url())
@@ -36,6 +33,8 @@ class RoleStrategy:
         """
         data = dict(type=type, roleName=name)
         response = requests.post(url='{0}/getRole'.format(self.bUrl), params=data)
+        if self.debug:
+            self.analise_content(data=data, response=response)
         return response
 
     def get_all_roles(self, type: str = None) -> requests:
@@ -46,6 +45,8 @@ class RoleStrategy:
         """
         data = dict(type=type)
         response = requests.post(url='{0}/getAllRoles'.format(self.bUrl), params=data)
+        if self.debug:
+            self.analise_content(data=data, response=response)
         return response
 
     def create_role(self, type: str = None, name: str = None, pattern: str = None, perm: str = None,
@@ -61,8 +62,8 @@ class RoleStrategy:
         """
         data = dict(type=type, roleName=name, pattern=pattern, permissionIds=perm, overwrite=overwrite)
         response = requests.post(url='{0}/addRole'.format(self.bUrl), params=data)
-        if debug:
-            self.analise_content(data, response)
+        if self.debug:
+            self.analise_content(data=data, response=response)
         return response
 
     def delete_role(self, type: str = None, name_list: str = None) -> requests:
@@ -74,8 +75,8 @@ class RoleStrategy:
         """
         data = dict(type=type, roleNames=name_list)
         response = requests.post(url='{0}/removeRoles'.format(self.bUrl), params=data)
-        if debug:
-            self.analise_content(data, response)
+        if self.debug:
+            self.analise_content(data=data, response=response)
         return response
 
     def assing_role(self):
