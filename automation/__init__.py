@@ -1,4 +1,5 @@
 # Library imports
+import os
 import sys
 import yaml
 import getopt
@@ -52,7 +53,14 @@ def automate():
     action = dict()
 
     # Carrega configurações internas
-    config = yaml.load(open('resources/config.yaml'))['projects']
+    # Permite carregamento de diferentes configurações (ENV ou ETC ou DEFAULT/INTERNO)
+    if os.environ('JENKINS_AUTOMATION_CONFIG'):
+        config = yaml.load(open(os.environ.get('JENKINS_AUTOMATION_CONFIG')))['projects']
+    elif os.path.isfile('/etc/jenkins_automations/config.yaml'):
+        config = yaml.load(open('/etc/jenkins_automations/config.yaml'))['projects']
+    else:
+        config = yaml.load(open('resources/config.yaml'))['projects']
+    #
 
     # Adiciona padrao
     action.setdefault('overwrite', False)
