@@ -2,12 +2,14 @@ from automation import RoleStrategy
 
 
 class Automation:
-    def __init__(self, role_manager: RoleStrategy=None, configuration: dict=None):
+    def __init__(self, role_manager: RoleStrategy = None, configuration: dict = None, debug=False):
         """
             Classe da automacao, responsavel pelas tarefas da automacao.
+            :param debug:
             :param role_manager:        Recebe uma instancia de uma RoleStrategy
             :param configuration        Recebe um dicionario de roles da automacao.
         """
+        self.debug = debug
         self.config = configuration
         self.role_manager = role_manager
 
