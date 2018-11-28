@@ -48,8 +48,8 @@ pipeline {
                     steps {
                         script {
                             script { ON_STAGE = "${ON_STAGE}" }
-                            sh(script: "./dist/automation --create=role --type=projectRoles --name=teste_unit_automacao --pattern=.*", returnStdout: true)
-                            sh(script: "./dist/automation --delete=role --type=projectRoles --name=teste_unit_automacao", returnStdout: true)
+                            sh(script: "./dist/automation --create=role --type=projectRoles --name=teste_unit_automacao --pattern=.* --debug", returnStdout: true)
+                            sh(script: "./dist/automation --delete=role --type=projectRoles --name=teste_unit_automacao --debug", returnStdout: true)
                         }
                     }
                 }
@@ -57,8 +57,8 @@ pipeline {
                     steps {
                         script {
                             script { ON_STAGE = "${ON_STAGE}" }
-                            sh(script: "./dist/automation --create=project --name=teste_prj_automacao", returnStdout: true)
-                            sh(script: "./dist/automation --delete=project --name=teste_prj_automacao", returnStdout: true)
+                            sh(script: "./dist/automation --create=project --name=teste_prj_automacao --debug", returnStdout: true)
+                            sh(script: "./dist/automation --delete=project --name=teste_prj_automacao --debug", returnStdout: true)
                         }
                     }
                 }
