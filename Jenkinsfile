@@ -9,7 +9,7 @@ pipeline {
         }
     }
     environment {
-        ON_STAGE = "Inicializando CI"
+        ON_STAGE = "Inicialização do CI"
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
@@ -22,7 +22,7 @@ pipeline {
         VERSION = sh(script: "py-parser setup.py | grep version | cut -d ' ' -f2", returnStdout: true).trim()
     }
     stages {
-        stage ('Instalando dependencias do modulo') {
+        stage ('Instalando das dependencias do modulo') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "pip install -r requirements.txt", returnStdout: true)
@@ -35,11 +35,12 @@ pipeline {
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/automation", returnStdout: true)
             }
         }
-        stage('Realizando testes basicos') {
+        stage('Realizando testes basicos do modulo') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "chmod a+x dist/automation", returnStdout: true)
-                sh(script: "./dist/automation -h", returnStdout: true)
+                output = sh(script: "./dist/automation -h", returnStdout: true)
+                echo $output
             }
         }
         stage('Subindo modulo para o Nexus') {
@@ -69,7 +70,7 @@ pipeline {
                     ON_STAGE = "${ON_STAGE}"
 
                     withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable:'user', passwordVariable:'passwd')]) {
-                        sh(script: "git remote add cotag https:${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
+                        sh(script: "git remote add cotag https://${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
                         sh(script: "git fetch cotag --tags")
                         sh(script: "git tag -f -a $VERSION -m 'Tag from CI/CD'")
                         sh(script: "git push cotag --tags")
@@ -91,7 +92,7 @@ pipeline {
     post {
 		failure {
 			slackSend channel: env.SLACK_CHANNEL, color: 'danger',
-			message: "Construção falhou no estágio de: ${ON_STAGE} - '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Construção falhou no estágio: ${ON_STAGE} - '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
