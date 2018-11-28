@@ -1,18 +1,20 @@
 # Library imports
 import sys
+import yaml
 import getopt
 
 # Internal imports
 from automation.Help import Help
+from automation.Automation import Automation
 from automation.FoldersPlus import FoldersPlus
 from automation.JenkinsCore import JenkinsCore
-from automation.RoleStrategy import RoleStrategy, Automation
-
+from automation.RoleStrategy import RoleStrategy
 
 # =============================================================================================== #
 #                                           Controle
 # =============================================================================================== #
 debug = False
+
 
 # =============================================================================================== #
 #                                           Função
@@ -48,6 +50,9 @@ def validateFields(conteudo: dict = None) -> bool:
 def automate():
     # Controle interno
     action = dict()
+
+    # Carrega configurações internas
+    config = yaml.load(open('resources/config.yaml'))['projects']
 
     # Adiciona padrao
     action.setdefault('overwrite', False)
@@ -102,16 +107,19 @@ def automate():
     # Cria instancias
     jnk = JenkinsCore()
     role = RoleStrategy(jenkins=jnk)
-    auto = Automation(role_manager=role)
+    folders = FoldersPlus(jenkins=jnk, configuration=config['folder_structure'])
+    auto = Automation(role_manager=role, configuration=config['role_strategy'])
 
     # Realiza procedimento de automacao
     if 'create' in action['acao']:
         if 'project' in action['dado']:
+            folders.create_project_structure(project=action['name'])
             auto.create_project_roles(project=action['name'])
         else:
             auto.create_role(data=action)
     elif 'delete' in action['acao']:
         if 'project' in action['dado']:
+            folders.delete_project_structure(project=action['name'])
             auto.delete_project_roles(project=action['name'])
         else:
             auto.delete_role(data=action)
