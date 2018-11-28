@@ -5,7 +5,7 @@
 from setuptools import setup
 
 setup(
-    name='jenkins-automation',
+    name='automation',
     version='2.0.2',
     packages=["automation"],
     url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',

@@ -32,14 +32,14 @@ pipeline {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "python setup.py develop && python setup.py sdist", returnStdout: true)
-                sh(script: "pyinstaller --onefile --path automation/ --console bin/jenkins_automation", returnStdout: true)
+                sh(script: "pyinstaller --onefile --path automation/ --console bin/automation", returnStdout: true)
             }
         }
         stage('Realizando testes basicos') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "chmod a+x dist/jenkins_automation", returnStdout: true)
-                sh(script: "./dist/jenkins_automation -h", returnStdout: true)
+                sh(script: "chmod a+x dist/automation", returnStdout: true)
+                sh(script: "./dist/automation -h", returnStdout: true)
             }
         }
         stage('Subindo modulo para o Nexus') {
@@ -56,7 +56,7 @@ pipeline {
                     artifacts: [[
                         artifactId: "${NAME}",
                         classifier: 'python37',
-                        file: "dist/jenkins_automation",
+                        file: "dist/automation",
                         type: 'bin'
                     ]]
                 )
