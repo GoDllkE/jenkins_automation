@@ -14,6 +14,7 @@ from automation.RoleStrategy import RoleStrategy
 # =============================================================================================== #
 #                                           Função
 # =============================================================================================== #
+development = False
 
 
 def validateFields(conteudo: dict = None) -> bool:
@@ -54,7 +55,12 @@ def automate():
     elif os.path.isfile('/etc/jenkins_automations/config.yaml'):
         config = yaml.load(open('/etc/jenkins_automations/config.yaml'))['projects']
     else:
-        config = yaml.load(open('automation/resources/config.yaml'))['projects']
+        # Funcionará apenas apos realizar o build do modulo.
+        # Em desenvolvimento, use: 'resources/config.yaml'
+        if development:
+            config = yaml.load(open('resources/config.yaml'))['projects']
+        else:
+            config = yaml.load(open('automation/resources/config.yaml'))['projects']
     #
 
     # Adiciona padrao
