@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='automation',
-    version='2.0.8',
+    version='3.0.0',
     packages=["automation"],
     url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
     download_url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/archive/master.zip',
@@ -14,7 +14,7 @@ setup(
     author='Gustavo Toledo de Oliveira',
     author_email='gustavot53@gmail.com',
     keywords=['jenkins', 'automation', 'role-strategy', 'folders-plugin'],
-    install_requires=['requests>=2.18.4', 'pyinstaller>=3.3', 'setuptools>=36.3'],
+    install_requires=['pyyaml','requests>=2.18.4', 'pyinstaller>=3.3', 'setuptools>=36.3'],
     classifiers=[
         # Intention
         'Intended Audience :: Developers',
