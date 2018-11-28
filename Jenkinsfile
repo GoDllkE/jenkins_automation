@@ -34,16 +34,16 @@ pipeline {
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/automation", returnStdout: true)
             }
         }
-        stage('Realizando testes basicos do modulo') {
-            steps {
-                script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "chmod a+x dist/automation", returnStdout: true)
-                sh(script: "./dist/automation -h", returnStdout: true)
-            }
-        }
-        stage('Realizando testes avançados no modulo') {
+        stage('Realizando testes no modulo') {
             parallel {
-                stage('Teste de execução unica') {
+                stage('Teste de compilação') {
+                    steps {
+                        script { ON_STAGE = "${ON_STAGE}" }
+                        sh(script: "chmod a+x dist/automation", returnStdout: true)
+                        sh(script: "./dist/automation -h", returnStdout: true)
+                    }
+                }
+                stage('Teste simples') {
                     steps {
                         script {
                             script { ON_STAGE = "${ON_STAGE}" }
@@ -52,7 +52,7 @@ pipeline {
                         }
                     }
                 }
-                stage('Teste de execução composta') {
+                stage('Teste composto') {
                     steps {
                         script {
                             script { ON_STAGE = "${ON_STAGE}" }
