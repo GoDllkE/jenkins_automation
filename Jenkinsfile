@@ -40,8 +40,8 @@ pipeline {
                 script {
                     env.ON_STAGE = "${ON_STAGE}"
                     sh(script: "chmod a+x dist/automation", returnStdout: true)
-                    output = sh(script: "./dist/automation -h", returnStdout: true)
-                    echo $output
+                    env.output = sh(script: "./dist/automation -h", returnStdout: true)
+                    echo $env.output
                 }
             }
         }
