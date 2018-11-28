@@ -42,10 +42,25 @@ pipeline {
             }
         }
         stage('Realizando testes avançados no modulo') {
-            steps {
-                script { ON_STAGE = "${ON_STAGE}" }
-                sh(script: "./dist/automation --create=project --name=teste_automacao", returnStdout: true)
-                sh(script: "./dist/automation --delete=project --name=teste_automacao", returnStdout: true)
+            parallel {
+                stage('Teste de execução unica') {
+                    steps {
+                        script {
+                            script { ON_STAGE = "${ON_STAGE}" }
+                            sh(script: "./dist/automation --create=role --type=projectRoles --name=teste_unit_automacao --pattern=.*", returnStdout: true)
+                            sh(script: "./dist/automation --delete=role --type=projectRoles --name=teste_unit_automacao", returnStdout: true)
+                        }
+                    }
+                }
+                stage('Teste de execução composta') {
+                    steps {
+                        script {
+                            script { ON_STAGE = "${ON_STAGE}" }
+                            sh(script: "./dist/automation --create=project --name=teste_prj_automacao", returnStdout: true)
+                            sh(script: "./dist/automation --delete=project --name=teste_prj_automacao", returnStdout: true)
+                        }
+                    }
+                }
             }
         }
         stage('Subindo modulo para o Nexus') {
