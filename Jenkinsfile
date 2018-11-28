@@ -41,6 +41,13 @@ pipeline {
                 sh(script: "./dist/automation -h", returnStdout: true)
             }
         }
+        stage('Realizando testes avançados no modulo') {
+            steps {
+                script { ON_STAGE = "${ON_STAGE}" }
+                sh(script: "./dist/automation --create=project --name=teste_automacao", returnStdout: true)
+                sh(script: "./dist/automation --delete=project --name=teste_automacao", returnStdout: true)
+            }
+        }
         stage('Subindo modulo para o Nexus') {
             steps {
                 script { ON_STAGE = "${ON_STAGE}" }
