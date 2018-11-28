@@ -7,17 +7,21 @@
       <w>acordo</w>
       <w>adiciona</w>
       <w>adicionadas</w>
+      <w>adicionado</w>
       <w>adicionando</w>
       <w>adicionar</w>
+      <w>adição</w>
       <w>agentes</w>
       <w>agora</w>
       <w>agrupamento</w>
       <w>agrupamentos</w>
+      <w>alinhamento</w>
       <w>ambiente</w>
       <w>ambientes</w>
       <w>apena</w>
       <w>apenas</w>
       <w>argumentos</w>
+      <w>arquivo</w>
       <w>arquivos</w>
       <w>assing</w>
       <w>atualizando</w>
@@ -26,8 +30,11 @@
       <w>basicas</w>
       <w>basicos</w>
       <w>buscar</w>
+      <w>básica</w>
       <w>cada</w>
       <w>campo</w>
+      <w>carrega</w>
+      <w>carregamento</w>
       <w>caso</w>
       <w>chamada</w>
       <w>classe</w>
@@ -39,6 +46,9 @@
       <w>complexidade</w>
       <w>compreensao</w>
       <w>concluido</w>
+      <w>configuracoes</w>
+      <w>configuração</w>
+      <w>configurações</w>
       <w>conjunto</w>
       <w>construido</w>
       <w>construtor</w>
@@ -47,14 +57,18 @@
       <w>controle</w>
       <w>conversao</w>
       <w>convertido</w>
+      <w>corrigindo</w>
       <w>cotag</w>
       <w>credenciais</w>
+      <w>crescente</w>
       <w>cria</w>
       <w>criacao</w>
+      <w>criada</w>
       <w>criando</w>
       <w>criar</w>
       <w>criaçao</w>
       <w>dados</w>
+      <w>declarada</w>
       <w>definicao</w>
       <w>definidas</w>
       <w>definido</w>
@@ -65,11 +79,14 @@
       <w>deletar</w>
       <w>dependencia</w>
       <w>dependencias</w>
+      <w>descritivo</w>
       <w>desejada</w>
       <w>desejadas</w>
+      <w>desenvolvimento</w>
       <w>deve</w>
       <w>devido</w>
       <w>dicionario</w>
+      <w>diferente</w>
       <w>documentacao</w>
       <w>erro</w>
       <w>especiais</w>
@@ -77,6 +94,7 @@
       <w>especificado</w>
       <w>especificas</w>
       <w>especifico</w>
+      <w>estrutura</w>
       <w>estágio</w>
       <w>execucao</w>
       <w>execução</w>
@@ -106,11 +124,13 @@
       <w>instalação</w>
       <w>instancia</w>
       <w>instancias</w>
+      <w>internas</w>
       <w>interno</w>
       <w>intuito</w>
       <w>invalidos</w>
       <w>isto</w>
       <w>limitacoes</w>
+      <w>limpeza</w>
       <w>lista</w>
       <w>manipulacao</w>
       <w>mapeamento</w>
@@ -122,6 +142,7 @@
       <w>modulos</w>
       <w>momento</w>
       <w>monta</w>
+      <w>montada</w>
       <w>notificação</w>
       <w>novo</w>
       <w>objeto</w>
@@ -139,6 +160,7 @@
       <w>passwd</w>
       <w>pela</w>
       <w>pelas</w>
+      <w>pelo</w>
       <w>permissionamento</w>
       <w>permissoes</w>
       <w>permissões</w>
@@ -159,6 +181,7 @@
       <w>referente</w>
       <w>remocao</w>
       <w>removendo</w>
+      <w>remoção</w>
       <w>repositorio</w>
       <w>requer</w>
       <w>requerido</w>
@@ -172,9 +195,13 @@
       <w>retornar</w>
       <w>retorno</w>
       <w>secundarios</w>
+      <w>seguir</w>
+      <w>separa</w>
+      <w>sessao</w>
       <w>siterepo</w>
       <w>sobrescrever</w>
       <w>subindo</w>
+      <w>substituida</w>
       <w>substituir</w>
       <w>sucesso</w>
       <w>tarefas</w>
