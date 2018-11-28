@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +68,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="221">
+              <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -114,11 +113,11 @@
         <option value="$PROJECT_DIR$/automation/Help.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/automation/__init__.py" />
         <option value="$PROJECT_DIR$/automation/Automation.py" />
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
@@ -243,20 +242,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Adicionando arquivos requisitos para o CI/CD.">
-      <created>1543341355309</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1543341355309</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Atualizando nome dos arquivos da documentacao">
-      <created>1543341377759</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1543341377759</updated>
     </task>
     <task id="LOCAL-00013" summary="Atualizando arquivos do projeto.">
       <created>1543341395792</created>
@@ -587,7 +572,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543430004474</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Atualizando versão e dados do projeto">
+      <created>1543430031898</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1543430031898</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Adicionando opcao debug ao pipeline">
+      <created>1543430104620</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1543430104621</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,8 +637,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Movendo sessao para dentro de scripts" />
-    <MESSAGE value="Workaround no stage de teste basico" />
     <MESSAGE value="Rollback" />
     <MESSAGE value="Atualizando versão para correção da importação de modulo do binario" />
     <MESSAGE value="Removendo mensagem de debug da função de deletar roles de projeto" />
@@ -663,7 +660,9 @@
     <MESSAGE value="Corrigindo variavel do pipeline" />
     <MESSAGE value="Adicionando sessoes de debug para a nova opcao" />
     <MESSAGE value="Adicionando novo parametro (--debug)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando novo parametro (--debug)" />
+    <MESSAGE value="Atualizando versão e dados do projeto" />
+    <MESSAGE value="Adicionando opcao debug ao pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando opcao debug ao pipeline" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
@@ -794,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -832,6 +824,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
         </state>
       </provider>
     </entry>
