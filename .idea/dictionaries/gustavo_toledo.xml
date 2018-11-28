@@ -16,31 +16,48 @@
       <w>agrupamento</w>
       <w>agrupamentos</w>
       <w>alinhamento</w>
+      <w>alterado</w>
+      <w>alterando</w>
+      <w>alterar</w>
+      <w>altere</w>
       <w>ambiente</w>
       <w>ambientes</w>
       <w>apena</w>
       <w>apenas</w>
+      <w>apos</w>
+      <w>aqui</w>
       <w>argumentos</w>
+      <w>arquitetura</w>
       <w>arquivo</w>
       <w>arquivos</w>
       <w>assing</w>
+      <w>atuais</w>
       <w>atualizando</w>
+      <w>atualização</w>
       <w>automacao</w>
       <w>automations</w>
+      <w>automatizar</w>
+      <w>automação</w>
+      <w>automações</w>
       <w>avançad</w>
       <w>avançados</w>
       <w>banco</w>
+      <w>baseada</w>
+      <w>basicamente</w>
       <w>basicas</w>
       <w>basicos</w>
       <w>buscar</w>
       <w>básica</w>
       <w>cada</w>
+      <w>caminho</w>
       <w>campo</w>
       <w>carrega</w>
       <w>carregamento</w>
       <w>carregar</w>
       <w>caso</w>
+      <w>cenários</w>
       <w>chamada</w>
+      <w>changelogs</w>
       <w>classe</w>
       <w>cloudbees</w>
       <w>codig</w>
@@ -48,8 +65,10 @@
       <w>coleta</w>
       <w>compatibilidade</w>
       <w>compilação</w>
+      <w>completo</w>
       <w>complexidade</w>
       <w>composta</w>
+      <w>compostas</w>
       <w>composto</w>
       <w>compreensao</w>
       <w>concluido</w>
@@ -60,10 +79,12 @@
       <w>construido</w>
       <w>construtor</w>
       <w>construção</w>
+      <w>contem</w>
       <w>conteudo</w>
       <w>controle</w>
       <w>conversao</w>
       <w>convertido</w>
+      <w>corretamente</w>
       <w>corrigindo</w>
       <w>cotag</w>
       <w>credenciais</w>
@@ -71,12 +92,15 @@
       <w>cria</w>
       <w>criacao</w>
       <w>criada</w>
+      <w>criado</w>
       <w>criando</w>
       <w>criar</w>
       <w>criaçao</w>
+      <w>criação</w>
       <w>dados</w>
       <w>declarada</w>
       <w>definicao</w>
+      <w>definida</w>
       <w>definidas</w>
       <w>definido</w>
       <w>definir</w>
@@ -86,6 +110,7 @@
       <w>deletar</w>
       <w>dependencia</w>
       <w>dependencias</w>
+      <w>desconhecido</w>
       <w>descritivo</w>
       <w>desejada</w>
       <w>desejadas</w>
@@ -96,34 +121,56 @@
       <w>diferenciado</w>
       <w>diferente</w>
       <w>diferentes</w>
+      <w>diversos</w>
       <w>documentacao</w>
+      <w>eles</w>
+      <w>encontra</w>
+      <w>encontrada</w>
+      <w>encontranda</w>
+      <w>então</w>
       <w>erro</w>
       <w>especiais</w>
       <w>especifica</w>
       <w>especificado</w>
       <w>especificas</w>
       <w>especifico</w>
+      <w>estagio</w>
       <w>estrutura</w>
+      <w>estrutural</w>
+      <w>estruturas</w>
       <w>estágio</w>
+      <w>estável</w>
       <w>execucao</w>
+      <w>execuçao</w>
       <w>execução</w>
       <w>exemplos</w>
+      <w>exibir</w>
       <w>exista</w>
+      <w>existe</w>
       <w>falha</w>
       <w>falhou</w>
       <w>falta</w>
       <w>fazer</w>
       <w>ferramenta</w>
+      <w>flexibilidade</w>
+      <w>fluxo</w>
       <w>formata</w>
       <w>funcao</w>
       <w>funcionais</w>
+      <w>funcionalidades</w>
+      <w>funcionando</w>
       <w>funcionar</w>
+      <w>funcionará</w>
       <w>funcoe</w>
       <w>funcoes</w>
       <w>função</w>
       <w>gerais</w>
       <w>geral</w>
+      <w>guardado</w>
       <w>imagem</w>
+      <w>implementado</w>
+      <w>implementação</w>
+      <w>incrementado</w>
       <w>incrementaria</w>
       <w>indica</w>
       <w>indicador</w>
@@ -133,11 +180,15 @@
       <w>instalação</w>
       <w>instancia</w>
       <w>instancias</w>
+      <w>integrar</w>
+      <w>interna</w>
+      <w>internamente</w>
       <w>internas</w>
       <w>interno</w>
       <w>intuito</w>
       <w>invalidos</w>
       <w>isto</w>
+      <w>itera</w>
       <w>limitacoes</w>
       <w>limpeza</w>
       <w>lista</w>
@@ -153,6 +204,10 @@
       <w>momento</w>
       <w>monta</w>
       <w>montada</w>
+      <w>navega</w>
+      <w>necessidade</w>
+      <w>nele</w>
+      <w>nesse</w>
       <w>nomeclatura</w>
       <w>notificação</w>
       <w>novo</w>
@@ -162,34 +217,50 @@
       <w>oliveira</w>
       <w>onefile</w>
       <w>opcao</w>
+      <w>opcional</w>
       <w>opcoes</w>
+      <w>opções</w>
+      <w>ordem</w>
       <w>outras</w>
+      <w>outros</w>
       <w>padrao</w>
       <w>padroes</w>
       <w>padrão</w>
       <w>palavras</w>
       <w>parametro</w>
       <w>parametros</w>
+      <w>partir</w>
+      <w>passos</w>
       <w>passwd</w>
       <w>pela</w>
       <w>pelas</w>
       <w>pelo</w>
+      <w>perdidos</w>
       <w>permissionamento</w>
       <w>permissoes</w>
       <w>permissões</w>
       <w>permite</w>
+      <w>pode</w>
       <w>pontoslivelo</w>
       <w>possivel</w>
       <w>possuir</w>
+      <w>prepara</w>
+      <w>prioridade</w>
+      <w>prioritários</w>
       <w>procedimento</w>
       <w>processa</w>
       <w>projeto</w>
       <w>projetos</w>
+      <w>proposito</w>
       <w>pyinstaller</w>
       <w>pyyaml</w>
       <w>qual</w>
+      <w>questão</w>
+      <w>raiz</w>
+      <w>reais</w>
       <w>realiza</w>
       <w>realizando</w>
+      <w>realizar</w>
       <w>recebe</w>
       <w>recolhe</w>
       <w>referente</w>
@@ -199,6 +270,7 @@
       <w>repositorio</w>
       <w>requer</w>
       <w>requerido</w>
+      <w>requisicoes</w>
       <w>requisita</w>
       <w>requisitado</w>
       <w>requisitos</w>
@@ -208,16 +280,21 @@
       <w>retorna</w>
       <w>retornar</w>
       <w>retorno</w>
+      <w>roadmap</w>
       <w>secundarios</w>
       <w>seguir</w>
+      <w>sendo</w>
       <w>separa</w>
       <w>sessao</w>
+      <w>simulando</w>
       <w>siterepo</w>
       <w>sobrescrever</w>
       <w>subindo</w>
       <w>substituida</w>
+      <w>substituido</w>
       <w>substituir</w>
       <w>sucesso</w>
+      <w>também</w>
       <w>tarefas</w>
       <w>testado</w>
       <w>testando</w>
@@ -225,22 +302,28 @@
       <w>tipo</w>
       <w>tipos</w>
       <w>tnpo</w>
+      <w>toda</w>
       <w>todas</w>
       <w>tratar</w>
+      <w>tudo</w>
+      <w>ultima</w>
       <w>unassing</w>
       <w>unica</w>
       <w>usar</w>
       <w>usuario</w>
       <w>utilizar</w>
       <w>validaçao</w>
+      <w>validação</w>
       <w>varias</w>
       <w>variavel</w>
       <w>varios</w>
+      <w>verdade</w>
       <w>verifica</w>
       <w>verifique</w>
       <w>versão</w>
       <w>visualizacao</w>
       <w>visualização</w>
+      <w>voce</w>
       <w>yaml</w>
     </words>
   </dictionary>
