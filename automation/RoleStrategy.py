@@ -72,8 +72,6 @@ class RoleStrategy:
         """
         data = dict(type=type, roleNames=name_list)
         response = requests.post(url='{0}/removeRoles'.format(self.bUrl), params=data)
-        if debug:
-            self.analise_content(data=data, response=response)
         return response
 
     def assing_role(self):
