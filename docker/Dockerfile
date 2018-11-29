@@ -1,13 +1,8 @@
 FROM python:3.7-stretch
 
-# Required arguments
-#ARG version
-#ARG n_user
-#ARG n_pass
-
-LABEL 	'company'='Livelo' \
-		'creator'='Gustavo Toledo' \
-		'maintainer'='Unknow'
+LABEL 'company'='Livelo' \
+	  'creator'='Gustavo Toledo' \
+	  'maintainer'='Unknow'
 
 # Update repo and packages
 RUN apt update && \
@@ -20,10 +15,10 @@ RUN apt install git curl bash vim zip jq -y
 RUN mkdir /etc/jenkins_automations
 
 # Add tool-scripts into image
-COPY build-scripts/data_collector.sh /bin/data_collector
-COPY build-scripts/py-parser.sh /bin/py-parser
-COPY ../dist/automation /bin/jenkins_automation
-COPY ../automation/resources/config.yaml /etc/jenkins_automations/config.yaml
+COPY docker/build-scripts/data_collector.sh /bin/data_collector
+COPY docker/build-scripts/py-parser.sh /bin/py-parser
+COPY dist/automation /bin/jenkins_automation
+COPY automation/resources/config.yaml /etc/jenkins_automations/config.yaml
 
 # Default python packages
 RUN pip install pip setuptools pyinstaller pyyaml requests --upgrade

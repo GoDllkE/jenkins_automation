@@ -92,7 +92,7 @@ pipeline {
                         container('docker-build') {
                             script {
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
-                                    docker_img = docker.build("$IMAGEM_DOCKER:latest", '-f ./docker/Dockerfile')
+                                    docker_img = docker.build("$IMAGEM_DOCKER:latest", '-f docker/Dockerfile .')
                                     docker_img.push()
                                 }
                             }
@@ -106,7 +106,7 @@ pipeline {
                             script {
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest"
-                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
+                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f docker/Dockerfile .')
                                     docker_img.push()
                                 }
                             }
@@ -119,7 +119,7 @@ pipeline {
                             script {
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
-                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
+                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f docker/Dockerfile .')
                                     docker_img.push()
                                 }
                             }
