@@ -40,12 +40,13 @@ Requisitos de construção do modulo:
 - Requests
 
 
-### Roadmap
-
-- Criar pipeline da automação (execução)
-
-
 ### Changelog
+**Versão: 3.10.8**
+- Removido mensagens desnecessárias.
+- Alterado entrypoint da imagem por compatibilidade do pipeline.
+- Removido testes com imagem docker. (problema identificado como DNS - infra)
+- Corrigido problema de build da imagem docker.
+
 **Versão: 3.10.0**
 - Adicionado testes para imagem docker, após sua construção.
 

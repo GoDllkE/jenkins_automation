@@ -146,8 +146,6 @@ def automate():
     #
 
     print('Concluido!')
-    print('Verifique: https://jenkins-central.pontoslivelo.com.br/role-strategy/manage-roles')
-
     sys.exit(0)
 
 
