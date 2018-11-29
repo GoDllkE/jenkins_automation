@@ -92,12 +92,12 @@ pipeline {
             }
         }
         stage('Criando imagem da automacao') {
-            container('docker-build') {
-                stages {
-                    docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
-                        stage('Construindo latest') {
-                            when { branch 'master' }
-                            steps {
+            stages {
+                docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+                    stage('Construindo latest') {
+                        when { branch 'master' }
+                        steps {
+                            container('docker-build') {
                                 script {
                                     ON_STAGE = "${ON_STAGE}"
 
@@ -106,9 +106,11 @@ pipeline {
                                 }
                             }
                         }
-                        stage('Construindo branch latest') {
-                            when { not { branch 'master' } }
-                            steps {
+                    }
+                    stage('Construindo branch latest') {
+                        when { not { branch 'master' } }
+                        steps {
+                            container('docker-build') {
                                 script {
                                     ON_STAGE = "${ON_STAGE}"
 
@@ -118,8 +120,10 @@ pipeline {
                                 }
                             }
                         }
-                        stage('Construindo branch com tag do build') {
-                            steps {
+                    }
+                    stage('Construindo branch com tag do build') {
+                        steps {
+                            container('docker-build') {
                                 script {
                                     ON_STAGE = "${ON_STAGE}"
 
