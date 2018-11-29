@@ -92,8 +92,8 @@ pipeline {
             }
         }
         stage('Criando imagem da automacao') {
-            stages {
-                docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+            docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+                stages {
                     stage('Construindo latest') {
                         when { branch 'master' }
                         steps {
