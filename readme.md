@@ -47,6 +47,8 @@ Requisitos de construção do modulo:
 
 
 ### Changelog
+**Versão: 3.10.0**
+- Adicionado testes para imagem docker, após sua construção.
 
 **Versão: 3.9.0**
 - Adicionado imagem docker para construção de outras imagens docker ao pod
