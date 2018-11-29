@@ -133,7 +133,7 @@ pipeline {
                 container('docker-build') {
                     script {
                         docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
-                            docker_img = docker.image('$IMAGEM_DOCKER:latest').inside {
+                            docker_img = docker.image('registry.ng.bluemix.net/$IMAGEM_DOCKER:latest').inside {
                                 sh "jenkins_automation -h"
                                 sh "jenkins_automation --create=project --name=teste_prj_automacao --debug"
                                 sh "jenkins_automation --delete=project --name=teste_prj_automacao --debug"
