@@ -67,6 +67,11 @@ def automate():
     action.setdefault('overwrite', False)
 
     try:
+        # Em casos de execução sem parametros
+        if len(sys.argv) <= 1:
+            Help()
+            sys.exit(0)
+
         # Coleta acao
         extended_options = ['create=', 'delete=', 'type=', 'name=', 'pattern=', 'overwrite=', 'help', 'debug']
         options, args = getopt.getopt(sys.argv[1:], 'cd:tnp:oh', extended_options)
