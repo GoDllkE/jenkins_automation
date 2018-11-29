@@ -10,7 +10,7 @@ pipeline {
     }
     environment {
         // Controle de build
-        ON_STAGE = 'Inicializando CI'
+        // ON_STAGE = 'Inicializando CI'
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
@@ -92,8 +92,8 @@ pipeline {
             }
         }
         stage('Criando imagem da automacao') {
-            stages {
-                container('docker-build') {
+            container('docker-build') {
+                stages {
                     docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                         stage('Construindo latest') {
                             when { branch 'master' }
