@@ -42,7 +42,6 @@ Requisitos de construção do modulo:
 
 ### Roadmap
 
-- Integrar modulo a imagem
 - Criar pipeline da automação (execução)
 
 
