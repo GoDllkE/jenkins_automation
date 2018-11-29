@@ -4,6 +4,7 @@
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,16 +36,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="205">
+              <caret line="94" column="112" lean-forward="true" selection-start-line="94" selection-start-column="112" selection-end-line="94" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -86,6 +87,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>env.</find>
+      <find>ON_STAGE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,8 +123,8 @@
         <option value="$PROJECT_DIR$/docker/build_scripts/py-parser.sh" />
         <option value="$PROJECT_DIR$/KubernetesPod.yaml" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
@@ -261,20 +263,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Workaround no stage de teste basico">
-      <created>1543418650193</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1543418650193</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Rollback">
-      <created>1543419081506</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1543419081506</updated>
     </task>
     <task id="LOCAL-00034" summary="Atualizando versão para correção da importação de modulo do binario">
       <created>1543420054656</created>
@@ -605,7 +593,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543504960211</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Corrigindo blocos e sessões do pipeline.">
+      <created>1543505093608</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1543505093608</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Corrigindo variavel do pipeline.">
+      <created>1543505296464</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1543505296464</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -657,7 +659,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Feature que permite carregar um arquivo de configuração de diferentes lugares (environment, etc ou interno)." />
     <MESSAGE value="Corrigindo carregamento via environment. Testando carregamento interno da compilação." />
     <MESSAGE value="Adicionado teste de execução do modulo ao pipeline" />
     <MESSAGE value="Adicionado teste simples e composto de execução do modulo ao pipeline" />
@@ -682,7 +683,8 @@
     <MESSAGE value="Corrigindo blocos do pipeline. Adicionando novo container para build de imagens docker" />
     <MESSAGE value="Corrigindo blocos do pipeline." />
     <MESSAGE value="Corrigindo blocos e sessões do pipeline." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo blocos e sessões do pipeline." />
+    <MESSAGE value="Corrigindo variavel do pipeline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo variavel do pipeline." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
@@ -941,17 +943,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="94" column="112" lean-forward="true" selection-start-line="94" selection-start-column="112" selection-end-line="94" selection-end-column="112" />
         </state>
       </provider>
     </entry>

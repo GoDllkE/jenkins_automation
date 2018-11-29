@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='automation',
-    version='3.9.11',
+    version='3.9.12',
     packages=["automation"],
     url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
     download_url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/archive/master.zip',
@@ -14,7 +14,7 @@ setup(
     author='Gustavo Toledo de Oliveira',
     author_email='gustavot53@gmail.com',
     keywords=['jenkins', 'automation', 'role-strategy', 'folders-plugin'],
-    install_requires=['pyyaml','requests>=2.18.4', 'pyinstaller>=3.3', 'setuptools>=36.3'],
+    install_requires=['pyyaml', 'requests>=2.18.4', 'pyinstaller>=3.3', 'setuptools>=36.3'],
     classifiers=[
         # Intention
         'Intended Audience :: Developers',
@@ -33,11 +33,11 @@ setup(
     ],
     project_urls={
         'Source':
-        'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
+            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
         'Documentation':
-        'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/docs',
+            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/docs',
         'Tracker':
-        'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/issues'
+            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/issues'
     },
     long_description="""
     Jenkins Role-Strategy & Folders-Plus automation
