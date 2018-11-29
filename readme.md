@@ -48,6 +48,16 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
+
+**Versão: 3.9.0**
+- Adicionado imagem docker para construção de outras imagens docker ao pod
+do kubernetes.
+- Corrigido sessões do pipeline invertidas.
+
+**Versão: 3.8.0**
+- Adicionado requisitos para construção de imagem docker
+- Corrigido bug referente a executar a aplicação sem argumentos.
+
 **Versão: 3.7.1**
 - Adicionado feature de criação da estrutura de pastas do projeto 
 - Adicionado feature de remoção da estrutura de pastas do projeto

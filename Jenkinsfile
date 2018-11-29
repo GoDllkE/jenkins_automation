@@ -94,40 +94,38 @@ pipeline {
         stage('Criando imagem da automacao') {
             steps {
                 container('docker-build') {
-                    script {
-                        docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
-                            stage('Construindo latest') {
-                                when { branch 'master' }
-                                steps {
-                                    script {
-                                        ON_STAGE = "${ON_STAGE}"
+                    docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+                        stage('Construindo latest') {
+                            when { branch 'master' }
+                            steps {
+                                script {
+                                    ON_STAGE = "${ON_STAGE}"
 
-                                        docker_img = docker.build("$IMAGEM_DOCKER:latest")
-                                        docker_img.push()
-                                    }
+                                    docker_img = docker.build("$IMAGEM_DOCKER:latest")
+                                    docker_img.push()
                                 }
                             }
-                            stage('Construindo branch latest') {
-                                when { not { branch 'master' } }
-                                steps {
-                                    script {
-                                        ON_STAGE = "${ON_STAGE}"
+                        }
+                        stage('Construindo branch latest') {
+                            when { not { branch 'master' } }
+                            steps {
+                                script {
+                                    ON_STAGE = "${ON_STAGE}"
 
-                                        DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest"
-                                        docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG")
-                                        docker_img.push()
-                                    }
+                                    DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest"
+                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG")
+                                    docker_img.push()
                                 }
                             }
-                            stage('Construindo branch com tag do build') {
-                                steps {
-                                    script {
-                                        ON_STAGE = "${ON_STAGE}"
+                        }
+                        stage('Construindo branch com tag do build') {
+                            steps {
+                                script {
+                                    ON_STAGE = "${ON_STAGE}"
 
-                                        DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
-                                        docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
-                                        docker_img.push()
-                                    }
+                                    DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
+                                    docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
+                                    docker_img.push()
                                 }
                             }
                         }
