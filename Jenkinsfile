@@ -78,11 +78,15 @@ pipeline {
                     artifacts: [[
                         artifactId: "jenkins_${NAME}",
                         classifier: 'python37',
-                        file: "dist/automation",
-                        type: 'bin'
+                        file:       "dist/automation",
+                        type:       'bin'
+                    ],[
+                        artifactId: "jenkins_${NAME}_config",
+                        classifier: 'python37',
+                        file:       "automation/resources/config.yaml",
+                        type:       'yaml'
                     ]]
                 )
-                //
             }
         }
         stage('Criando TAG referente ao build') {
@@ -99,16 +103,16 @@ pipeline {
                 }
             }
         }
-        // Need to create this other job/image first
-        //stage('Atualizando imagem da automacao') {
-        //   when { branch 'master' }
-        //   steps {
-        //      script {
-        //          IMG_JOB = ''
-        //          build job: $IMG_JOB, parameters: [String(name: 'version', value: $VERSION)]
-        //      }
-        //  }
-        //}
+//        stage('Atualizando imagem da automacao') {
+//            // Engatilha job que cria imagem
+//            when { branch 'master' }
+//            steps {
+//                script {
+//                    IMG_JOB = '/projects/infrastructure/build/docker/livelo_stretch_python3'
+//                    build job: $IMG_JOB, parameters: [String(name: 'version', value: $VERSION)]
+//                }
+//            }
+//        }
     }
     post {
 		failure {
