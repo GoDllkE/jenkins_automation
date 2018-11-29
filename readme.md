@@ -48,7 +48,6 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
-
 **Versão: 3.9.0**
 - Adicionado imagem docker para construção de outras imagens docker ao pod
 do kubernetes.
