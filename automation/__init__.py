@@ -145,7 +145,7 @@ def automate():
         pass
     #
 
-    print('Concluido!')
+    print('Processo finalizado.')
     sys.exit(0)
 
 
