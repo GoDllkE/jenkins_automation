@@ -12,6 +12,6 @@ RUN chmod a+x /bin/jenkins_automation &&\
     chmod a+r /etc/jenkins_automations/config.yaml
 
 # Define a entrypoint as app
-ENTRYPOINT ["jenkins_automation"]
+ENTRYPOINT ["bash"]
 
 # End of file
