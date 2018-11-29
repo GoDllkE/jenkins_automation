@@ -111,7 +111,7 @@ pipeline {
                             script {
                                 ON_STAGE = "${ON_STAGE}"
 
-                                DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest
+                                DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest"
                                 docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG")
                                 docker_img.push()
                             }
