@@ -15,8 +15,8 @@ RUN apt install git curl bash vim zip jq -y
 RUN mkdir /etc/jenkins_automations
 
 # Add tool-scripts into image
-COPY docker/build-scripts/data_collector.sh /bin/data_collector
-COPY docker/build-scripts/py-parser.sh /bin/py-parser
+COPY docker/build_scripts/data_collector.sh /bin/data_collector
+COPY docker/build_scripts/py-parser.sh /bin/py-parser
 COPY dist/automation /bin/jenkins_automation
 COPY automation/resources/config.yaml /etc/jenkins_automations/config.yaml
 
