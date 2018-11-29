@@ -100,7 +100,6 @@ pipeline {
                     }
                 }
                 stage('Construindo branch latest') {
-                    when { not { branch 'master' } }
                     steps {
                         container('docker-build') {
                             script {
@@ -129,6 +128,7 @@ pipeline {
             }
         }
         stage('Criando TAG referente ao build') {
+            when { branch 'master' }
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable:'user', passwordVariable:'passwd')]) {
