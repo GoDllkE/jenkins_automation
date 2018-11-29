@@ -85,7 +85,7 @@ pipeline {
             }
         }
         stage('Criando imagem da automacao') {
-            stages {
+            parallel {
                 stage('Construindo latest') {
                     when { branch 'master' }
                     steps {
