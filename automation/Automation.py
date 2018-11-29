@@ -102,7 +102,7 @@ class Automation:
             continue
         #
 
-        print("Deletando role(s): {0}".format(str(role_list)), end='')
+        print("Deletando role(s): {0}...".format(str(role_list)), end='')
         self.role_manager.delete_role(type='projectRoles', name_list=self.format_perms(role_list))
         print("concluido!")
         # End of function
