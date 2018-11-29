@@ -10,7 +10,6 @@ pipeline {
     }
     environment {
         // Controle de build
-        // ON_STAGE = 'Inicializando CI'
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
@@ -26,13 +25,11 @@ pipeline {
     stages {
         stage ('Instalando das dependencias do modulo') {
             steps {
-                script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "pip install -r requirements.txt", returnStdout: true)
             }
         }
         stage('Realizando build do modulo') {
             steps {
-                script { ON_STAGE = "${ON_STAGE}" }
                 sh(script: "python setup.py develop && python setup.py sdist", returnStdout: true)
                 sh(script: "pyinstaller --onefile --path automation/ --console bin/automation", returnStdout: true)
             }
@@ -41,7 +38,6 @@ pipeline {
             parallel {
                 stage('Teste de compilação') {
                     steps {
-                        script { ON_STAGE = "${ON_STAGE}" }
                         sh "chmod a+x dist/automation"
                         sh "./dist/automation -h"
                     }
@@ -49,7 +45,6 @@ pipeline {
                 stage('Teste simples') {
                     steps {
                         script {
-                            script { ON_STAGE = "${ON_STAGE}" }
                             sh "./dist/automation --create=role --type=projectRoles --name=teste_unit_automacao --pattern=.* --debug"
                             sh "./dist/automation --delete=role --type=projectRoles --name=teste_unit_automacao --debug"
                         }
@@ -58,7 +53,6 @@ pipeline {
                 stage('Teste composto') {
                     steps {
                         script {
-                            script { ON_STAGE = "${ON_STAGE}" }
                             sh "./dist/automation --create=project --name=teste_prj_automacao --debug"
                             sh "./dist/automation --delete=project --name=teste_prj_automacao --debug"
                         }
@@ -68,7 +62,6 @@ pipeline {
         }
         stage('Subindo modulo para o Nexus') {
             steps {
-                script { ON_STAGE = "${ON_STAGE}" }
                 nexusArtifactUploader (
                     nexusVersion: 'nexus2',
                     protocol: 'http',
@@ -98,7 +91,6 @@ pipeline {
                     steps {
                         container('docker-build') {
                             script {
-                                ON_STAGE = "${ON_STAGE}"
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     docker_img = docker.build("$IMAGEM_DOCKER:latest")
                                     docker_img.push()
@@ -112,7 +104,6 @@ pipeline {
                     steps {
                         container('docker-build') {
                             script {
-                                ON_STAGE = "${ON_STAGE}"
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest"
                                     docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG")
@@ -126,7 +117,6 @@ pipeline {
                     steps {
                         container('docker-build') {
                             script {
-                                ON_STAGE = "${ON_STAGE}"
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
                                     docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
@@ -141,8 +131,6 @@ pipeline {
         stage('Criando TAG referente ao build') {
             steps {
                 script {
-                    ON_STAGE = "${ON_STAGE}"
-
                     withCredentials([usernamePassword(credentialsId: 'jenkins-user', usernameVariable:'user', passwordVariable:'passwd')]) {
                         sh(script: "git remote add cotag https://${user}:${passwd}@stash.pontoslivelo.com.br/scm/jnk/automation_role-strategy.git")
                         sh(script: "git fetch cotag --tags")
@@ -156,7 +144,7 @@ pipeline {
     post {
 		failure {
 			slackSend channel: env.SLACK_CHANNEL, color: 'danger',
-			message: "Falha na construção do modulo 'Jenkins_${NAME}', no estágio: ${ON_STAGE}'. <${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Falha na construção do modulo 'Jenkins_${NAME}'. <${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
