@@ -38,8 +38,8 @@
       <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+            <state relative-caret-position="85">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -49,6 +49,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="196">
+                <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -102,13 +114,13 @@
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/automation/__init__.py" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/docker/build_scripts/data_collector.sh" />
         <option value="$PROJECT_DIR$/docker/build_scripts/py-parser.sh" />
         <option value="$PROJECT_DIR$/KubernetesPod.yaml" />
+        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
@@ -249,20 +261,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Adicionando stage de teste simples">
-      <created>1543353866296</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1543353866296</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Atualizando construção do modulo">
-      <created>1543417945339</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1543417945339</updated>
     </task>
     <task id="LOCAL-00028" summary="Atualizando stage de testes">
       <created>1543418275062</created>
@@ -593,7 +591,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543504039977</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Corrigindo blocos do pipeline.">
+      <created>1543504088114</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1543504088114</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Corrigindo blocos e sessões do pipeline.">
+      <created>1543504406307</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1543504406307</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -645,8 +657,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionado nova dependencia do modulo" />
-    <MESSAGE value="Atualizando banco de palavras e estrutura do modulo" />
     <MESSAGE value="Feature que permite carregar um arquivo de configuração de diferentes lugares (environment, etc ou interno)." />
     <MESSAGE value="Corrigindo carregamento via environment. Testando carregamento interno da compilação." />
     <MESSAGE value="Adicionado teste de execução do modulo ao pipeline" />
@@ -670,7 +680,9 @@
     <MESSAGE value="Corrigindo syntax do pipeline" />
     <MESSAGE value="Corrigindo blocos do pipeline" />
     <MESSAGE value="Corrigindo blocos do pipeline. Adicionando novo container para build de imagens docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo blocos do pipeline. Adicionando novo container para build de imagens docker" />
+    <MESSAGE value="Corrigindo blocos do pipeline." />
+    <MESSAGE value="Corrigindo blocos e sessões do pipeline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo blocos e sessões do pipeline." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
@@ -867,16 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="383">
-            <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/automation">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -922,6 +924,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="196">
+            <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KubernetesPod.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -931,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
+        <state relative-caret-position="85">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
         </state>
       </provider>
     </entry>
