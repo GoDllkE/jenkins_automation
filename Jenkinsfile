@@ -9,15 +9,17 @@ pipeline {
         }
     }
     environment {
+        // Controle de build
         ON_STAGE = 'Inicializando CI'
         PYTHON_VERSION = '3.7.1'
         SLACK_CHANNEL = '#devops-notifications'
 
-        // Structural environments
+        // Controle da imagem
+        IMAGEM_DOCKER = 'livelo/jenkins_automation'
+
+        // Controle do nexus
         PROJECT = sh(script: "echo $JOB_NAME | cut -d '/' -f2", returnStdout: true).trim()
         COMPONENT = sh(script: "echo $JOB_NAME | cut -d '/' -f4", returnStdout: true).trim()
-
-        //
         NAME = sh(script: "py-parser setup.py | grep name | cut -d ' ' -f2", returnStdout: true).trim()
         VERSION = sh(script: "py-parser setup.py | grep version | cut -d ' ' -f2", returnStdout: true).trim()
     }
@@ -89,6 +91,46 @@ pipeline {
                 )
             }
         }
+        stage('Criando imagem da automacao') {
+            docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+                stages {
+                    stage('Construindo latest') {
+                        when { branch 'master' }
+                        steps {
+                            script {
+                                ON_STAGE = "${ON_STAGE}"
+
+                                docker_img = docker.build("$IMAGEM_DOCKER:latest")
+                                docker_img.push()
+                            }
+                        }
+                    }
+                    stage('Construindo branch latest') {
+                        when { not { branch 'master' } }
+                        steps {
+                            script {
+                                ON_STAGE = "${ON_STAGE}"
+
+                                DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + ".latest
+                                docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG")
+                                docker_img.push()
+                            }
+                        }
+                    }
+                    stage('Construindo branch com tag do build') {
+                        steps {
+                            script {
+                                ON_STAGE = "${ON_STAGE}"
+
+                                DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
+                                docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f ./docker/Dockerfile')
+                                docker_img.push()
+                            }
+                        }
+                    }
+                }
+            }
+        }
         stage('Criando TAG referente ao build') {
             steps {
                 script {
@@ -103,16 +145,6 @@ pipeline {
                 }
             }
         }
-//        stage('Atualizando imagem da automacao') {
-//            // Engatilha job que cria imagem
-//            when { branch 'master' }
-//            steps {
-//                script {
-//                    IMG_JOB = '/projects/infrastructure/build/docker/livelo_stretch_python3'
-//                    build job: $IMG_JOB, parameters: [String(name: 'version', value: $VERSION)]
-//                }
-//            }
-//        }
     }
     post {
 		failure {
