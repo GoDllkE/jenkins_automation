@@ -2,7 +2,6 @@ projects:
   folder_structure:
     - '<project>'
     - '<project>/build'
-    - '<project>/build/docker'
     - '<project>/deploy'
     - '<project>/deploy/<env>'
     - '<project>/tests'
@@ -21,7 +20,7 @@ projects:
       - 'hudson.model.Item.Read'
     build_role:
       name: '<project> - build'
-      pattern: '^projects(|/<project>+(|/build+(.*|/docker(|/.*))))'
+      pattern: '^projects(|/<project>+(|/build+(|/.*)))'
       permissionsIds:
       - 'hudson.model.Item.Build'
       - 'hudson.model.Item.Cancel'
