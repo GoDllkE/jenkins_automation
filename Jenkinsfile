@@ -148,7 +148,7 @@ pipeline {
 		}
 		success {
 			slackSend channel: env.SLACK_CHANNEL, color: 'good',
-			message: "Modulo 'Jenkins_${NAME}' construido com sucesso! '<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
+			message: "Modulo 'Jenkins_${NAME}' construido com sucesso! (Tag: $VERSION).'<${BUILD_URL}|${JOB_NAME}:${BUILD_NUMBER}>'"
 		}
 	}
 }
