@@ -38,3 +38,6 @@ class JenkinsCore:
 
     def getEnvironments(self) -> list:
         return self.environment
+
+    def get_bUrl(self) -> list:
+        return "{0}@{1}".format(self.get_bAuth(), self.get_url())
