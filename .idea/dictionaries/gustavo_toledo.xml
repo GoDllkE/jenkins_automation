@@ -11,6 +11,7 @@
       <w>adicionando</w>
       <w>adicionar</w>
       <w>adição</w>
+      <w>afim</w>
       <w>agentes</w>
       <w>agora</w>
       <w>agrupamento</w>
@@ -34,6 +35,7 @@
       <w>arquivos</w>
       <w>assing</w>
       <w>atuais</w>
+      <w>atualizado</w>
       <w>atualizando</w>
       <w>atualização</w>
       <w>automacao</w>
@@ -56,15 +58,19 @@
       <w>básica</w>
       <w>cada</w>
       <w>caminho</w>
+      <w>caminhos</w>
       <w>campo</w>
       <w>carrega</w>
+      <w>carregador</w>
       <w>carregamento</w>
       <w>carregar</w>
       <w>caso</w>
       <w>casos</w>
+      <w>centralização</w>
       <w>cenários</w>
       <w>chamada</w>
       <w>changelogs</w>
+      <w>chatbot</w>
       <w>classe</w>
       <w>cloudbees</w>
       <w>codig</w>
@@ -79,7 +85,9 @@
       <w>composto</w>
       <w>compreensao</w>
       <w>concluido</w>
+      <w>configuracao</w>
       <w>configuracoes</w>
+      <w>configuraçao</w>
       <w>configuração</w>
       <w>configurações</w>
       <w>conjunto</w>
@@ -108,6 +116,8 @@
       <w>criar</w>
       <w>criaçao</w>
       <w>criação</w>
+      <w>cumprimento</w>
+      <w>cumprir</w>
       <w>dados</w>
       <w>debian</w>
       <w>declarada</w>
@@ -122,8 +132,10 @@
       <w>deletar</w>
       <w>dependencia</w>
       <w>dependencias</w>
+      <w>deployer</w>
       <w>desconhecido</w>
       <w>descritivo</w>
+      <w>deseja</w>
       <w>desejada</w>
       <w>desejadas</w>
       <w>desenvolvimento</w>
@@ -174,6 +186,7 @@
       <w>flexibilidade</w>
       <w>fluxo</w>
       <w>formata</w>
+      <w>formação</w>
       <w>funcao</w>
       <w>funcionais</w>
       <w>funcionalidades</w>
@@ -183,16 +196,22 @@
       <w>funcoe</w>
       <w>funcoes</w>
       <w>função</w>
+      <w>funções</w>
       <w>gerada</w>
       <w>gerais</w>
       <w>geral</w>
+      <w>gerenciadora</w>
+      <w>gerenciadores</w>
       <w>guardado</w>
+      <w>habili</w>
+      <w>habilitar</w>
       <w>ibmcloud</w>
       <w>identificado</w>
       <w>imagem</w>
       <w>imagens</w>
       <w>implementado</w>
       <w>implementação</w>
+      <w>importa</w>
       <w>incrementado</w>
       <w>incrementaria</w>
       <w>indica</w>
@@ -204,6 +223,7 @@
       <w>instancia</w>
       <w>instancias</w>
       <w>integrar</w>
+      <w>interfaciamento</w>
       <w>interna</w>
       <w>internamente</w>
       <w>internas</w>
@@ -213,6 +233,8 @@
       <w>invertidas</w>
       <w>isto</w>
       <w>itera</w>
+      <w>jenkinsci</w>
+      <w>leitura</w>
       <w>limitacoes</w>
       <w>limpeza</w>
       <w>linhas</w>
@@ -237,6 +259,7 @@
       <w>nomeclatura</w>
       <w>notificação</w>
       <w>novo</w>
+      <w>novos</w>
       <w>objeto</w>
       <w>obrigacoes</w>
       <w>observacoes</w>
@@ -282,6 +305,8 @@
       <w>projeto</w>
       <w>projetos</w>
       <w>proposito</w>
+      <w>propositos</w>
+      <w>propostido</w>
       <w>pyinstaller</w>
       <w>pyyaml</w>
       <w>qual</w>
@@ -294,6 +319,7 @@
       <w>recebe</w>
       <w>recolhe</w>
       <w>recursos</w>
+      <w>refatorando</w>
       <w>referente</w>
       <w>remocao</w>
       <w>removendo</w>
@@ -307,14 +333,19 @@
       <w>requisita</w>
       <w>requisitado</w>
       <w>requisitos</w>
+      <w>requisição</w>
       <w>responsavel</w>
       <w>resquests</w>
       <w>resultado</w>
       <w>retorna</w>
       <w>retornar</w>
       <w>retorno</w>
+      <w>rnatp</w>
+      <w>rnetp</w>
+      <w>rntp</w>
       <w>roadmap</w>
       <w>rodar</w>
+      <w>rtnp</w>
       <w>secundarios</w>
       <w>seguir</w>
       <w>sendo</w>
@@ -323,6 +354,7 @@
       <w>sequencial</w>
       <w>sessao</w>
       <w>sessões</w>
+      <w>simplificando</w>
       <w>simulando</w>
       <w>siterepo</w>
       <w>sobrescrever</w>
@@ -343,6 +375,7 @@
       <w>tnpo</w>
       <w>toda</w>
       <w>todas</w>
+      <w>todos</w>
       <w>tratar</w>
       <w>tudo</w>
       <w>ultima</w>
@@ -354,6 +387,7 @@
       <w>validaçao</w>
       <w>validação</w>
       <w>varias</w>
+      <w>variaveis</w>
       <w>variavel</w>
       <w>varios</w>
       <w>verdade</w>
