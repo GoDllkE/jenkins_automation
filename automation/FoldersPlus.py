@@ -14,79 +14,89 @@ class FoldersPlus:
         :param jenkins:         Recebe uma instancia da classe JenkinsCore
         :param configuration    Recebe uma lista da estrutura padrão a seguir.
         """
-        self.debug = debug
-        self.jenkins = jenkins
-        self.structure = configuration
-        self.bUrl = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bAuth(), self.jenkins.get_url())
+        # self.debug = debug
+        # self.jenkins = jenkins
+        # self.structure = configuration
+        # self.bUrl = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bAuth(), self.jenkins.get_url())
 
-    def create_project_structure(self, project: str = None) -> None:
+    def create_structure(self, path: str = None, name: str = None) -> requests:
         # Controle interno
-        headers = {"Content-Type": "application/x-www-form-urlencoded"}
-        folder_list = [item.replace('<project>', project) for item in self.structure]
-        data = {"name": "", "mode": "com.cloudbees.hudson.plugins.folder.Folder", "Submit": "OK"}
+        header = {"Content-Type": "application/x-www-form-urlencoded"}
+        data = {"name": "{0}".format(name), "mode": "com.cloudbees.hudson.plugins.folder.Folder", "Submit": "OK"}
+        response = requests.post(url=path, headers=header, params=data)
+        return response
 
-        # Itera lista e cria pastas
-        for folder in folder_list:
-            # Mensagem
-            if '<env>' not in folder:
-                print('Criando pasta: {0}...'.format(folder.split('/')[-1]), end='')
-
-            #
-            if len(folder.split('/')) < 2:
-                bUrl = '{0}/createItem'.format(self.bUrl)
-                data['name'] = str(folder.split('/')[-1])
-                response = requests.post(url=bUrl, headers=headers, params=data)
-                self.validate(status_code=response.status_code, folder=folder)
-
-            elif len(folder.split('/')) < 3:
-                data['name'] = str(folder.split('/')[-1])
-                bUrl = '{0}/job/{1}/createItem'.format(self.bUrl, folder.split('/')[0])
-                response = requests.post(url=bUrl, headers=headers, params=data)
-                self.validate(status_code=response.status_code, folder=folder)
-
-            elif len(folder.split('/')) < 4:
-                # Prepara url
-                bUrl = self.bUrl
-                for item in folder.split('/')[:2]:
-                    bUrl += '/job/{0}'.format(item)
-                bUrl += '/createItem'
-
-                if '<env>' in folder.split('/')[-1]:
-                    # Itera lista de ambientes
-                    for env in self.jenkins.getEnvironments():
-                        print('Criando pasta: {0}...'.format(folder.split('/')[-1].replace('<env>', env)), end='')
-                        data['name'] = str(folder.split('/')[-1]).replace('<env>', env)
-                        response = requests.post(url=bUrl, headers=headers, params=data)
-                        self.validate(status_code=response.status_code, folder=folder, env=env)
-
-                    #
-                    continue
-                else:
-                    data['name'] = str(folder.split('/')[-1])
-                    response = requests.post(url=bUrl, headers=headers, params=data)
-                    self.validate(status_code=response.status_code, folder=folder)
-            else:
-                print("Path too long or to short! ({0}".format(folder))
-                exit(1)
-            pass
-        # End of function
-
-    def delete_project_structure(self, project: str = None) -> None:
-        """
-            Funcao para deletar um conjunto de pastas de um projeto
-            :param project:         Recebe o nome do projeto
-            :return:                Retorna nada
-        """
-        print('Deletando estrutura de pastas do projeto "{0}"...'.format(project), end='')
-        bUrl = '{0}/job/{1}/doDelete'.format(self.bUrl, project)
-        response = requests.post(url=bUrl)
-        if response.status_code == 200:
-            print("concluido com sucesso!")
-        elif response.status_code == 404:
-            print("erro. A estrutura de pastas nao foi encontrada/nao existe.")
-        else:
-            print("erro. Desconhecido (codigo: {0})".format(response.status_code))
+    def delete_structure(self, path: str = None, name: str = None) -> requests:
         pass
+
+    # def create_project_structure(self, project: str = None) -> None:
+    #     # Controle interno
+    #     headers = {"Content-Type": "application/x-www-form-urlencoded"}
+    #     folder_list = [item.replace('<project>', project) for item in self.structure]
+    #     data = {"name": "", "mode": "com.cloudbees.hudson.plugins.folder.Folder", "Submit": "OK"}
+    #
+    #     # Itera lista e cria pastas
+    #     for folder in folder_list:
+    #         # Mensagem
+    #         if '<env>' not in folder:
+    #             print('Criando pasta: {0}...'.format(folder.split('/')[-1]), end='')
+    #
+    #         #
+    #         if len(folder.split('/')) < 2:
+    #             bUrl = '{0}/createItem'.format(self.bUrl)
+    #             data['name'] = str(folder.split('/')[-1])
+    #             response = requests.post(url=bUrl, headers=headers, params=data)
+    #             self.validate(status_code=response.status_code, folder=folder)
+    #
+    #         elif len(folder.split('/')) < 3:
+    #             data['name'] = str(folder.split('/')[-1])
+    #             bUrl = '{0}/job/{1}/createItem'.format(self.bUrl, folder.split('/')[0])
+    #             response = requests.post(url=bUrl, headers=headers, params=data)
+    #             self.validate(status_code=response.status_code, folder=folder)
+    #
+    #         elif len(folder.split('/')) < 4:
+    #             # Prepara url
+    #             bUrl = self.bUrl
+    #             for item in folder.split('/')[:2]:
+    #                 bUrl += '/job/{0}'.format(item)
+    #             bUrl += '/createItem'
+    #
+    #             if '<env>' in folder.split('/')[-1]:
+    #                 # Itera lista de ambientes
+    #                 for env in self.jenkins.getEnvironments():
+    #                     print('Criando pasta: {0}...'.format(folder.split('/')[-1].replace('<env>', env)), end='')
+    #                     data['name'] = str(folder.split('/')[-1]).replace('<env>', env)
+    #                     response = requests.post(url=bUrl, headers=headers, params=data)
+    #                     self.validate(status_code=response.status_code, folder=folder, env=env)
+    #
+    #                 #
+    #                 continue
+    #             else:
+    #                 data['name'] = str(folder.split('/')[-1])
+    #                 response = requests.post(url=bUrl, headers=headers, params=data)
+    #                 self.validate(status_code=response.status_code, folder=folder)
+    #         else:
+    #             print("Path too long or to short! ({0}".format(folder))
+    #             exit(1)
+    #         pass
+    #     # End of function
+    #
+    # def delete_project_structure(self, project: str = None) -> None:
+    #     """
+    #         Funcao para deletar um conjunto de pastas de um projeto
+    #         :param project:         Recebe o nome do projeto
+    #         :return:                Retorna nada
+    #     """
+    #     print('Deletando estrutura de pastas do projeto "{0}"...'.format(project), end='')
+    #     bUrl = '{0}/job/{1}/doDelete'.format(self.bUrl, project)
+    #     response = requests.post(url=bUrl)
+    #     if response.status_code == 200:
+    #         print("concluido com sucesso!")
+    #     elif response.status_code == 404:
+    #         print("erro. A estrutura de pastas nao foi encontrada/nao existe.")
+    #     else:
+    #         print("erro. Desconhecido (codigo: {0})".format(response.status_code))
+    #     pass
 
     def analise_content(self, data: dict = None, response: requests = None) -> None:
         """
