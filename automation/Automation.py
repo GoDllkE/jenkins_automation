@@ -149,29 +149,83 @@ class Automation:
             pass
         pass
 
+    def delete_deploy_jobs(self, projeto: str = None, repositorio: str = None) -> None:
+        pass
+
+    def create_project_structure(self, project: str = None) -> None:
+        # Leitura de configurações
+        config = Configurator()
+        structure = config.load_config()['folder_structure']
+        folder_list = [item.replace('<project>', project) for item in structure]
+
+        # Itera lista e cria pastas
+        for folder in folder_list:
+            if '<env>' not in folder:
+                print('Criando pasta: {0}...'.format(folder.split('/')[-1]), end='')
+            #
+            if len(folder.split('/')) < 2:
+                bUrl = '{0}/createItem'.format(self.jenkins.get_bUrl())
+                name = str(folder.split('/')[-1])
+                status = self.folder_manager.create_structure(path=bUrl, name=name)
+                self.folder_manager.validate(status_code=status.status_code, folder=folder)
+
+            elif len(folder.split('/')) < 3:
+                name = str(folder.split('/')[-1])
+                bUrl = '{0}/job/{1}/createItem'.format(self.jenkins.get_bUrl(), folder.split('/')[0])
+                status = self.folder_manager.create_structure(path=bUrl, name=name)
+                self.folder_manager.validate(status_code=status.status_code, folder=folder)
+
+            elif len(folder.split('/')) < 4:
+                bUrl = self.jenkins.get_bUrl()
+                for item in folder.split('/')[:2]:
+                    bUrl += '/job/{0}'.format(item)
+                bUrl += '/createItem'
+
+                if '<env>' in folder.split('/')[-1]:
+                    for env in self.jenkins.getEnvironments():
+                        print('Criando pasta: {0}...'.format(folder.split('/')[-1].replace('<env>', env)), end='')
+                        name = str(folder.split('/')[-1]).replace('<env>', env)
+                        status = self.folder_manager.create_structure(path=bUrl, name=name)
+                        self.folder_manager.validate(status_code=status.status_code, folder=folder, env= env)
+                    #
+                    continue
+                else:
+                    name = str(folder.split('/')[-1])
+                    status = self.folder_manager.create_structure(path=bUrl, name=name)
+                    self.folder_manager.validate(status_code=status.status_code, folder=folder)
+
+            else:
+                print("Path too long or to short! ({0}".format(folder))
+                exit(1)
+            pass
+        # End of function
+
+    def delete_project_structure(self, project: str = None) -> None:
+        pass
+
     # ================================================================================================================ #
     #                                     Funcoes de interfaciamento                                                   #
     # ================================================================================================================ #
 
-    # def create_role(self, data: dict = None) -> None:
-    #     """
-    #         Interface do metodo create da RoleStrategy, que recebe um dict e formata para o metodo da RoleStrategy.
-    #         :param data:        Recebe um dicionario
-    #         :return:            Retorna nada
-    #     """
-    #     self.role_manager.create_role(
-    #         type=data['type'],
-    #         name=data['name'],
-    #         pattern=data['pattern'],
-    #         perm=str(self.__format_perms(self.config['view_role']['permissionsIds'])),
-    #         overwrite=data['overwrite']
-    #     )
-    #     pass
-    #
-    # def delete_role(self, data: dict = None) -> None:
-    #     """
-    #         Interface do metodo delete da RoleStrategy, que recebe um dit e formata para o metodo da RoleStrategy
-    #         :param data:        Recebe um dicionario
-    #         :return:            Retorna nada
-    #     """
-    #     self.role_manager.delete_role(type=data['type'], name_list=data['name'])
+    def create_role(self, data: dict = None) -> None:
+        """
+            Interface do metodo create da RoleStrategy, que recebe um dict e formata para o metodo da RoleStrategy.
+            :param data:        Recebe um dicionario
+            :return:            Retorna nada
+        """
+        self.role_manager.create_role(
+            type=data['type'],
+            name=data['name'],
+            pattern=data['pattern'],
+            perm=str(self.__format_perms__(self.config['view_role']['permissionsIds'])),
+            overwrite=data['overwrite']
+        )
+        pass
+
+    def delete_role(self, data: dict = None) -> None:
+        """
+            Interface do metodo delete da RoleStrategy, que recebe um dit e formata para o metodo da RoleStrategy
+            :param data:        Recebe um dicionario
+            :return:            Retorna nada
+        """
+        self.role_manager.delete_role(type=data['type'], name_list=data['name'])
