@@ -225,14 +225,16 @@ class Automation:
             :param data:        Recebe um dicionario
             :return:            Retorna nada
         """
+        # Core
+        role_config = self.config_manger.load_config()['role_strategy']
+
         self.role_manager.create_role(
             type=data['type'],
             name=data['name'],
             pattern=data['pattern'],
-            perm=str(self.__format_perms__(self.config_manger['view_role']['permissionsIds'])),
+            perm=str(self.__format_perms__(role_config['view_role']['permissionsIds'])),
             overwrite=data['overwrite']
         )
-        pass
 
     def delete_role(self, data: dict = None) -> None:
         """
