@@ -16,6 +16,7 @@
       <w>agora</w>
       <w>agrupamento</w>
       <w>agrupamentos</w>
+      <w>alguns</w>
       <w>alinhamento</w>
       <w>alterado</w>
       <w>alterando</w>
@@ -50,6 +51,7 @@
       <w>basicamente</w>
       <w>basicas</w>
       <w>basicos</w>
+      <w>bitbucket</w>
       <w>blocos</w>
       <w>bloqueios</w>
       <w>bluemix</w>
@@ -93,6 +95,7 @@
       <w>configuração</w>
       <w>configurações</w>
       <w>conjunto</w>
+      <w>construcao</w>
       <w>construido</w>
       <w>construindo</w>
       <w>construtor</w>
@@ -109,6 +112,7 @@
       <w>corrigindo</w>
       <w>cotag</w>
       <w>credenciais</w>
+      <w>credencial</w>
       <w>crescente</w>
       <w>cria</w>
       <w>criacao</w>
@@ -122,12 +126,14 @@
       <w>cumprindo</w>
       <w>cumprir</w>
       <w>dados</w>
+      <w>daystokeep</w>
       <w>debian</w>
       <w>declarada</w>
       <w>definicao</w>
       <w>definida</w>
       <w>definidas</w>
       <w>definido</w>
+      <w>definindo</w>
       <w>definir</w>
       <w>definição</w>
       <w>deleta</w>
@@ -136,6 +142,7 @@
       <w>dependencia</w>
       <w>dependencias</w>
       <w>deployer</w>
+      <w>desabilitando</w>
       <w>desconhecido</w>
       <w>descritivo</w>
       <w>deseja</w>
@@ -150,6 +157,7 @@
       <w>diferenciado</w>
       <w>diferente</w>
       <w>diferentes</w>
+      <w>diretorio</w>
       <w>diversos</w>
       <w>documentacao</w>
       <w>eles</w>
@@ -215,11 +223,15 @@
       <w>implementado</w>
       <w>implementação</w>
       <w>importa</w>
+      <w>importado</w>
+      <w>importando</w>
+      <w>importação</w>
       <w>incrementado</w>
       <w>incrementaria</w>
       <w>indica</w>
       <w>indicador</w>
       <w>individuais</w>
+      <w>informado</w>
       <w>inicializando</w>
       <w>inicialização</w>
       <w>instalando</w>
@@ -232,6 +244,7 @@
       <w>internamente</w>
       <w>internas</w>
       <w>interno</w>
+      <w>intervalo</w>
       <w>intuito</w>
       <w>invalidos</w>
       <w>invertidas</w>
@@ -246,7 +259,9 @@
       <w>livelo</w>
       <w>localizar</w>
       <w>lugares</w>
+      <w>mais</w>
       <w>manipulacao</w>
+      <w>manter</w>
       <w>mapeamento</w>
       <w>melhor</w>
       <w>mensagem</w>
@@ -267,6 +282,7 @@
       <w>notificação</w>
       <w>novo</w>
       <w>novos</w>
+      <w>numtokeep</w>
       <w>objeto</w>
       <w>obrigacoes</w>
       <w>observacoes</w>
@@ -284,8 +300,10 @@
       <w>padrao</w>
       <w>padroes</w>
       <w>padrão</w>
+      <w>padrões</w>
       <w>palavras</w>
       <w>paralelo</w>
+      <w>parametrização</w>
       <w>parametro</w>
       <w>parametros</w>
       <w>partir</w>
@@ -319,6 +337,7 @@
       <w>pyinstaller</w>
       <w>pyyaml</w>
       <w>qual</w>
+      <w>quantidade</w>
       <w>questão</w>
       <w>raiz</w>
       <w>reais</w>
@@ -326,8 +345,10 @@
       <w>realizando</w>
       <w>realizar</w>
       <w>recebe</w>
+      <w>recebidos</w>
       <w>recolhe</w>
       <w>recursos</w>
+      <w>redefinindo</w>
       <w>refatorado</w>
       <w>refatorando</w>
       <w>referente</w>
@@ -353,6 +374,7 @@
       <w>rnatp</w>
       <w>rnetp</w>
       <w>rnetpo</w>
+      <w>rnetpouikqs</w>
       <w>rntp</w>
       <w>roadmap</w>
       <w>rodar</w>
