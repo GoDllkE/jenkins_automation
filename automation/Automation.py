@@ -1,29 +1,31 @@
 import requests
 
 # Importa todos os modulos
-from automation import *
+from automation.JobManager import JobManager
+from automation.JenkinsCore import JenkinsCore
+from automation.FoldersPlus import FoldersPlus
+from automation.Configurator import Configurator
+from automation.RoleStrategy import RoleStrategy
 
 
 class Automation:
-    def __init__(self, jenkins: JenkinsCore = None, role: RoleStrategy = None, config: dict = None, folder: FoldersPlus = None, job: JobManager = None, debug=False):
+
+    def __init__(self, jenkins: JenkinsCore = None, configuration: Configurator = None, debug=False):
         """
             Construtor
             :param jenkins:         Recebe uma instancia do jenkins
-            :param role:            Recebe uma instancia das roles
-            :param config:          Recebe uma instancia das configuracoes
-            :param folder:          Recebe uma instancia de estruturas
-            :param job:             Recebe uma instancia de jobs
+            :param configuration:   Recebe uma instancia das configuracoes
             :param debug:           Parametro de definição de debug
         """
         # Core
         self.debug = debug
         self.jenkins = jenkins
+        self.config_manger = configuration
 
-        # Gerenciadores
-        self.job_manager = job
-        self.role_manager = role
-        self.config_manger = config
-        self.folder_manager = folder
+        # Instancias
+        self.role_manager = RoleStrategy(jenkins=self.jenkins, debug=self.debug)
+        self.folder_manager = FoldersPlus(jenkins=self.jenkins, debug=self.debug)
+        self.job_manager = JobManager(jenkins=self.jenkins, configuration=self.config_manger.load_job_config(), debug=self.debug)
 
     def __format_perms__(self, permissions: list = None) -> str:
         """
@@ -41,46 +43,52 @@ class Automation:
         #
         return data
 
+    # ================================================================================================================ #
+    #                                       Funcoes de automação                                                       #
+    # ================================================================================================================ #
+
     def create_project_roles(self, project: str = None) -> None:
         """
             Funcao para criacao do padrao de roles de um projeto especificado.
             :param project:         Recebe o nome do projeto
             :return:                Retorna Nada
         """
+        # Core
+        role_config = self.config_manger.load_config()['role_strategy']
 
         print('Criando role de view')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(self.config_manger['view_role']['name']).replace('<project>', project),
-            pattern=str(self.config_manger['view_role']['pattern']).replace('<project>', project),
-            perm=str(self.__format_perms__(self.config_manger['view_role']['permissionsIds'])),
+            name=str(role_config['view_role']['name']).replace('<project>', project),
+            pattern=str(role_config['view_role']['pattern']).replace('<project>', project),
+            perm=str(self.__format_perms__(role_config['view_role']['permissionsIds'])),
             overwrite=True
         )
 
         print('Criando role de build')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(self.config_manger['build_role']['name']).replace('<project>', project),
-            pattern=str(self.config_manger['build_role']['pattern']).replace('<project>', project),
-            perm=str(self.__format_perms__(self.config_manger['build_role']['permissionsIds'])),
+            name=str(role_config['build_role']['name']).replace('<project>', project),
+            pattern=str(role_config['build_role']['pattern']).replace('<project>', project),
+            perm=str(self.__format_perms__(role_config['build_role']['permissionsIds'])),
             overwrite=True
         )
 
         print('Criando role de testes')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(self.config_manger['tests_role']['name']).replace('<project>', project),
-            pattern=str(self.config_manger['tests_role']['pattern']).replace('<project>', project),
-            perm=str(self.__format_perms__(self.config_manger['tests_role']['permissionsIds'])),
+            name=str(role_config['tests_role']['name']).replace('<project>', project),
+            pattern=str(role_config['tests_role']['pattern']).replace('<project>', project),
+            perm=str(self.__format_perms__(role_config['tests_role']['permissionsIds'])),
             overwrite=True
         )
 
         print('Criando roles de deploy (1/2)')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(self.config_manger['deploy_role']['name']).replace('<project>', project),
-            pattern=str(self.config_manger['deploy_role']['pattern']).replace('<project>', project),
-            perm=str(self.__format_perms__(self.config_manger['deploy_role']['permissionsIds'])),
+            name=str(role_config['deploy_role']['name']).replace('<project>', project),
+            pattern=str(role_config['deploy_role']['pattern']).replace('<project>', project),
+            perm=str(self.__format_perms__(role_config['deploy_role']['permissionsIds'])),
             overwrite=True
         )
 
@@ -88,10 +96,9 @@ class Automation:
         for env in self.role_manager.environments:
             self.role_manager.create_role(
                 type='projectRoles',
-                name=str(self.config_manger['deploy_role_env']['name']).replace('<project>', project).replace('<env>', env),
-                pattern=str(self.config_manger['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>',
-                                                                                                             env),
-                perm=str(self.__format_perms__(self.config_manger['deploy_role_env']['permissionsIds'])),
+                name=str(role_config['deploy_role_env']['name']).replace('<project>', project).replace('<env>', env),
+                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>', env),
+                perm=str(self.__format_perms__(role_config['deploy_role_env']['permissionsIds'])),
                 overwrite=True
             )
         # End of function
@@ -102,15 +109,17 @@ class Automation:
             :param project:     Recebe o nome do projeto
             :return:            Retorna Nada
         """
+        # Core
+        role_config = self.config_manger.load_config()['role_strategy']
 
         # Dynamic project roles name list generation (don't blame me)
         role_list = []
-        for item in list(self.config_manger.keys()):
-            if 'env' not in self.config_manger[item]['name']:
-                role_list.append(str(self.config_manger[item]['name']).replace('<project>', project))
+        for item in list(role_config.keys()):
+            if 'env' not in role_config[item]['name']:
+                role_list.append(str(role_config[item]['name']).replace('<project>', project))
             else:
                 for env in self.role_manager.environments:
-                    role_list.append(str(self.config_manger[item]['name']).replace('<project>', project).replace('<env>', env))
+                    role_list.append(str(role_config[item]['name']).replace('<project>', project).replace('<env>', env))
                 continue
             continue
         #
@@ -128,34 +137,32 @@ class Automation:
             :return:                            Retorna nada
         """
         # Core
-        header = {"Content-Type": "text/xml"}
-
-        # Carrega configurações de job
-        global_config = Configurator()
-        xml = global_config.load_job_config()
-
-        # Controle
         name = repositorio.split('/')[-1].split('.', 1)[0]
-        path = "{0}/job/{1}/job/deploy/job/<env>/createItem?name={2}".format(self.jenkins.getBUrl(), projeto, name)
+        path = "/job/{0}/job/deploy/job/<env>".format(projeto)
 
         #
-        for env in self.jenkins.getEnvironments():
+        for env in self.jenkins.get_environments():
             print("Criando job de deploy {0} para {1}...".format(name, env), end='')
-            response = requests.post(url=path.replace('<env>', env), headers=header, data=xml)
-            if response.status_code in [200, 201]:
-                print('concluido com sucesso!')
-            else:
-                print("falhou...(codigo: {0})".format(response.status_code))
-            pass
+            response = self.job_manager.create_job(projeto=projeto, caminho=path.replace('<env>', env), repositorio=repositorio)
+            self.job_manager.validate(status_code=response.status_code, job=name, env=env)
+        #
         pass
 
     def delete_deploy_jobs(self, projeto: str = None, repositorio: str = None) -> None:
+        # Controle
+        name = repositorio.split('/')[-1].split('.', 1)[0]
+        path = "/job/{0}/job/deploy/job/<env>".format(projeto)
+
+        for env in self.jenkins.get_environments():
+            print("Deletando job de deploy {0} para {1}...".format(name, env), end='')
+            response = self.job_manager.delete_job(caminho=path.replace('<env>', env), repositorio=repositorio)
+            self.job_manager.validate(status_code=response.status_code, job=name, env=env)
+        #
         pass
 
     def create_project_structure(self, project: str = None) -> None:
         # Leitura de configurações
-        config = Configurator()
-        structure = config.load_config()['folder_structure']
+        structure = self.config_manger.load_config()['folder_structure']
         folder_list = [item.replace('<project>', project) for item in structure]
 
         # Itera lista e cria pastas
@@ -164,29 +171,29 @@ class Automation:
                 print('Criando pasta: {0}...'.format(folder.split('/')[-1]), end='')
             #
             if len(folder.split('/')) < 2:
-                bUrl = '{0}/createItem'.format(self.jenkins.get_bUrl())
+                bUrl = '/createItem'.format()
                 name = str(folder.split('/')[-1])
                 status = self.folder_manager.create_structure(path=bUrl, name=name)
                 self.folder_manager.validate(status_code=status.status_code, folder=folder)
 
             elif len(folder.split('/')) < 3:
                 name = str(folder.split('/')[-1])
-                bUrl = '{0}/job/{1}/createItem'.format(self.jenkins.get_bUrl(), folder.split('/')[0])
+                bUrl = '/job/{0}/createItem'.format(folder.split('/')[0])
                 status = self.folder_manager.create_structure(path=bUrl, name=name)
                 self.folder_manager.validate(status_code=status.status_code, folder=folder)
 
             elif len(folder.split('/')) < 4:
-                bUrl = self.jenkins.get_bUrl()
+                bUrl = ''
                 for item in folder.split('/')[:2]:
                     bUrl += '/job/{0}'.format(item)
                 bUrl += '/createItem'
 
                 if '<env>' in folder.split('/')[-1]:
-                    for env in self.jenkins.getEnvironments():
+                    for env in self.jenkins.get_environments():
                         print('Criando pasta: {0}...'.format(folder.split('/')[-1].replace('<env>', env)), end='')
                         name = str(folder.split('/')[-1]).replace('<env>', env)
                         status = self.folder_manager.create_structure(path=bUrl, name=name)
-                        self.folder_manager.validate(status_code=status.status_code, folder=folder, env= env)
+                        self.folder_manager.validate(status_code=status.status_code, folder=folder, env=env)
                     #
                     continue
                 else:
@@ -201,6 +208,11 @@ class Automation:
         # End of function
 
     def delete_project_structure(self, project: str = None) -> None:
+        # Core
+        response = self.folder_manager.delete_structure(name=project)
+        #
+        print("Deletando estrutura do projeto {0}...".format(project), end='')
+        self.folder_manager.validate(status_code=response.status_code, folder=project)
         pass
 
     # ================================================================================================================ #
@@ -217,7 +229,7 @@ class Automation:
             type=data['type'],
             name=data['name'],
             pattern=data['pattern'],
-            perm=str(self.__format_perms__(self.config['view_role']['permissionsIds'])),
+            perm=str(self.__format_perms__(self.config_manger['view_role']['permissionsIds'])),
             overwrite=data['overwrite']
         )
         pass
@@ -229,3 +241,11 @@ class Automation:
             :return:            Retorna nada
         """
         self.role_manager.delete_role(type=data['type'], name_list=data['name'])
+
+    def create_job(self, data: dict = None) -> None:
+        pass
+
+    def delete_job(self, data: dict = None) -> None:
+        pass
+
+    # ================================================================================================================ #

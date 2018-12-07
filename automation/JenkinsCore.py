@@ -18,10 +18,10 @@ class JenkinsCore:
         self.environment = ['dev', 'sit', 'uat', 'prd']
 
         # Generate basic-auth
-        self.bAuth = '{0}:{1}'.format(self.username, self.password)
+        self.b_auth = '{0}:{1}'.format(self.username, self.password)
 
     # =============================================================================================== #
-    #                                           Metodos
+    #                                           Métodos
     # =============================================================================================== #
 
     def get_url(self) -> str:
@@ -33,11 +33,13 @@ class JenkinsCore:
     def get_passwd(self) -> str:
         return self.password
 
-    def get_bAuth(self) -> str:
-        return self.bAuth
+    def get_bauth(self) -> str:
+        return self.b_auth
 
-    def getEnvironments(self) -> list:
+    def get_environments(self) -> list:
         return self.environment
 
-    def get_bUrl(self) -> list:
-        return "{0}@{1}".format(self.get_bAuth(), self.get_url())
+    def get_burl(self) -> list:
+        return "{0}@{1}".format(self.get_bauth(), self.get_url())
+
+    # =============================================================================================== #

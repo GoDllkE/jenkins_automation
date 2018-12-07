@@ -54,6 +54,8 @@ pipeline {
                     steps {
                         script {
                             sh "./dist/automation --create=project --name=teste_prj_automacao --debug"
+                            sh "./dist/automation --create=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git"
+                            sh "./dist/automation --delete=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git"
                             sh "./dist/automation --delete=project --name=teste_prj_automacao --debug"
                         }
                     }
@@ -80,6 +82,12 @@ pipeline {
                         classifier: 'python37',
                         file:       "automation/resources/config.yaml",
                         type:       'yaml'
+                    ],
+                    [
+                        artifactId: "jenkins_${NAME}_job_config",
+                        classifier: 'python37',
+                        file:       "automation/resources/job_config.xml",
+                        type:       'xml'
                     ]]
                 )
             }

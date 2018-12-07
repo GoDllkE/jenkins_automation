@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='automation',
-    version='3.12.0',
+    version='4.0.0',
     packages=["automation"],
     url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
     download_url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/archive/master.zip',

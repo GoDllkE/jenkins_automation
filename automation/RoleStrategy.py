@@ -4,10 +4,6 @@ import requests
 # Internal imports
 from automation.JenkinsCore import JenkinsCore
 
-# =============================================================================================== #
-#                                           Classe
-# =============================================================================================== #
-
 
 class RoleStrategy:
     """
@@ -21,8 +17,8 @@ class RoleStrategy:
         """
         self.debug = debug
         self.jenkins = jenkins
-        self.environments = self.jenkins.getEnvironments()
-        self.bUrl = 'http://{0}/role-strategy/strategy'.format(self.jenkins.get_bUrl())
+        self.environments = self.jenkins.get_environments()
+        self.bUrl = 'http://{0}/role-strategy/strategy'.format(self.jenkins.get_burl())
 
     def get_role(self, type: str = None, name: str = None) -> requests:
         """
@@ -49,8 +45,7 @@ class RoleStrategy:
             self.analise_content(data=data, response=response)
         return response
 
-    def create_role(self, type: str = None, name: str = None, pattern: str = None, perm: str = None,
-                    overwrite: bool = False) -> requests:
+    def create_role(self, type: str = None, name: str = None, pattern: str = None, perm: str = None, overwrite: bool = False) -> requests:
         """
             Funcao para criacao das roles
             :param type:        Recebe o tipo da role
@@ -85,6 +80,10 @@ class RoleStrategy:
     def unassing_role(self):
         pass
 
+    # =============================================================================================== #
+    #                                     Miscellaneous                                               #
+    # =============================================================================================== #
+
     def analise_content(self, data: dict = None, response: requests = None) -> None:
         """
             Funcao para debug das funcoes
@@ -99,4 +98,4 @@ class RoleStrategy:
         print("\t- Code: {0}".format(response.status_code))
         print("\t- Content: {0}".format(str(response.content)))
 
-# =============================================================================================== #
+    # =============================================================================================== #

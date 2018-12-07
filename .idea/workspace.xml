@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Automation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/Configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Configurator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/FoldersPlus.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/FoldersPlus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/JenkinsCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JenkinsCore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/JobManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JobManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/RoleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/RoleStrategy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,52 +28,78 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="147" column="39" lean-forward="true" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
+            <state relative-caret-position="273">
+              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
               <folding>
-                <element signature="e#18#27#0" expanded="true" />
+                <element signature="e#18#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/Automation.py">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="154" column="69" lean-forward="true" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="11" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Help.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automation/Help.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configurator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#263#616#0" />
-                <element signature="e#618#1131#0" />
-                <element signature="e#1206#3665#0" />
-                <element signature="e#3740#4706#0" />
-                <element signature="e#4928#6041#0" />
-                <element signature="e#6788#6792#0" />
+                <element signature="e#2#11#0" expanded="true" />
+                <element signature="e#563#1138#0" />
+                <element signature="e#1187#1723#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FoldersPlus.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FoldersPlus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
-                <element signature="e#1030#1096#0" />
-                <element signature="e#4029#4542#0" />
-                <element signature="e#4646#5706#0" />
+                <element signature="e#18#33#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleStrategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="63" column="67" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -89,8 +122,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Gustavo Toledo de Oliveira" />
         <option value="Gustavo Toledo de Oliveira &lt;gustavo.toledo@compasso.com.br&gt;" />
+        <option value="Gustavo Toledo de Oliveira" />
         <option value="gustavo.toledo" />
         <option value="Gustavo Toledo" />
         <option value="gustavo.toledo@compasso.com.br" />
@@ -109,29 +142,29 @@
         <option value="$PROJECT_DIR$/docker/build_scripts/data_collector.sh" />
         <option value="$PROJECT_DIR$/docker/build_scripts/py-parser.sh" />
         <option value="$PROJECT_DIR$/KubernetesPod.yaml" />
-        <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/automation/jobCreator.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
-        <option value="$PROJECT_DIR$/automation/Help.py" />
         <option value="$PROJECT_DIR$/automation/JobCreator.py" />
-        <option value="$PROJECT_DIR$/automation/Configurator.py" />
-        <option value="$PROJECT_DIR$/automation/JobManager.py" />
-        <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
-        <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/automation/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/automation/JobManager.py" />
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
+        <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
+        <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
         <option value="$PROJECT_DIR$/automation/Automation.py" />
+        <option value="$PROJECT_DIR$/automation/Configurator.py" />
+        <option value="$PROJECT_DIR$/automation/__init__.py" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/automation/Help.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-18" />
-    <option name="y" value="-1095" />
+    <option name="x" value="1637" />
+    <option name="y" value="-325" />
     <option name="width" value="1126" />
     <option name="height" value="743" />
   </component>
@@ -158,6 +191,11 @@
               <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
               <item name="automation" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jenkins_automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,7 +267,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automation/__init__.py" />
-      <option name="PARAMETERS" value="--delete=project --name=teste --repo=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git" />
+      <option name="PARAMETERS" value="--delete=project --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -275,27 +313,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Atualizando versão e dados do projeto">
-      <created>1543430031898</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1543430031898</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Adicionando opcao debug ao pipeline">
-      <created>1543430104620</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1543430104621</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Alterando passos para exibir logs">
-      <created>1543430470090</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1543430470090</updated>
     </task>
     <task id="LOCAL-00063" summary="Atualizando estrutura por questão de compatibilidade">
       <created>1543442577184</created>
@@ -619,11 +636,32 @@
       <option name="project" value="LOCAL" />
       <updated>1544124080967</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Simplificando funcoes afim de cumprir propositos">
+      <created>1544126030675</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1544126030676</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Refatorando em prol de proposito">
+      <created>1544126062322</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1544126062322</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Atualizando arquivos do projeto">
+      <created>1544126082246</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1544126082246</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-297" y="-1088" width="1936" height="1066" extended-state="6" />
+    <frame x="1358" y="-320" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Jenkins" order="3" />
@@ -631,12 +669,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50073206" side_tool="true" weight="0.3022508" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.17130621" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.3254818" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329582" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39871383" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -651,9 +689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Corrigindo contexto do pipeline docker." />
-    <MESSAGE value="Corrigindo contexto do docker." />
-    <MESSAGE value="Corrigindo contexto do docker e caminho." />
     <MESSAGE value="Corrigindo syntax" />
     <MESSAGE value="Adicionado testes da imagem docker" />
     <MESSAGE value="Substituindo imagem base na tentativa de burlar os bloqueios da empresa aos repositorios oficiais do debian." />
@@ -676,11 +711,14 @@
     <MESSAGE value="Atualizando funções para centralização e cumprimento do proposito" />
     <MESSAGE value="Criação de classe gerenciadora de configuração" />
     <MESSAGE value="Adicionando linhas de exemplo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando linhas de exemplo" />
+    <MESSAGE value="Simplificando funcoes afim de cumprir propositos" />
+    <MESSAGE value="Refatorando em prol de proposito" />
+    <MESSAGE value="Atualizando arquivos do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivos do projeto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -692,7 +730,7 @@
         <state relative-caret-position="1581">
           <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -710,6 +748,10 @@
           <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding>
             <element signature="e#2#11#0" expanded="true" />
+            <element signature="e#532#979#0" />
+            <element signature="e#1081#1378#0" />
+            <element signature="e#1352#1865#0" />
+            <element signature="e#1969#3029#0" />
           </folding>
         </state>
       </provider>
@@ -719,7 +761,7 @@
         <state relative-caret-position="2244">
           <caret line="143" column="37" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,7 +785,7 @@
         <state relative-caret-position="765">
           <caret line="55" column="69" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="69" />
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,7 +805,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,20 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="150" column="87" selection-start-line="150" selection-start-column="87" selection-end-line="150" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python37/Lib/site-packages/requests/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1945" />
@@ -961,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KubernetesPod.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -975,99 +996,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/JenkinsCore.py">
+    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="33" column="65" lean-forward="true" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
-          <folding>
-            <element signature="e#2#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state>
+          <caret selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="289">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#2#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="147" column="39" lean-forward="true" selection-start-line="147" selection-start-column="39" selection-end-line="147" selection-end-column="39" />
-          <folding>
-            <element signature="e#18#27#0" expanded="true" />
+            <element signature="e#532#979#0" />
+            <element signature="e#1081#1378#0" />
+            <element signature="e#1352#1865#0" />
+            <element signature="e#1969#3029#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="63" column="67" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="67" />
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+            <element signature="e#379#450#1" />
+            <element signature="e#518#870#0" />
+            <element signature="e#518#664#1" />
+            <element signature="e#952#1445#0" />
+            <element signature="e#952#1206#1" />
+            <element signature="e#1514#1935#0" />
+            <element signature="e#1514#1707#1" />
+            <element signature="e#2104#2815#0" />
+            <element signature="e#2104#2518#1" />
+            <element signature="e#2905#3434#0" />
+            <element signature="e#2905#3185#1" />
+            <element signature="e#3471#3475#0" />
+            <element signature="e#3514#3518#0" />
+            <element signature="e#3613#4126#0" />
+            <element signature="e#3613#3837#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/JenkinsCore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/Automation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+        <state relative-caret-position="714">
+          <caret line="247" column="14" selection-start-line="247" selection-start-column="14" selection-end-line="247" selection-end-column="14" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#263#616#0" />
+            <element signature="e#412#1038#0" />
             <element signature="e#618#1131#0" />
             <element signature="e#1206#3665#0" />
             <element signature="e#3740#4706#0" />
-            <element signature="e#4928#6041#0" />
-            <element signature="e#6788#6792#0" />
+            <element signature="e#5931#7011#0" />
+            <element signature="e#7114#7118#0" />
+            <element signature="e#7337#9704#0" />
+            <element signature="e#9535#9539#0" />
+            <element signature="e#9538#10055#0" />
+            <element signature="e#10119#10427#0" />
+            <element signature="e#11463#11467#0" />
+            <element signature="e#11534#11538#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="98" column="14" lean-forward="true" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
-            <element signature="e#1030#1096#0" />
-            <element signature="e#4029#4542#0" />
-            <element signature="e#4646#5706#0" />
+            <element signature="e#18#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding>
+            <element signature="e#2#11#0" expanded="true" />
+            <element signature="e#563#1138#0" />
+            <element signature="e#1187#1723#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="e#18#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="154" column="69" lean-forward="true" selection-start-line="154" selection-start-column="69" selection-end-line="154" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
         </state>
       </provider>
     </entry>

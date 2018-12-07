@@ -76,6 +76,7 @@
       <w>codig</w>
       <w>codigo</w>
       <w>coleta</w>
+      <w>collpased</w>
       <w>compatibilidade</w>
       <w>compilação</w>
       <w>completo</w>
@@ -240,6 +241,7 @@
       <w>linhas</w>
       <w>lista</w>
       <w>livelo</w>
+      <w>localizar</w>
       <w>lugares</w>
       <w>manipulacao</w>
       <w>mapeamento</w>
@@ -252,6 +254,8 @@
       <w>momento</w>
       <w>monta</w>
       <w>montada</w>
+      <w>mtodos</w>
+      <w>métodos</w>
       <w>navega</w>
       <w>necessidade</w>
       <w>nele</w>
@@ -269,6 +273,7 @@
       <w>opcao</w>
       <w>opcional</w>
       <w>opcoes</w>
+      <w>operação</w>
       <w>opções</w>
       <w>ordem</w>
       <w>outras</w>
@@ -342,6 +347,7 @@
       <w>retorno</w>
       <w>rnatp</w>
       <w>rnetp</w>
+      <w>rnetpo</w>
       <w>rntp</w>
       <w>roadmap</w>
       <w>rodar</w>
