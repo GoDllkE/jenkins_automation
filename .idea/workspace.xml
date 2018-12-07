@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="Definindo padrões. Sem necessidade de parametrização de alguns itens">
+    <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="Atualizando dados do projeto.">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +27,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            <state relative-caret-position="323">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -46,11 +54,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="55" column="102" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="102" />
+            <state relative-caret-position="500">
+              <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -133,7 +162,6 @@
         <option value="$PROJECT_DIR$/docker/build_scripts/data_collector.sh" />
         <option value="$PROJECT_DIR$/docker/build_scripts/py-parser.sh" />
         <option value="$PROJECT_DIR$/KubernetesPod.yaml" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/automation/jobCreator.py" />
         <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
         <option value="$PROJECT_DIR$/automation/JobCreator.py" />
@@ -141,7 +169,6 @@
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
-        <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/automation/Help.py" />
         <option value="$PROJECT_DIR$/bin/automation" />
         <option value="$PROJECT_DIR$/automation/JobManager.py" />
@@ -151,7 +178,9 @@
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/automation/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
       </list>
     </option>
   </component>
@@ -182,8 +211,7 @@
             <path>
               <item name="jenkins_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
-              <item name="automation" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,27 +329,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Corrigindo blocos do pipeline. Adicionando novo container para build de imagens docker">
-      <created>1543504039977</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1543504039977</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Corrigindo blocos do pipeline.">
-      <created>1543504088114</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1543504088114</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Corrigindo blocos e sessões do pipeline.">
-      <created>1543504406307</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1543504406307</updated>
     </task>
     <task id="LOCAL-00077" summary="Corrigindo blocos e sessões do pipeline.">
       <created>1543504699933</created>
@@ -645,20 +652,40 @@
       <option name="project" value="LOCAL" />
       <updated>1544209451895</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Atualizando dados do projeto.">
+      <created>1544209502256</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1544209502256</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Adicionando arquivo de configuração a imagem docker.">
+      <created>1544210077039</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1544210077039</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Adicionando arquivo de configuraçao a lista de upload para o nexus.">
+      <created>1544210097548</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1544210097548</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Jenkins" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15625" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50073206" side_tool="true" weight="0.3019272" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.21627408" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.329582" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" weight="0.21627408" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
@@ -698,9 +725,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Atualizando recursos da automação (role, pattern, directory structure)" />
-    <MESSAGE value="Atualizando mensagem de sucesso." />
-    <MESSAGE value="Adicionado arquivo template de configuraçao dos novos jobs." />
     <MESSAGE value="Atualizando versão do modulo" />
     <MESSAGE value="Adicionado feature de requisição bUrl" />
     <MESSAGE value="Atualizado metodo de formação do bUrl" />
@@ -723,7 +747,10 @@
     <MESSAGE value="Adicionando feature da automação de importação de projeto do bitbucket" />
     <MESSAGE value="Adicionando função de importação da nova feature." />
     <MESSAGE value="Redefinindo lista de argumentos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Redefinindo lista de argumentos." />
+    <MESSAGE value="Atualizando dados do projeto." />
+    <MESSAGE value="Adicionando arquivo de configuração a imagem docker." />
+    <MESSAGE value="Adicionando arquivo de configuraçao a lista de upload para o nexus." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando arquivo de configuraçao a lista de upload para o nexus." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -998,23 +1025,6 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="799">
-            <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
@@ -1036,13 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1108,13 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KubernetesPod.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1122,10 +1118,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="55" column="102" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="102" />
+        <state relative-caret-position="500">
+          <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -41,6 +41,17 @@ Requisitos de construção do modulo:
 
 
 ### Changelog
+
+**Versão: 4.2.0**
+- Adicionado feature de importação de projeto do stash para o jenkins.
+- Atualizando arquivos de configuração.
+
+**Versão: 4.0.2**
+- Modulo completamente refatorado
+- Alterado fluxo de chamadas e dados utilizados.
+- Corrigido função de interfacionamento da automação.
+- Corrigido nomeclatura de funções para entrada de nova feature.
+
 **Versão: 3.10.8**
 - Removido mensagens desnecessárias.
 - Alterado entrypoint da imagem por compatibilidade do pipeline.
