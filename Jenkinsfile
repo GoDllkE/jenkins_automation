@@ -53,10 +53,10 @@ pipeline {
                 stage('Teste composto') {
                     steps {
                         script {
-                            sh "./dist/automation --create=project --name=teste_prj_automacao --debug"
-                            sh "./dist/automation --create=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git"
-                            sh "./dist/automation --delete=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pi/partners-teste.git"
-                            sh "./dist/automation --delete=project --name=teste_prj_automacao --debug"
+                            sh "./dist/automation --create=project --name=teste_prj_automacao --url=https://stash.pontoslivelo.com.br/projects/PUP --debug"
+                            sh "./dist/automation --create=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git"
+                            sh "./dist/automation --delete=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git"
+                            sh "./dist/automation --delete=project --name=teste_prj_automacao --url=https://stash.pontoslivelo.com.br/projects/PUP --debug"
                         }
                     }
                 }
