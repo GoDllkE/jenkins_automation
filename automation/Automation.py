@@ -144,8 +144,12 @@ class Automation:
 
         #
         for env in self.jenkins.get_environments():
+            # Atualiza job de deploy
+            configuration = self.config_manger.load_job_config().replace('#cluster#', "\"{0}\"".format(env))
+            configuration = configuration.replace('#git_url#', "\"{0}\"".format(repositorio))
+
             print("Criando job de deploy {0} para {1}...".format(name, env), end='')
-            response = self.job_manager.create_deploy_job(projeto=projeto, caminho=path.replace('<env>', env), repositorio=repositorio)
+            response = self.job_manager.create_deploy_job(caminho=path.replace('<env>', env), configuration=configuration, repositorio=repositorio)
             self.job_manager.validate(status_code=response.status_code, job=name, env=env)
         #
         pass

@@ -57,13 +57,13 @@ def automate():
                     action['type'] = value
                 elif opt in ['-n', '--name']:
                     action['name'] = value
-                elif opt in ['-e', 'env', '--environment']:
+                elif opt in ['-e', '--env', '--environment']:
                     action['env'] = value
                 elif opt in ['-p', '--regex', '--pattern']:
                     action['pattern'] = value
                 elif opt in ['-o', '--overwrite']:
                     action['overwrite'] = True
-                elif opt in ['-r', 'repo', '--repository']:
+                elif opt in ['-r', '--repo', '--repository']:
                     action['repo'] = value
                 elif opt in ['-u', '--url', '--projeto_stash_url']:
                     action['url'] = value

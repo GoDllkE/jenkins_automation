@@ -15,14 +15,14 @@ class JobManager:
         self.project_configuration = configuration.load_project_config()
         self.b_url = b_url = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bauth(), self.jenkins.get_url())
 
-    def create_deploy_job(self, projeto: str = None, caminho: str = None, repositorio: str = None) -> requests:
+    def create_deploy_job(self, configuration: str = None, caminho: str = None, repositorio: str = None) -> requests:
         # Core
         header = {"Content-Type": "text/xml"}
 
         name = repositorio.split('/')[-1].split('.', 1)[0]
         path = "{0}{1}/createItem?name={2}".format(self.b_url, caminho, name)
 
-        response = requests.post(url=path, headers=header, data=self.job_configuration)
+        response = requests.post(url=path, headers=header, data=configuration)
         if self.debug:
             self.analise_content(response=response, data=dict(headers=header, name=name, config=self.job_configuration))
         return response

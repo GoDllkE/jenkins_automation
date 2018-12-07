@@ -9,7 +9,7 @@
   </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.60">
     <script>@Library(&apos;deployer&apos;)_
-deployer()</script>
+deployer clusterK8s: #cluster#, git_url: #git_url#</script>
     <sandbox>true</sandbox>
   </definition>
   <triggers/>
