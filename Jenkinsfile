@@ -88,6 +88,12 @@ pipeline {
                         classifier: 'python37',
                         file:       "automation/resources/job_config.xml",
                         type:       'xml'
+                    ],
+                    [
+                        artifactId: "jenkins_${NAME}_project_config",
+                        classifier: 'python37',
+                        file:       "automation/resources/project_config.xml",
+                        type:       'xml'
                     ]]
                 )
             }
