@@ -3,15 +3,16 @@ import os
 import requests
 
 from automation.JenkinsCore import JenkinsCore
-
+from automation.Configurator import Configurator
 
 class JobManager:
 
-    def __init__(self, jenkins: JenkinsCore, configuration: str = None, debug: bool = None):
+    def __init__(self, jenkins: JenkinsCore, configuration: Configurator = None, debug: bool = None):
         # Core
         self.debug = debug
         self.jenkins = jenkins
-        self.job_configuration = configuration
+        self.job_configuration = configuration.load_job_config()
+        self.project_configuration = configuration.load_project_config()
         self.b_url = b_url = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bauth(), self.jenkins.get_url())
 
     def create_deploy_job(self, projeto: str = None, caminho: str = None, repositorio: str = None) -> requests:
@@ -36,6 +37,20 @@ class JobManager:
             self.analise_content(response=response, data={})
         return response
 
+    def import_project_jobs(self, projeto: str = None, data: dict = None):
+        # Core
+        header = {"Content-Type": "text/xml"}
+
+        # Data manipulation
+        path = "{0}/job/{1}/createItem?name=build".format(self.b_url, projeto)
+        self.project_configuration = self.project_configuration.replace('#project_owner#', data['project_owner'])
+        self.project_configuration = self.project_configuration.replace('#credencial#', data['credencial'])
+        self.project_configuration = self.project_configuration.replace('#invervalo#', str(data['intervalo']))
+
+        response = requests.post(url=path, headers=header, data=self.project_configuration)
+        if self.debug:
+            self.analise_content(response=response, data=dict(headers=header, config=self.project_configuration))
+        return response
 
     # ================================================================================================================ #
     #                                                 Miscellaneous                                                    #
