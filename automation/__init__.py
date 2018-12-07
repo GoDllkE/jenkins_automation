@@ -53,18 +53,24 @@ def automate():
                 sys.exit(0)
             else:
                 # Processa dados secundarios
-                if opt in ['-t', '--type']:
+                if opt in ['-t', '--type', '--role-type']:
                     action['type'] = value
                 elif opt in ['-n', '--name']:
                     action['name'] = value
-                elif opt in ['-e', '--environment']:
+                elif opt in ['-e', 'env', '--environment']:
                     action['env'] = value
-                elif opt in ['-p', '--pattern']:
+                elif opt in ['-p', '--regex', '--pattern']:
                     action['pattern'] = value
                 elif opt in ['-o', '--overwrite']:
                     action['overwrite'] = True
-                elif opt in ['-r', '--repository']:
+                elif opt in ['-r', 'repo', '--repository']:
                     action['repo'] = value
+                elif opt in ['-u', '--url', '--projeto_stash_url']:
+                    action['url'] = value
+                elif opt in ['-i', '--intervalo']:
+                    action['intervalo'] = value
+                elif opt in ['-s', '--credential']:
+                    action['credenciais'] = value
                 else:
                     continue
     except (getopt.GetoptError, ValueError, KeyError, IndexError) as error:
@@ -91,7 +97,7 @@ def automate():
         if 'project' in action['dado']:
             auto.create_project_structure(project=action['name'])
             auto.create_project_roles(project=action['name'])
-            # auto.import_project_jobs(project=action['name'])
+            auto.import_project_builds(project=action['name'], dados=action)
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'job' in action['dado']:
