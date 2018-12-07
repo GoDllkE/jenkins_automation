@@ -14,7 +14,7 @@ class JobManager:
         self.job_configuration = configuration
         self.b_url = b_url = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bauth(), self.jenkins.get_url())
 
-    def create_job(self, projeto: str = None, caminho: str = None, repositorio: str = None) -> requests:
+    def create_deploy_job(self, projeto: str = None, caminho: str = None, repositorio: str = None) -> requests:
         # Core
         header = {"Content-Type": "text/xml"}
 
@@ -26,7 +26,7 @@ class JobManager:
             self.analise_content(response=response, data=dict(headers=header, name=name, config=self.job_configuration))
         return response
 
-    def delete_job(self, caminho: str = None, repositorio: str = None) -> requests:
+    def delete_deploy_job(self, caminho: str = None, repositorio: str = None) -> requests:
         # Core
         name = repositorio.split('/')[-1].split('.', 1)[0]
         #

@@ -143,7 +143,7 @@ class Automation:
         #
         for env in self.jenkins.get_environments():
             print("Criando job de deploy {0} para {1}...".format(name, env), end='')
-            response = self.job_manager.create_job(projeto=projeto, caminho=path.replace('<env>', env), repositorio=repositorio)
+            response = self.job_manager.create_deploy_job(projeto=projeto, caminho=path.replace('<env>', env), repositorio=repositorio)
             self.job_manager.validate(status_code=response.status_code, job=name, env=env)
         #
         pass
@@ -155,7 +155,7 @@ class Automation:
 
         for env in self.jenkins.get_environments():
             print("Deletando job de deploy {0} para {1}...".format(name, env), end='')
-            response = self.job_manager.delete_job(caminho=path.replace('<env>', env), repositorio=repositorio)
+            response = self.job_manager.delete_deploy_job(caminho=path.replace('<env>', env), repositorio=repositorio)
             self.job_manager.validate(status_code=response.status_code, job=name, env=env)
         #
         pass
