@@ -9,10 +9,12 @@ class Configurator:
         # Variaveis de ambiente de controle
         self.global_environment_path = 'JENKINS_AUTOMATION_CONFIGURATION_PATH'
         self.global_job_environment_path = 'JENKINS_AUTOMATION_JOB_CONFIGURATION_PATH'
+        self.global_project_environment_path = 'JENKINS_AUTOMATION_PROJECT_CONFIGURATION_PATH'
 
         # Caminhos padroes de arquivos de configuracao
         self.default_path_configuration = '/etc/jenkins_automations/config.yaml'
         self.default_job_path_configuration = '/etc/jenkins_automations/job_config.xml'
+        self.default_project_path_configuration = '/etc/jenkins_automations/project_config.xml'
         pass
 
     def load_config(self) -> dict:
@@ -28,7 +30,7 @@ class Configurator:
                 return yaml.load(open('automation/resources/config.yaml'))['projects']
         pass
 
-    def load_job_config(self) -> dict:
+    def load_job_config(self) -> str:
         if os.environ.get(self.global_job_environment_path):
             return open(os.environ.get(self.global_job_environment_path)).read()
         elif os.path.isfile(self.default_job_path_configuration):
@@ -39,6 +41,19 @@ class Configurator:
                 return open('resources/job_config.xml').read()
             else:
                 return open('automation/resources/job_config.xml').read()
+        pass
+
+    def load_project_config(self) -> str:
+        if os.environ.get(self.global_project_environment_path):
+            return open(os.environ.get(self.global_project_environment_path)).read()
+        elif os.path.isfile(self.default_project_path_configuration):
+            return open(self.default_project_path_configuration).read()
+        else:
+            # Internal load
+            if os.path.isfile('resources/project_config.xml'):
+                return open('resources/project_config.xml').read()
+            else:
+                return open('automation/resources/project_config.xml').read()
         pass
 
     def get_collpased_execution_parameters(self) -> str:
