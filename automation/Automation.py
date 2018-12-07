@@ -1,3 +1,5 @@
+import sys
+
 import requests
 
 # Importa todos os modulos
@@ -25,7 +27,7 @@ class Automation:
         # Instancias
         self.role_manager = RoleStrategy(jenkins=self.jenkins, debug=self.debug)
         self.folder_manager = FoldersPlus(jenkins=self.jenkins, debug=self.debug)
-        self.job_manager = JobManager(jenkins=self.jenkins, configuration=self.config_manger.load_job_config(), debug=self.debug)
+        self.job_manager = JobManager(jenkins=self.jenkins, configuration=self.config_manger, debug=self.debug)
 
     def __format_perms__(self, permissions: list = None) -> str:
         """
@@ -213,6 +215,36 @@ class Automation:
         #
         print("Deletando estrutura do projeto {0}...".format(project), end='')
         self.folder_manager.validate(status_code=response.status_code, folder=project)
+        pass
+
+    def import_project_builds(self, project: str = None, dados: dict = None):
+        # Controle
+        data = {}
+
+        #
+        if dados.get('url'):
+            project_owner = dados['url'].split('/')[-1]
+        else:
+            if dados.get('repo'):
+                project_owner = dados['repo'].split('/')[-3]
+            else:
+                print('Erro. Dado "project_owner" nao informado.')
+                sys.exit(1)
+            pass
+
+        # Padrao de construcao
+        data.setdefault('project_owner', project_owner)
+        data.setdefault('credencial', 'jenkins-user')
+        data.setdefault('intervalo', 120000)
+
+        # dados recebidos
+        for key in list(dados.keys()):
+            data[key] = dados[key]
+
+        # Do it
+        print("Importando projeto do stash para o jenkins...", end='')
+        response = self.job_manager.import_project_jobs(projeto=project, data=data)
+        self.job_manager.validate(status_code=response.status_code, job=project)
         pass
 
     # ================================================================================================================ #
