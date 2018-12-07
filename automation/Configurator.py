@@ -57,25 +57,34 @@ class Configurator:
         pass
 
     def get_collpased_execution_parameters(self) -> str:
-        return 'cdg:rnetpo:hd'
+        return 'cdg:rnetpouikqs:hd'
 
     def get_expanded_execution_parameters(self) -> list:
         return [
             'create=',
             'delete=',
+            'get=',
+            'repo=',
             'repository=',
             'name=',
+            'env=',
             'environment=',
             'type=',
+            'role-type=',
+            'regex=',
             'pattern=',
             'overwrite=',
+            'url=',
+            'projeto_stash_url='
+            'intervalo=',
+            'credential=',
             'help',
             'debug'
         ]
 
     def validate_runtime_options(self, conteudo: dict = None) -> bool:
         if 'create' in conteudo['acao']:
-            if 'project' in conteudo['dado'] and conteudo.get('name'):
+            if 'project' in conteudo['dado'] and conteudo.get('name') and (conteudo.get('url') or conteudo.get('repo')):
                 return True
             elif 'role' in conteudo['dado'] and conteudo.get('type') and conteudo.get('name') and conteudo.get(
                     'pattern'):
