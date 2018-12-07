@@ -24,8 +24,8 @@
   </icon>
   <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.7">
     <pruneDeadBranches>true</pruneDeadBranches>
-    <daysToKeep>#diasParaManter#</daysToKeep>
-    <numToKeep>#quantidadeParaManter#</numToKeep>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>-1</numToKeep>
   </orphanedItemStrategy>
   <triggers>
     <com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger plugin="cloudbees-folder@6.7">
