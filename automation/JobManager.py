@@ -5,6 +5,7 @@ import requests
 from automation.JenkinsCore import JenkinsCore
 from automation.Configurator import Configurator
 
+
 class JobManager:
 
     def __init__(self, jenkins: JenkinsCore, configuration: Configurator = None, debug: bool = None):
@@ -87,7 +88,8 @@ class JobManager:
                 print('erro. Job "{0}" ja existe'.format(job))
         else:
             if env:
-                print('erro. Nao foi possivel criar job "{0}" (codigo: {1})'.format(job.replace('<env>', env), status_code))
+                print('erro. Nao foi possivel criar job "{0}" (codigo: {1})'.format(job.replace('<env>', env),
+                                                                                    status_code))
             else:
                 print('erro. Nao foi possivel criar job "{0}" (codigo: {1})'.format(job, status_code))
         pass
