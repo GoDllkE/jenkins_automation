@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
@@ -19,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+              <caret line="101" column="59" lean-forward="true" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -27,55 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="94" lean-forward="true" selection-start-line="59" selection-start-column="94" selection-end-line="59" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KubernetesPod.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KubernetesPod.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobManager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#2#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Configurator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="129" column="78" lean-forward="true" selection-start-line="129" selection-start-column="78" selection-end-line="129" selection-end-column="78" />
+            <state relative-caret-position="423">
+              <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -83,8 +40,8 @@
       <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/Automation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="276" selection-start-line="276" selection-end-line="276" />
+            <state relative-caret-position="-43">
+              <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -92,26 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FoldersPlus.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#18#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleStrategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-              <folding>
-                <element signature="e#18#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -129,6 +71,10 @@
     <findStrings>
       <find>env.</find>
       <find>ON_STAGE</find>
+      <find>credentials</find>
+      <find>&lt;interval&gt;</find>
+      <find>&lt;/repoOwner&gt;</find>
+      <find>interv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,17 +105,17 @@
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
         <option value="$PROJECT_DIR$/automation/Help.py" />
         <option value="$PROJECT_DIR$/bin/automation" />
-        <option value="$PROJECT_DIR$/automation/resources/project_config.xml" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
-        <option value="$PROJECT_DIR$/automation/JobManager.py" />
         <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
-        <option value="$PROJECT_DIR$/automation/Automation.py" />
         <option value="$PROJECT_DIR$/automation/Configurator.py" />
+        <option value="$PROJECT_DIR$/automation/JobManager.py" />
+        <option value="$PROJECT_DIR$/automation/resources/project_config.xml" />
         <option value="$PROJECT_DIR$/automation/__init__.py" />
+        <option value="$PROJECT_DIR$/automation/Automation.py" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
@@ -181,10 +127,10 @@
     <option name="jenkinsVersion" value="VERSION_2" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1959" />
-    <option name="y" value="-18" />
-    <option name="width" value="1378" />
-    <option name="height" value="743" />
+    <option name="x" value="2299" />
+    <option name="y" value="-8" />
+    <option name="width" value="980" />
+    <option name="height" value="522" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -203,6 +149,12 @@
               <item name="jenkins_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
               <item name="automation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jenkins_automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
+              <item name="automation" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,7 +226,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automation/__init__.py" />
-      <option name="PARAMETERS" value="--delete=project --name=teste_prj_automacao" />
+      <option name="PARAMETERS" value="--create=project --name=teste --id=PUP --debug" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -320,41 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00090" summary="Corrigindo imagem docker">
-      <created>1543512402329</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1543512402329</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Corrigindo sessões do pipeline referente a branch.">
-      <created>1543513055305</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1543513055305</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Removendo linhas desnecessarias">
-      <created>1543513452570</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1543513452570</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Substituindo entrypoint para rodar na automação.">
-      <created>1543516859174</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1543516859174</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Substituindo sequencial por paralelo">
-      <created>1543517158642</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1543517158642</updated>
     </task>
     <task id="LOCAL-00095" summary="Atualizando mensagens de log">
       <created>1543519958805</created>
@@ -664,19 +581,54 @@
       <option name="project" value="LOCAL" />
       <updated>1544542671357</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Corrigindo sintax">
+      <created>1544542965098</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1544542965098</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Corrigindo formato do arquivo">
+      <created>1544548295653</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548295653</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Removendo caracteres especiais">
+      <created>1544548312934</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548312934</updated>
+    </task>
+    <task id="LOCAL-00142" summary="Alterando nome das roles para ID do projeto no bitbucket.">
+      <created>1544548449094</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548449095</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Alterando nome das roles para ID do projeto no bitbucket na criação das roles.">
+      <created>1544548477726</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548477726</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Jenkins" order="3" visible="true" weight="0.3296875" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15" />
+      <window_info anchor="right" id="Jenkins" order="3" weight="0.3296875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50073206" side_tool="true" weight="0.3019272" />
-      <window_info active="true" anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.21627408" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.4261242" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -707,11 +659,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Corrigindo funcao de interfaciamento da automacao" />
-    <MESSAGE value="Alterando nomeclatura de funcoes para nova feature." />
-    <MESSAGE value="Adicionando carregamento de configurações da importação de projetos" />
-    <MESSAGE value="Adicionando arquivo de configurações de importação de projeto" />
-    <MESSAGE value="Desabilitando diretorio nao mais requerido devido a nova feature" />
     <MESSAGE value="Definindo padrões. Sem necessidade de parametrização de alguns itens" />
     <MESSAGE value="Adicionando chamada da feature de importação do projeto bitbucket a pasta build da estrutura do jenkins" />
     <MESSAGE value="Adicionando feature da automação de importação de projeto do bitbucket" />
@@ -732,7 +679,12 @@
     <MESSAGE value="Corrigindo bug de syntax" />
     <MESSAGE value="Corrigindo parametro do CI" />
     <MESSAGE value="Corrigindo validação de parametros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo validação de parametros" />
+    <MESSAGE value="Corrigindo sintax" />
+    <MESSAGE value="Corrigindo formato do arquivo" />
+    <MESSAGE value="Removendo caracteres especiais" />
+    <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket." />
+    <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -975,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/Help.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -999,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1020,13 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1037,12 +968,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="272">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#2#11#0" expanded="true" />
+            <element signature="e#18#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1057,54 +1009,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
+    <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#18#33#0" expanded="true" />
+            <element signature="e#2#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/Automation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="276" selection-start-line="276" selection-end-line="276" />
+        <state relative-caret-position="-43">
+          <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="129" column="78" lean-forward="true" selection-start-line="129" selection-start-column="78" selection-end-line="129" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+          <caret line="101" column="59" lean-forward="true" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        <state relative-caret-position="423">
+          <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="59" column="94" lean-forward="true" selection-start-line="59" selection-start-column="94" selection-end-line="59" selection-end-column="94" />
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
