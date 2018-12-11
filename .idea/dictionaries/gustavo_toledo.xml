@@ -3,6 +3,7 @@
     <words>
       <w>abre</w>
       <w>acao</w>
+      <w>acesse</w>
       <w>acoes</w>
       <w>acordo</w>
       <w>adiciona</w>
@@ -16,6 +17,7 @@
       <w>agora</w>
       <w>agrupamento</w>
       <w>agrupamentos</w>
+      <w>ajuda</w>
       <w>alguns</w>
       <w>alinhamento</w>
       <w>alterado</w>
@@ -150,6 +152,7 @@
       <w>deleta</w>
       <w>deletando</w>
       <w>deletar</w>
+      <w>dentro</w>
       <w>dependencia</w>
       <w>dependencias</w>
       <w>deployer</w>
@@ -189,6 +192,7 @@
       <w>especifico</w>
       <w>estagio</w>
       <w>estatico</w>
+      <w>este</w>
       <w>estrutura</w>
       <w>estrutural</w>
       <w>estruturas</w>
@@ -200,6 +204,7 @@
       <w>execuçao</w>
       <w>execução</w>
       <w>exemplos</w>
+      <w>exibida</w>
       <w>exibir</w>
       <w>exista</w>
       <w>existe</w>
@@ -302,6 +307,7 @@
       <w>monta</w>
       <w>montada</w>
       <w>mtodos</w>
+      <w>máquina</w>
       <w>métodos</w>
       <w>navega</w>
       <w>necessidade</w>
@@ -324,6 +330,7 @@
       <w>opcional</w>
       <w>opcoes</w>
       <w>operação</w>
+      <w>operações</w>
       <w>opções</w>
       <w>ordem</w>
       <w>outras</w>
@@ -344,6 +351,7 @@
       <w>pela</w>
       <w>pelas</w>
       <w>pelo</w>
+      <w>pelos</w>
       <w>pendentes</w>
       <w>perdidos</w>
       <w>permissionamento</w>
@@ -401,6 +409,7 @@
       <w>requisitos</w>
       <w>requisição</w>
       <w>responsavel</w>
+      <w>responsáveis</w>
       <w>resquests</w>
       <w>resultado</w>
       <w>retorna</w>
@@ -417,6 +426,7 @@
       <w>rodar</w>
       <w>rtnp</w>
       <w>secundarios</w>
+      <w>seguida</w>
       <w>seguinte</w>
       <w>seguir</w>
       <w>sendo</w>
@@ -437,6 +447,8 @@
       <w>sucesso</w>
       <w>também</w>
       <w>tarefas</w>
+      <w>tela</w>
+      <w>tenha</w>
       <w>tentativa</w>
       <w>testado</w>
       <w>testando</w>

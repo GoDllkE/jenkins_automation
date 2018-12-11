@@ -3,6 +3,20 @@ Jenkins automation module
 
 Modulo python criado com o proposito de automatizar o processo de criação e remoção de projetos na ferramenta.
 
+### Uso
+Para utilizar este modulo, tenha docker-ce em sua máquina e execute o seguinte comando:
+
+    $ docker pull registry.ng.bluemix.net/livelo/jenkins_automation:latest
+    
+Em seguida, acesse-a:
+    
+    $ docker run -it --rm --name jenkins_automation  registry.ng.bluemix.net/livelo/jenkins_automation
+
+Agora, dentro da imagem do modulo, execute:
+
+    $ /bin/jenkins_automation -h
+    
+A partir da ajuda exibida em tela, realize as operações desejadas.   
 
 ### Configurações
 
@@ -42,7 +56,14 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
+**Versão: 4.2.8**
+- Corrigido XML's responsáveis pelos jobs de deploy e importação de projeto stash.
+- Alterado nomeclatura das roles de um projeto para utilizar ID do projeto do bitbucket.
+
 **Versão: 4.2.0**
+- Adicionado feature de verificação/garantia dos jobs de deploy de um repositorio.
+
+**Versão: 4.1.0**
 - Adicionado feature de importação de projeto do stash para o jenkins.
 - Atualizando arquivos de configuração.
 
