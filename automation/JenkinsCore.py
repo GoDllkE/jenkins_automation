@@ -40,6 +40,6 @@ class JenkinsCore:
         return self.environment
 
     def get_burl(self) -> list:
-        return "{0}@{1}".format(self.get_bauth(), self.get_url())
+        return "http://{0}@{1}".format(self.get_bauth(), self.get_url())
 
     # =============================================================================================== #
