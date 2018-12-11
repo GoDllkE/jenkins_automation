@@ -99,7 +99,8 @@ class Automation:
             self.role_manager.create_role(
                 type='projectRoles',
                 name=str(role_config['deploy_role_env']['name']).replace('<project>', project).replace('<env>', env),
-                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>', env),
+                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>',
+                                                                                                             env),
                 perm=str(self.__format_perms__(role_config['deploy_role_env']['permissionsIds'])),
                 overwrite=True
             )
@@ -148,9 +149,37 @@ class Automation:
             configuration = self.config_manger.load_job_config().replace('#cluster#', "\"{0}\"".format(env))
             configuration = configuration.replace('#git_url#', "\"{0}\"".format(repositorio))
 
-            print("Criando job de deploy {0} para {1}...".format(name, env), end='')
-            response = self.job_manager.create_deploy_job(caminho=path.replace('<env>', env), configuration=configuration, repositorio=repositorio)
+            response = self.job_manager.create_deploy_job(caminho=path.replace('<env>', env),
+                                                          configuration=configuration, repositorio=repositorio)
             self.job_manager.validate(status_code=response.status_code, job=name, env=env)
+            if response.status_code in [200]:
+                print("Criando job de deploy {0} para {1}...".format(name, env), end='')
+        #
+        pass
+
+    def create_missing_deploy_jobs(self, projeto: str = None, ambiente: list = None, repositorio: str = None) -> None:
+        """
+            Funcao que cria jobs de deploy dado um projeto e um repositorio em especifico
+            :param ambiente:                    Recebe lista de ambientes onde o job esta faltando.
+            :param projeto:                     Nome do projeto a na estrutura do jenkins
+            :param repositorio:                 Nome do repositorio da qual deseja criar os jobs de deploy.
+            :return:                            Retorna nada
+        """
+        # Core
+        name = repositorio.split('/')[-1].split('.', 1)[0]
+        path = "/job/{0}/job/deploy/job/<env>".format(projeto, ambiente)
+
+        #
+        for env in ambiente:
+            # Atualiza job de deploy
+            configuration = self.config_manger.load_job_config().replace('#cluster#', "\"{0}\"".format(env))
+            configuration = configuration.replace('#git_url#', "\"{0}\"".format(repositorio))
+
+            print("Criando job de deploy {0} para {1}...".format(name, env), end='')
+            response = self.job_manager.create_deploy_job(caminho=path.replace('<env>', env),
+                                                          configuration=configuration, repositorio=repositorio)
+            self.job_manager.validate(status_code=response.status_code, job=name, env=env)
+
         #
         pass
 
@@ -221,35 +250,56 @@ class Automation:
         self.folder_manager.validate(status_code=response.status_code, folder=project)
         pass
 
-    def import_project_builds(self, project: str = None, dados: dict = None):
-        # Controle
+    def import_project_builds(self, project: str = None, project_id: str = None, dados: dict = None):
+        # Core
         data = {}
+        data.setdefault('project_owner', project_id)
 
-        #
-        if dados.get('url'):
-            project_owner = dados['url'].split('/')[-1]
+        # Valida se existe credenciais passadas
+        if dados.get('credenciais'):
+            data.setdefault('credencial', dados.get('credenciais'))
         else:
-            if dados.get('repo'):
-                project_owner = dados['repo'].split('/')[-3]
-            else:
-                print('Erro. Dado "project_owner" nao informado.')
-                sys.exit(1)
-            pass
+            data.setdefault('credencial', 'jenkins-user')
 
-        # Padrao de construcao
-        data.setdefault('project_owner', project_owner)
-        data.setdefault('credencial', 'jenkins-user')
-        data.setdefault('intervalo', 120000)
+        # Valida se existe intervalo customizado
+        if dados.get('intervalo'):
+            data.setdefault('intervalo', dados.get('intervalo'))
+        else:
+            data.setdefault('intervalo', 120000)
 
-        # dados recebidos
-        for key in list(dados.keys()):
-            data[key] = dados[key]
-
-        # Do it
         print("Importando projeto do stash para o jenkins...", end='')
         response = self.job_manager.import_project_jobs(projeto=project, data=data)
         self.job_manager.validate(status_code=response.status_code, job=project)
         pass
+
+    # ================================================================================================================ #
+
+    def check_deploy_jobs(self, project: str = None, repositorio: str = None) -> list:
+        # Controle
+        missing = []
+        job_name = repositorio.split('/')[-1].split('.', 1)[0]
+
+        for env in self.jenkins.get_environments():
+            #
+            # Cria URL de pesquisa
+            url = "{0}/job/projects/job/{1}/job/deploy/job/{2}/job/{3}/api/json".format(self.jenkins.get_burl(),
+                                                                                        project, env, job_name)
+
+            print("Verificando job de deploy do ambiente de {0}...".format(env), end='')
+            response = requests.get(url=url)
+            if self.debug:
+                self.job_manager.analise_content(data={}, response=response)
+
+            # Criando validação
+            if response.status_code not in [200]:
+                print('não encontrado. (Adicionado a lista de pendentes)')
+                missing.append(env)
+            else:
+                print('encontrado!')
+                continue
+
+        #
+        return missing
 
     # ================================================================================================================ #
     #                                     Funcoes de interfaciamento                                                   #
