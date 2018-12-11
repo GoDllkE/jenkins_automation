@@ -57,56 +57,78 @@ class Configurator:
         pass
 
     def get_collpased_execution_parameters(self) -> str:
-        return 'cdg:rnetpouikqs:hd'
+        return 'cdg:rnietpoukqs:hd'
 
     def get_expanded_execution_parameters(self) -> list:
         return [
-            'create=',
-            'delete=',
-            'get=',
-            'repo=',
-            'repository=',
+            'check=', 'create=', 'delete=', 'get=',
+            'repo=', 'repository=',
             'name=',
-            'env=',
-            'environment=',
-            'type=',
-            'role-type=',
-            'regex=',
-            'pattern=',
+            'id=', 'project_id=', 'project_stash_id=',
+            'env=', 'environment=',
+            'type=', 'role-type=',
+            'regex=', 'pattern=',
             'overwrite=',
-            'url=',
-            'projeto_stash_url='
             'intervalo=',
             'credential=',
-            'help',
-            'debug'
+            'help', 'debug'
         ]
+
+    def __validate_field__(self, parameter: str = None, value: str = None):
+        if value in [None, '']:
+            print('Erro: Parametro {0} vazio ou invalido ({1})'.format(parameter, value))
+            return False
+        else:
+            return True
 
     def validate_runtime_options(self, conteudo: dict = None) -> bool:
         if 'create' in conteudo['acao']:
-            if 'project' in conteudo['dado'] and conteudo.get('name') and (conteudo.get('url') or conteudo.get('repo')):
-                return True
-            elif 'role' in conteudo['dado'] and conteudo.get('type') and conteudo.get('name') and conteudo.get(
-                    'pattern'):
-                return True
-            elif 'job' in conteudo['dado'] and conteudo.get('name') and conteudo.get('repo'):
-                return True
+            if 'project' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name') and
+                       self.__validate_field__('id', conteudo.get('id')))
+
+            elif 'role' in conteudo['dado']:
+                return self.__validate_field__('type', conteudo.get('type')) and \
+                       self.__validate_field__('name', conteudo.get('name')) and \
+                       self.__validate_field__('pattern', conteudo.get('pattern'))
+
+            elif 'deploy_jobs' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name')) and \
+                       self.__validate_field__('repo', conteudo.get('repo'))
             else:
                 return False
 
         elif 'delete' in conteudo['acao']:
-            if 'project' in conteudo['dado'] and conteudo.get('name'):
-                return True
-            elif 'role' in conteudo['dado'] and conteudo.get('type') and conteudo.get('name'):
-                return True
-            elif 'job' in conteudo['dado'] and conteudo.get('name') and conteudo.get('repo'):
-                return True
+            if 'project' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name'))
+
+            elif 'role' in conteudo['dado']:
+                return self.__validate_field__('type', conteudo.get('type')) and \
+                       self.__validate_field__('repo', conteudo.get('name'))
+
+            elif 'deploy_jobs' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name')) and \
+                       self.__validate_field__('repo', conteudo.get('repo'))
+
+            else:
+                return False
+
+        elif 'check' in conteudo['acao']:
+            if 'project' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name'))
+
+            elif 'deploy_jobs' in conteudo['dado']:
+                return self.__validate_field__('name', conteudo.get('name')) and \
+                       self.__validate_field__('repo', conteudo.get('repo'))
+
             else:
                 return False
 
         elif 'get' in conteudo['acao']:
             if conteudo.get('type') and conteudo.get('name'):
-                return True
+                return self.__validate_field__('type', conteudo.get('type')) and \
+                       self.__validate_field__('repo', conteudo.get('name'))
+
             else:
                 return False
         else:
