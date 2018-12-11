@@ -53,10 +53,15 @@ pipeline {
                 stage('Teste composto') {
                     steps {
                         script {
-                            sh "./dist/automation --create=project --name=teste_prj_automacao --url=https://stash.pontoslivelo.com.br/projects/PUP --debug"
-                            sh "./dist/automation --create=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git"
-                            sh "./dist/automation --delete=job --name=teste --repository=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git"
-                            sh "./dist/automation --delete=project --name=teste_prj_automacao --url=https://stash.pontoslivelo.com.br/projects/PUP --debug"
+                            sh "./dist/automation --create=project --name=teste_prj_automacao --id=PUP --debug"
+                            sh "./dist/automation --create=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --check=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+
+                            sh "./dist/automation --delete=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --check=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --delete=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug
+
+                            sh "./dist/automation --delete=project --name=teste_prj_automacao --debug"
                         }
                     }
                 }
@@ -77,23 +82,6 @@ pipeline {
                         classifier: 'python37',
                         file:       "dist/automation",
                         type:       'bin'
-                    ],[
-                        artifactId: "jenkins_${NAME}_config",
-                        classifier: 'python37',
-                        file:       "automation/resources/config.yaml",
-                        type:       'yaml'
-                    ],
-                    [
-                        artifactId: "jenkins_${NAME}_job_config",
-                        classifier: 'python37',
-                        file:       "automation/resources/job_config.xml",
-                        type:       'xml'
-                    ],
-                    [
-                        artifactId: "jenkins_${NAME}_project_config",
-                        classifier: 'python37',
-                        file:       "automation/resources/project_config.xml",
-                        type:       'xml'
                     ]]
                 )
             }
