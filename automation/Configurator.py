@@ -76,7 +76,7 @@ class Configurator:
 
     def __validate_field__(self, parameter: str = None, value: str = None):
         if value in [None, '']:
-            print('Erro: Parametro {0} vazio ou invalido ({1})'.format(parameter, value))
+            print('Erro: Parametro {0} vazio ou invalido (valor: {1})'.format(parameter, value))
             return False
         else:
             return True
@@ -84,17 +84,17 @@ class Configurator:
     def validate_runtime_options(self, conteudo: dict = None) -> bool:
         if 'create' in conteudo['acao']:
             if 'project' in conteudo['dado']:
-                return self.__validate_field__('name', conteudo.get('name') and
-                       self.__validate_field__('id', conteudo.get('id')))
+                return (self.__validate_field__('name', conteudo.get('name')) and
+                        self.__validate_field__('id', conteudo.get('id')))
 
             elif 'role' in conteudo['dado']:
-                return self.__validate_field__('type', conteudo.get('type')) and \
-                       self.__validate_field__('name', conteudo.get('name')) and \
-                       self.__validate_field__('pattern', conteudo.get('pattern'))
+                return (self.__validate_field__('type', conteudo.get('type')) and
+                        self.__validate_field__('name', conteudo.get('name')) and
+                        self.__validate_field__('pattern', conteudo.get('pattern')))
 
             elif 'deploy_jobs' in conteudo['dado']:
-                return self.__validate_field__('name', conteudo.get('name')) and \
-                       self.__validate_field__('repo', conteudo.get('repo'))
+                return (self.__validate_field__('name', conteudo.get('name')) and
+                        self.__validate_field__('repo', conteudo.get('repo')))
             else:
                 return False
 
@@ -103,12 +103,12 @@ class Configurator:
                 return self.__validate_field__('name', conteudo.get('name'))
 
             elif 'role' in conteudo['dado']:
-                return self.__validate_field__('type', conteudo.get('type')) and \
-                       self.__validate_field__('repo', conteudo.get('name'))
+                return (self.__validate_field__('type', conteudo.get('type')) and
+                        self.__validate_field__('repo', conteudo.get('name')))
 
             elif 'deploy_jobs' in conteudo['dado']:
-                return self.__validate_field__('name', conteudo.get('name')) and \
-                       self.__validate_field__('repo', conteudo.get('repo'))
+                return (self.__validate_field__('name', conteudo.get('name')) and
+                        self.__validate_field__('repo', conteudo.get('repo')))
 
             else:
                 return False
@@ -118,16 +118,16 @@ class Configurator:
                 return self.__validate_field__('name', conteudo.get('name'))
 
             elif 'deploy_jobs' in conteudo['dado']:
-                return self.__validate_field__('name', conteudo.get('name')) and \
-                       self.__validate_field__('repo', conteudo.get('repo'))
+                return (self.__validate_field__('name', conteudo.get('name')) and
+                        self.__validate_field__('repo', conteudo.get('repo')))
 
             else:
                 return False
 
         elif 'get' in conteudo['acao']:
             if conteudo.get('type') and conteudo.get('name'):
-                return self.__validate_field__('type', conteudo.get('type')) and \
-                       self.__validate_field__('repo', conteudo.get('name'))
+                return (self.__validate_field__('type', conteudo.get('type')) and
+                        self.__validate_field__('repo', conteudo.get('name')))
 
             else:
                 return False
