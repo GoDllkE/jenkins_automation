@@ -49,20 +49,21 @@ class Automation:
     #                                       Funcoes de automação                                                       #
     # ================================================================================================================ #
 
-    def create_project_roles(self, project: str = None) -> None:
+    def create_project_roles(self, project_id: str = None) -> None:
         """
             Funcao para criacao do padrao de roles de um projeto especificado.
-            :param project:         Recebe o nome do projeto
+            :param project_id:      Recebe o ID do projeto no bitbucket
             :return:                Retorna Nada
         """
         # Core
+        project_id = project_id.upper()
         role_config = self.config_manger.load_config()['role_strategy']
 
         print('Criando role de view')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(role_config['view_role']['name']).replace('<project>', project),
-            pattern=str(role_config['view_role']['pattern']).replace('<project>', project),
+            name=str(role_config['view_role']['name']).replace('<project>', project_id),
+            pattern=str(role_config['view_role']['pattern']).replace('<project>', project_id),
             perm=str(self.__format_perms__(role_config['view_role']['permissionsIds'])),
             overwrite=True
         )
@@ -70,8 +71,8 @@ class Automation:
         print('Criando role de build')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(role_config['build_role']['name']).replace('<project>', project),
-            pattern=str(role_config['build_role']['pattern']).replace('<project>', project),
+            name=str(role_config['build_role']['name']).replace('<project>', project_id),
+            pattern=str(role_config['build_role']['pattern']).replace('<project>', project_id),
             perm=str(self.__format_perms__(role_config['build_role']['permissionsIds'])),
             overwrite=True
         )
@@ -79,8 +80,8 @@ class Automation:
         print('Criando role de testes')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(role_config['tests_role']['name']).replace('<project>', project),
-            pattern=str(role_config['tests_role']['pattern']).replace('<project>', project),
+            name=str(role_config['tests_role']['name']).replace('<project>', project_id),
+            pattern=str(role_config['tests_role']['pattern']).replace('<project>', project_id),
             perm=str(self.__format_perms__(role_config['tests_role']['permissionsIds'])),
             overwrite=True
         )
@@ -88,8 +89,8 @@ class Automation:
         print('Criando roles de deploy (1/2)')
         self.role_manager.create_role(
             type='projectRoles',
-            name=str(role_config['deploy_role']['name']).replace('<project>', project),
-            pattern=str(role_config['deploy_role']['pattern']).replace('<project>', project),
+            name=str(role_config['deploy_role']['name']).replace('<project>', project_id),
+            pattern=str(role_config['deploy_role']['pattern']).replace('<project>', project_id),
             perm=str(self.__format_perms__(role_config['deploy_role']['permissionsIds'])),
             overwrite=True
         )
@@ -98,9 +99,8 @@ class Automation:
         for env in self.role_manager.environments:
             self.role_manager.create_role(
                 type='projectRoles',
-                name=str(role_config['deploy_role_env']['name']).replace('<project>', project).replace('<env>', env),
-                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>',
-                                                                                                             env),
+                name=str(role_config['deploy_role_env']['name']).replace('<project>', project_id).replace('<env>', env),
+                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project_id).replace('<env>', env),
                 perm=str(self.__format_perms__(role_config['deploy_role_env']['permissionsIds'])),
                 overwrite=True
             )
