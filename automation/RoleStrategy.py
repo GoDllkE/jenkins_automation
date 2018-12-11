@@ -18,7 +18,7 @@ class RoleStrategy:
         self.debug = debug
         self.jenkins = jenkins
         self.environments = self.jenkins.get_environments()
-        self.bUrl = 'http://{0}/role-strategy/strategy'.format(self.jenkins.get_burl())
+        self.bUrl = '{0}/role-strategy/strategy'.format(self.jenkins.get_burl())
 
     def get_role(self, type: str = None, name: str = None) -> requests:
         """
