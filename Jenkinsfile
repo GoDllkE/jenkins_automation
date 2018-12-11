@@ -59,7 +59,7 @@ pipeline {
 
                             sh "./dist/automation --delete=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
                             sh "./dist/automation --check=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
-                            sh "./dist/automation --delete=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug
+                            sh "./dist/automation --delete=job --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
 
                             sh "./dist/automation --delete=project --name=teste_prj_automacao --debug"
                         }
