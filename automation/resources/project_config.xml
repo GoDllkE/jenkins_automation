@@ -1,13 +1,12 @@
-<?xml version='1.1' encoding='UTF-8'?>
+<?xml version="1.1" encoding="UTF-8"?>
 <jenkins.branch.OrganizationFolder plugin="branch-api@2.1.1">
   <actions/>
-  <description>Projeto importado via automação</description>
+  <description>Projeto importado via automacao</description>
   <properties>
     <org.csanchez.jenkins.plugins.kubernetes.KubernetesFolderProperty plugin="kubernetes@1.13.6">
       <permittedClouds/>
     </org.csanchez.jenkins.plugins.kubernetes.KubernetesFolderProperty>
     <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.3.2">
-      <dockerLabel></dockerLabel>
       <registry plugin="docker-commons@1.13"/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig>
   </properties>
