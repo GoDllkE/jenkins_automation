@@ -99,7 +99,7 @@ def automate():
     if 'create' in action['acao']:
         if 'project' in action['dado']:
             auto.create_project_structure(project=action['name'])
-            auto.create_project_roles(project=action['id'])
+            auto.create_project_roles(project_id=action['id'])
             auto.import_project_builds(project=action['name'], project_id=action['id'], dados=action)
         elif 'role' in action['dado']:
             auto.create_role(data=action)
