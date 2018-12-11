@@ -4,8 +4,7 @@
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/resources/job_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/automation/resources/job_config.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +18,38 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="101" column="59" lean-forward="true" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
+            <state relative-caret-position="1649">
+              <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="job_config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project_config.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -40,8 +66,8 @@
       <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/Automation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43">
-              <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+            <state relative-caret-position="190">
+              <caret line="51" column="45" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -75,6 +101,7 @@
       <find>&lt;interval&gt;</find>
       <find>&lt;/repoOwner&gt;</find>
       <find>interv</find>
+      <find>create_project_roles</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,15 +135,15 @@
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
-        <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
         <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/automation/Configurator.py" />
         <option value="$PROJECT_DIR$/automation/JobManager.py" />
         <option value="$PROJECT_DIR$/automation/resources/project_config.xml" />
-        <option value="$PROJECT_DIR$/automation/__init__.py" />
         <option value="$PROJECT_DIR$/automation/Automation.py" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
+        <option value="$PROJECT_DIR$/automation/__init__.py" />
+        <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
@@ -127,8 +154,8 @@
     <option name="jenkinsVersion" value="VERSION_2" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2299" />
-    <option name="y" value="-8" />
+    <option name="x" value="220" />
+    <option name="y" value="57" />
     <option name="width" value="980" />
     <option name="height" value="522" />
   </component>
@@ -272,20 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Atualizando mensagens de log">
-      <created>1543519958805</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1543519958805</updated>
-    </task>
-    <task id="LOCAL-00096" summary="Corrigindo logs">
-      <created>1543520141474</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1543520141474</updated>
     </task>
     <task id="LOCAL-00097" summary="Corrigindo logs de remoção.">
       <created>1543521144005</created>
@@ -616,19 +629,33 @@
       <option name="project" value="LOCAL" />
       <updated>1544548477726</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Corrigindo XML. (bug de encode)">
+      <created>1544548727605</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548727605</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Corrigindo parametro declarativo no inicializador">
+      <created>1544548952080</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1544548952080</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Jenkins" order="3" weight="0.3296875" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083455" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50073206" side_tool="true" weight="0.3019272" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49926794" visible="true" weight="0.4261242" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.42604503" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.4261242" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -659,8 +686,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Definindo padrões. Sem necessidade de parametrização de alguns itens" />
-    <MESSAGE value="Adicionando chamada da feature de importação do projeto bitbucket a pasta build da estrutura do jenkins" />
     <MESSAGE value="Adicionando feature da automação de importação de projeto do bitbucket" />
     <MESSAGE value="Adicionando função de importação da nova feature." />
     <MESSAGE value="Redefinindo lista de argumentos." />
@@ -684,7 +709,9 @@
     <MESSAGE value="Removendo caracteres especiais" />
     <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket." />
     <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
+    <MESSAGE value="Corrigindo XML. (bug de encode)" />
+    <MESSAGE value="Corrigindo parametro declarativo no inicializador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo parametro declarativo no inicializador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -944,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/JenkinsCore.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -979,13 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1019,17 +1032,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="423">
+          <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/Automation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="58" column="39" lean-forward="true" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+        <state relative-caret-position="190">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="45" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1038,18 +1051,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="101" column="59" lean-forward="true" selection-start-line="101" selection-start-column="59" selection-end-line="101" selection-end-column="59" />
+        <state relative-caret-position="1649">
+          <caret line="97" column="39" lean-forward="true" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+    <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
+        <state relative-caret-position="204">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/project_config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="84" />
         </state>
       </provider>
     </entry>
