@@ -34,6 +34,8 @@
       <w>arquitetura</w>
       <w>arquivo</w>
       <w>arquivos</w>
+      <w>artefa</w>
+      <w>artefatos</w>
       <w>assing</w>
       <w>atuais</w>
       <w>atualiza</w>
@@ -52,6 +54,7 @@
       <w>basicamente</w>
       <w>basicas</w>
       <w>basicos</w>
+      <w>bauth</w>
       <w>bitbucket</w>
       <w>blocos</w>
       <w>bloqueios</w>
@@ -81,6 +84,7 @@
       <w>codigo</w>
       <w>coleta</w>
       <w>collpased</w>
+      <w>comando</w>
       <w>compatibilidade</w>
       <w>compilação</w>
       <w>completamente</w>
@@ -90,6 +94,7 @@
       <w>compostas</w>
       <w>composto</w>
       <w>compreensao</w>
+      <w>comunicação</w>
       <w>concluido</w>
       <w>configuracao</w>
       <w>configuracoes</w>
@@ -124,9 +129,11 @@
       <w>criar</w>
       <w>criaçao</w>
       <w>criação</w>
+      <w>crie</w>
       <w>cumprimento</w>
       <w>cumprindo</w>
       <w>cumprir</w>
+      <w>customizado</w>
       <w>dados</w>
       <w>daystokeep</w>
       <w>debian</w>
@@ -153,6 +160,7 @@
       <w>desenvolvimento</w>
       <w>desnecessarias</w>
       <w>desnecessárias</w>
+      <w>destes</w>
       <w>deve</w>
       <w>devido</w>
       <w>dicionario</w>
@@ -166,6 +174,7 @@
       <w>empresa</w>
       <w>encontra</w>
       <w>encontrada</w>
+      <w>encontrado</w>
       <w>encontranda</w>
       <w>engatilha</w>
       <w>entrypoint</w>
@@ -177,11 +186,13 @@
       <w>especificas</w>
       <w>especifico</w>
       <w>estagio</w>
+      <w>estatico</w>
       <w>estrutura</w>
       <w>estrutural</w>
       <w>estruturas</w>
       <w>estágio</w>
       <w>estável</w>
+      <w>excredenciais</w>
       <w>execucao</w>
       <w>executar</w>
       <w>execuçao</w>
@@ -190,9 +201,12 @@
       <w>exibir</w>
       <w>exista</w>
       <w>existe</w>
+      <w>existem</w>
       <w>falha</w>
       <w>falhou</w>
       <w>falta</w>
+      <w>faltando</w>
+      <w>faltantes</w>
       <w>fazer</w>
       <w>ferramenta</w>
       <w>finalizado</w>
@@ -202,6 +216,7 @@
       <w>formação</w>
       <w>funcao</w>
       <w>funcionais</w>
+      <w>funcionalidade</w>
       <w>funcionalidades</w>
       <w>funcionando</w>
       <w>funcionar</w>
@@ -210,6 +225,7 @@
       <w>funcoes</w>
       <w>função</w>
       <w>funções</w>
+      <w>garantia</w>
       <w>gerada</w>
       <w>gerais</w>
       <w>geral</w>
@@ -229,10 +245,12 @@
       <w>importando</w>
       <w>importação</w>
       <w>incrementado</w>
+      <w>incrementando</w>
       <w>incrementaria</w>
       <w>indica</w>
       <w>indicador</w>
       <w>individuais</w>
+      <w>individualmente</w>
       <w>informado</w>
       <w>inicializando</w>
       <w>inicialização</w>
@@ -250,9 +268,11 @@
       <w>interno</w>
       <w>intervalo</w>
       <w>intuito</w>
+      <w>invalido</w>
       <w>invalidos</w>
       <w>invertidas</w>
       <w>isto</w>
+      <w>itens</w>
       <w>itera</w>
       <w>jenkinsci</w>
       <w>leitura</w>
@@ -280,6 +300,7 @@
       <w>métodos</w>
       <w>navega</w>
       <w>necessidade</w>
+      <w>necessita</w>
       <w>nele</w>
       <w>nesse</w>
       <w>nomeclatura</w>
@@ -292,6 +313,7 @@
       <w>observacoes</w>
       <w>oficiais</w>
       <w>oliveira</w>
+      <w>onde</w>
       <w>onefile</w>
       <w>opcao</w>
       <w>opcional</w>
@@ -311,16 +333,19 @@
       <w>parametro</w>
       <w>parametros</w>
       <w>partir</w>
+      <w>passadas</w>
       <w>passos</w>
       <w>passwd</w>
       <w>pela</w>
       <w>pelas</w>
       <w>pelo</w>
+      <w>pendentes</w>
       <w>perdidos</w>
       <w>permissionamento</w>
       <w>permissoes</w>
       <w>permissões</w>
       <w>permite</w>
+      <w>pesquisa</w>
       <w>pode</w>
       <w>pontoslivelo</w>
       <w>possivel</w>
@@ -338,6 +363,7 @@
       <w>propositos</w>
       <w>propostido</w>
       <w>proprios</w>
+      <w>protocolo</w>
       <w>pyinstaller</w>
       <w>pyyaml</w>
       <w>qual</w>
@@ -378,12 +404,15 @@
       <w>rnatp</w>
       <w>rnetp</w>
       <w>rnetpo</w>
+      <w>rnetpoiukqs</w>
       <w>rnetpouikqs</w>
+      <w>rnietpoukqs</w>
       <w>rntp</w>
       <w>roadmap</w>
       <w>rodar</w>
       <w>rtnp</w>
       <w>secundarios</w>
+      <w>seguinte</w>
       <w>seguir</w>
       <w>sendo</w>
       <w>separa</w>
@@ -428,8 +457,11 @@
       <w>variaveis</w>
       <w>variavel</w>
       <w>varios</w>
+      <w>vazio</w>
       <w>verdade</w>
       <w>verifica</w>
+      <w>verificando</w>
+      <w>verificação</w>
       <w>verifique</w>
       <w>versao</w>
       <w>versão</w>
