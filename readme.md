@@ -56,6 +56,9 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
+**Versão: 4.2.13**
+- Corrigido template do job de deploy [job](automation/resources/job_config.xml). Agora adicionado ao interpretador do jenkins os parametros além da declaração via pipeline.
+
 **Versão: 4.2.12**
 - Corrigido nomeclatura na criação das roles estarem vazias.
 - Corrigido regex das roles de projetos estarem com ID do projeto ao invés do nome da pasta.
