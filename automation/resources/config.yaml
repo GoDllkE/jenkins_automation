@@ -1,7 +1,6 @@
 projects:
   folder_structure:
     - '<project>'
-    #- '<project>/build'  - No need anymore, since import_jobs_from_stash create it.
     - '<project>/deploy'
     - '<project>/deploy/<env>'
     - '<project>/tests'
