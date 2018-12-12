@@ -56,6 +56,14 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
+**Versão: 4.2.12**
+- Corrigido nomeclatura na criação das roles estarem vazias.
+- Corrigido regex das roles de projetos estarem com ID do projeto ao invés do nome da pasta.
+- Atualizado [help-me](automation/Help.py) com exemplos respectivos a versão do modulo.
+- Alterado nomeclatura das roles de um projeto para utilizar ID do projeto do bitbucket.
+- Removido linhas desnecessárias de arquivos de configuração e outros.
+- Outros bugs menores corrigidos.
+
 **Versão: 4.2.8**
 - Corrigido XML's responsáveis pelos jobs de deploy e importação de projeto stash.
 - Alterado nomeclatura das roles de um projeto para utilizar ID do projeto do bitbucket.
