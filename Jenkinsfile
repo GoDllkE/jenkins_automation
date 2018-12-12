@@ -101,7 +101,7 @@ pipeline {
                         }
                     }
                 }
-                stage('Construindo branch latest') {
+                stage('Construindo branch-latest') {
                     steps {
                         container('docker-build') {
                             script {
@@ -121,6 +121,18 @@ pipeline {
                                 docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
                                     DOCKER_TAG = env.BRANCH_NAME.replaceAll("[^0-9a-zA-Z-._]","_") + "." + env.BUILD_ID
                                     docker_img = docker.build("$IMAGEM_DOCKER:$DOCKER_TAG", '-f docker/Dockerfile .')
+                                    docker_img.push()
+                                }
+                            }
+                        }
+                    }
+                }
+                stage('Construindo com tag referente a versao do modulo') {
+                    steps {
+                        container('docker-build') {
+                            script {
+                                docker.withRegistry('https://registry.ng.bluemix.net', 'ibmcloud-container_registry-token') {
+                                    docker_img = docker.build("$IMAGEM_DOCKER:$VERSION", '-f docker/Dockerfile .')
                                     docker_img.push()
                                 }
                             }
