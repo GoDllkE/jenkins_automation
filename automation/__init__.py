@@ -99,7 +99,7 @@ def automate():
     if 'create' in action['acao']:
         if 'project' in action['dado']:
             auto.create_project_structure(project=action['name'])
-            auto.create_project_roles(project_id=action['id'])
+            auto.create_project_roles(project=action['name'], project_id=action['id'])
             auto.import_project_builds(project=action['name'], project_id=action['id'], dados=action)
         elif 'role' in action['dado']:
             auto.create_role(data=action)
@@ -110,7 +110,7 @@ def automate():
 
     elif 'delete' in action['acao']:
         if 'project' in action['dado']:
-            auto.delete_project_roles(project=action['name'])
+            auto.delete_project_roles(project=action['id'])
             auto.delete_project_structure(project=action['name'])
         elif 'role' in action['dado']:
             auto.delete_role(data=action)

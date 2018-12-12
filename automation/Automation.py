@@ -49,9 +49,10 @@ class Automation:
     #                                       Funcoes de automação                                                       #
     # ================================================================================================================ #
 
-    def create_project_roles(self, project_id: str = None) -> None:
+    def create_project_roles(self, project: str = None, project_id: str = None) -> None:
         """
             Funcao para criacao do padrao de roles de um projeto especificado.
+            :param project:         Recebe o nome do projeto
             :param project_id:      Recebe o ID do projeto no bitbucket
             :return:                Retorna Nada
         """
@@ -63,7 +64,7 @@ class Automation:
         self.role_manager.create_role(
             type='projectRoles',
             name=str(role_config['view_role']['name']).replace('<project>', project_id),
-            pattern=str(role_config['view_role']['pattern']).replace('<project>', project_id),
+            pattern=str(role_config['view_role']['pattern']).replace('<project>', project),
             perm=str(self.__format_perms__(role_config['view_role']['permissionsIds'])),
             overwrite=True
         )
@@ -72,7 +73,7 @@ class Automation:
         self.role_manager.create_role(
             type='projectRoles',
             name=str(role_config['build_role']['name']).replace('<project>', project_id),
-            pattern=str(role_config['build_role']['pattern']).replace('<project>', project_id),
+            pattern=str(role_config['build_role']['pattern']).replace('<project>', project),
             perm=str(self.__format_perms__(role_config['build_role']['permissionsIds'])),
             overwrite=True
         )
@@ -81,7 +82,7 @@ class Automation:
         self.role_manager.create_role(
             type='projectRoles',
             name=str(role_config['tests_role']['name']).replace('<project>', project_id),
-            pattern=str(role_config['tests_role']['pattern']).replace('<project>', project_id),
+            pattern=str(role_config['tests_role']['pattern']).replace('<project>', project),
             perm=str(self.__format_perms__(role_config['tests_role']['permissionsIds'])),
             overwrite=True
         )
@@ -90,7 +91,7 @@ class Automation:
         self.role_manager.create_role(
             type='projectRoles',
             name=str(role_config['deploy_role']['name']).replace('<project>', project_id),
-            pattern=str(role_config['deploy_role']['pattern']).replace('<project>', project_id),
+            pattern=str(role_config['deploy_role']['pattern']).replace('<project>', project),
             perm=str(self.__format_perms__(role_config['deploy_role']['permissionsIds'])),
             overwrite=True
         )
@@ -100,7 +101,7 @@ class Automation:
             self.role_manager.create_role(
                 type='projectRoles',
                 name=str(role_config['deploy_role_env']['name']).replace('<project>', project_id).replace('<env>', env),
-                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project_id).replace('<env>', env),
+                pattern=str(role_config['deploy_role_env']['pattern']).replace('<project>', project).replace('<env>', env),
                 perm=str(self.__format_perms__(role_config['deploy_role_env']['permissionsIds'])),
                 overwrite=True
             )
