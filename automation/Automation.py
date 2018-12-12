@@ -1,5 +1,3 @@
-import sys
-
 import requests
 
 # Importa todos os modulos
@@ -57,7 +55,10 @@ class Automation:
             :return:                Retorna Nada
         """
         # Core
-        project_id = project_id.upper()
+        if project_id is not None:
+            project_id = project_id.upper()
+        else:
+            project_id = project
         role_config = self.config_manger.load_config()['role_strategy']
 
         print('Criando role de view')
@@ -211,6 +212,7 @@ class Automation:
                 name = str(folder.split('/')[-1])
                 status = self.folder_manager.create_structure(path=bUrl, name=name)
                 self.folder_manager.validate(status_code=status.status_code, folder=folder)
+
 
             elif len(folder.split('/')) < 3:
                 name = str(folder.split('/')[-1])
