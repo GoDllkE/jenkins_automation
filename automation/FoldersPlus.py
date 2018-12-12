@@ -1,4 +1,5 @@
 # Library imports
+import sys
 import requests
 
 # Internal imports
@@ -72,10 +73,10 @@ class FoldersPlus:
                 print('erro de operação. Pasta "{0}" ja existe'.format(folder))
         else:
             if env:
-                print('erro. Nao foi possivel localizar pasta "{0}" (codigo: {1})'.format(folder.replace('<env>', env),
-                                                                                      status_code))
+                print('erro. Nao foi possivel localizar pasta "{0}" (codigo: {1})'.format(folder.replace('<env>', env), status_code))
             else:
                 print('erro. Nao foi possivel localizar pasta "{0}" (codigo: {1})'.format(folder, status_code))
+            sys.exit(1)
         pass
 
     # ================================================================================================================ #
