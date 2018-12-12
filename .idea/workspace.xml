@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/resources/job_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/automation/resources/job_config.xml" afterDir="false" />
     </list>
@@ -17,8 +18,8 @@
       <file leaf-file-name="job_config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="493">
+              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -27,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -84,7 +85,6 @@
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
         <option value="$PROJECT_DIR$/automation/Configurator.py" />
         <option value="$PROJECT_DIR$/automation/resources/project_config.xml" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
         <option value="$PROJECT_DIR$/automation/__init__.py" />
@@ -92,6 +92,7 @@
         <option value="$PROJECT_DIR$/automation/JobManager.py" />
         <option value="$PROJECT_DIR$/automation/Help.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
@@ -248,20 +249,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00108" summary="Adicionando linhas de exemplo">
-      <created>1544124080967</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1544124080967</updated>
-    </task>
-    <task id="LOCAL-00109" summary="Simplificando funcoes afim de cumprir propositos">
-      <created>1544126030675</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1544126030676</updated>
     </task>
     <task id="LOCAL-00110" summary="Refatorando em prol de proposito">
       <created>1544126062322</created>
@@ -592,7 +579,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544643452819</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="Corrigindo utilização de parametros do job de deploy">
+      <created>1544646000574</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1544646000575</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Adicionando construção de imagens com TAG respectivo a versão do modulo">
+      <created>1544646132088</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1544646132088</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -604,13 +605,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.42604503" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -625,22 +626,22 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
-      <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.42604503" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -657,8 +658,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionado protocolo padrão de uso" />
-    <MESSAGE value="Removido protocolo de comunicação estatico da criação de projetos" />
     <MESSAGE value="Removido itens da lista de artefatos para upload do Nexus e incrementado novos testes, para nova feature." />
     <MESSAGE value="Refatorando validação. Agora valida campos individualmente." />
     <MESSAGE value="Atualizando arquivos do projeto e versionamento." />
@@ -682,7 +681,9 @@
     <MESSAGE value="Atualizado documento do modulo" />
     <MESSAGE value="Removendo linhas desnecessárias" />
     <MESSAGE value="Atualizando arquivos do projeto." />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivos do projeto." />
+    <MESSAGE value="Corrigindo utilização de parametros do job de deploy" />
+    <MESSAGE value="Adicionando construção de imagens com TAG respectivo a versão do modulo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando construção de imagens com TAG respectivo a versão do modulo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -861,22 +862,22 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Alterando permissoes padrões.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Criando novas roles.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/build_scripts/py-parser.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -970,23 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="306">
-            <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-313">
@@ -1027,17 +1011,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="59" selection-start-line="59" selection-end-line="59" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="142" column="9" lean-forward="true" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="493">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>

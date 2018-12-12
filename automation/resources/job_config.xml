@@ -15,13 +15,13 @@
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>slack_channel</name>
-          <description>Canal de notificação</description>
+          <description>Canal de notificacao no slack</description>
           <defaultValue>#devops-notifications</defaultValue>
           <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>pipeline_img</name>
-          <description>Imagem docker p/ pipeline</description>
+          <description>Imagem docker para rodar o pipeline sobre</description>
           <defaultValue>registry.ng.bluemix.net/livelo/alpine-pipeline_img</defaultValue>
           <trim>true</trim>
         </hudson.model.StringParameterDefinition>
