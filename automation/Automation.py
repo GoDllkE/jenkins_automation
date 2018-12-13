@@ -1,3 +1,5 @@
+import sys
+
 import requests
 
 # Importa todos os modulos
@@ -277,6 +279,26 @@ class Automation:
 
     # ================================================================================================================ #
 
+    def check_imported_folder(self, project: str = None) -> bool:
+        # Core
+        url = "{0}/jobs/projects/job/{1}/build/api/json".format(self.jenkins.get_burl(), project)
+
+        print("Verificando existencia da importaçao...", end='')
+        response = requests.get(url=url)
+        if self.debug:
+            self.job_manager.analise_content(data={}, response=response)
+
+        # Validação
+        if response.status_code in [404]:
+            print("não encontrado. (Adicionado a lista de pendentes)")
+            return False
+        elif response.status_code in [200]:
+            print("importação já existe.")
+            return True
+        else:
+            print("erro: desconhecido (codigo: {0})".format(response.status_code))
+            sys.exit(1)
+
     def check_deploy_jobs(self, project: str = None, repositorio: str = None) -> list:
         # Controle
         missing = []
@@ -285,8 +307,7 @@ class Automation:
         for env in self.jenkins.get_environments():
             #
             # Cria URL de pesquisa
-            url = "{0}/job/projects/job/{1}/job/deploy/job/{2}/job/{3}/api/json".format(self.jenkins.get_burl(),
-                                                                                        project, env, job_name)
+            url = "{0}/job/projects/job/{1}/job/deploy/job/{2}/job/{3}/api/json".format(self.jenkins.get_burl(), project, env, job_name)
 
             print("Verificando job de deploy do ambiente de {0}...".format(env), end='')
             response = requests.get(url=url)

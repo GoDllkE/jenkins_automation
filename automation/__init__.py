@@ -100,7 +100,8 @@ def automate():
         if 'project' in action['dado']:
             auto.create_project_structure(project=action['name'])
             auto.create_project_roles(project=action['name'], project_id=action['id'])
-            auto.import_project_builds(project=action['name'], project_id=action['id'], dados=action)
+            if not auto.check_imported_folder(project=action['name']):
+                auto.import_project_builds(project=action['name'], project_id=action['id'], dados=action)
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'deploy_jobs' in action['dado']:
