@@ -93,7 +93,8 @@ def automate():
     auto = Automation(jenkins=jnk, configuration=global_config, debug=debug)
 
     # Formata conteudo de dicionario
-    action['id'] = action['id'].lower()
+    if action.get('id'):
+        action['id'] = str(action['id']).lower()
 
     # Recupera nome do projeto no stash atravéz da ID
     if not action.get('name') and action.get('id'):
