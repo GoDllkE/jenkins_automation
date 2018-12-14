@@ -4,8 +4,9 @@
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Automation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file leaf-file-name="StashCore.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+            <state relative-caret-position="278">
+              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+              <folding>
+                <element signature="e#2#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,8 +33,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="103" column="42" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="42" />
+            <state relative-caret-position="136">
+              <caret line="123" column="33" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="37" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -41,25 +45,82 @@
       <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/Automation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="239" column="29" lean-forward="true" selection-start-line="239" selection-start-column="29" selection-end-line="239" selection-end-column="30" />
+            <state relative-caret-position="291">
+              <caret line="122" column="22" lean-forward="true" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#412#1074#0" />
-                <element signature="e#1149#1664#0" />
-                <element signature="e#2127#4906#0" />
-                <element signature="e#4981#6038#0" />
-                <element signature="e#6136#7396#0" />
-                <element signature="e#7525#8823#0" />
-                <element signature="e#8921#9426#0" />
-                <element signature="e#11831#12096#0" />
-                <element signature="e#12208#12974#0" />
-                <element signature="e#13193#14161#0" />
-                <element signature="e#14589#15183#0" />
-                <element signature="e#15247#15555#0" />
-                <element signature="e#15618#15622#0" />
-                <element signature="e#15685#15689#0" />
+                <element signature="e#424#1086#0" />
+                <element signature="e#1161#1676#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="175">
+                <caret line="61" selection-start-line="61" selection-end-line="61" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+              <folding>
+                <element signature="e#2#12#0" expanded="true" />
+                <element signature="e#703#1141#0" />
+                <element signature="e#1242#1543#0" />
+                <element signature="e#2834#3349#0" />
+                <element signature="e#3450#4488#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Help.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automation/Help.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configurator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="119" column="70" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -83,6 +144,8 @@
       <find>interv</find>
       <find>create_project_roles</find>
       <find>PYTHON_VERSION</find>
+      <find>check_deploy_jobs</find>
+      <find>.lower()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,18 +177,19 @@
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
         <option value="$PROJECT_DIR$/automation/RoleStrategy.py" />
-        <option value="$PROJECT_DIR$/automation/Configurator.py" />
         <option value="$PROJECT_DIR$/automation/resources/project_config.xml" />
         <option value="$PROJECT_DIR$/automation/resources/config.yaml" />
         <option value="$PROJECT_DIR$/automation/FoldersPlus.py" />
         <option value="$PROJECT_DIR$/automation/JobManager.py" />
-        <option value="$PROJECT_DIR$/automation/Help.py" />
+        <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
+        <option value="$PROJECT_DIR$/automation/Configurator.py" />
+        <option value="$PROJECT_DIR$/automation/StashCore.py" />
+        <option value="$PROJECT_DIR$/automation/__init__.py" />
+        <option value="$PROJECT_DIR$/automation/Automation.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
-        <option value="$PROJECT_DIR$/automation/resources/job_config.xml" />
-        <option value="$PROJECT_DIR$/automation/Automation.py" />
-        <option value="$PROJECT_DIR$/automation/__init__.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/automation/Help.py" />
       </list>
     </option>
   </component>
@@ -228,7 +292,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/automation/__init__.py" />
-      <option name="PARAMETERS" value="--create=project --name=huebr --id=PI --debug" />
+      <option name="PARAMETERS" value="--delete=project --id=PI" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -274,41 +338,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00111" summary="Atualizando arquivos do projeto">
-      <created>1544126082246</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1544126082246</updated>
-    </task>
-    <task id="LOCAL-00112" summary="Modulo completamente refatorado, cumprindo proprios proposito individuais e de fluxo.">
-      <created>1544198073292</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1544198073292</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Corrigindo funcao de interfaciamento da automacao">
-      <created>1544199742870</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1544199742871</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Alterando nomeclatura de funcoes para nova feature.">
-      <created>1544201373889</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1544201373889</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Adicionando carregamento de configurações da importação de projetos">
-      <created>1544202125291</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1544202125291</updated>
     </task>
     <task id="LOCAL-00116" summary="Adicionando arquivo de configurações de importação de projeto">
       <created>1544202222593</created>
@@ -618,24 +647,60 @@
       <option name="project" value="LOCAL" />
       <updated>1544646309558</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="Adicionado recurso de verificação de importação de projeto">
+      <created>1544716461655</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1544716461655</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Adicionado classe gerenciadora de requisições para o Stash">
+      <created>1544822100129</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1544822100131</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Implementando classe Stash">
+      <created>1544822140460</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1544822140460</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Atualizando parametros de inicialização aceitáveis">
+      <created>1544822164637</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1544822164637</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Refatorando funções da automação para compatibilidade da nova implementação">
+      <created>1544822201677</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1544822201677</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Jenkins" order="3" weight="0.46266472" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21083455" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14787701" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.42604503" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39828694" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -682,11 +747,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refatorando validação. Agora valida campos individualmente." />
-    <MESSAGE value="Atualizando arquivos do projeto e versionamento." />
-    <MESSAGE value="Corrigindo bug de syntax" />
-    <MESSAGE value="Corrigindo parametro do CI" />
-    <MESSAGE value="Corrigindo validação de parametros" />
     <MESSAGE value="Corrigindo sintax" />
     <MESSAGE value="Corrigindo formato do arquivo" />
     <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket." />
@@ -707,21 +767,19 @@
     <MESSAGE value="Corrigindo utilização de parametros do job de deploy" />
     <MESSAGE value="Adicionando construção de imagens com TAG respectivo a versão do modulo" />
     <MESSAGE value="Corrigindo mal formação do XML template de jobs de deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo mal formação do XML template de jobs de deploy" />
+    <MESSAGE value="Adicionado recurso de verificação de importação de projeto" />
+    <MESSAGE value="Adicionado classe gerenciadora de requisições para o Stash" />
+    <MESSAGE value="Implementando classe Stash" />
+    <MESSAGE value="Atualizando parametros de inicialização aceitáveis" />
+    <MESSAGE value="Refatorando funções da automação para compatibilidade da nova implementação" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando funções da automação para compatibilidade da nova implementação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <option name="time" value="48" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/automation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="104" column="20" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -886,22 +944,22 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Alterando permissoes padrões.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Criando novas roles.md">
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/build_scripts/py-parser.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -957,20 +1015,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -988,20 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Help.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -1016,72 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="59" selection-start-line="59" selection-end-line="59" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="142" column="9" lean-forward="true" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="103" column="42" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="42" />
-          <folding>
-            <element signature="e#18#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="73" column="90" selection-start-line="73" selection-start-column="90" selection-end-line="73" selection-end-column="90" />
-          <folding>
-            <element signature="e#2#12#0" expanded="true" />
-            <element signature="e#703#1141#0" />
-            <element signature="e#1242#1543#0" />
-            <element signature="e#1628#2375#0" />
-            <element signature="e#2834#3349#0" />
-            <element signature="e#3450#4488#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/Automation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="239" column="29" lean-forward="true" selection-start-line="239" selection-start-column="29" selection-end-line="239" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#412#1074#0" />
-            <element signature="e#1149#1664#0" />
-            <element signature="e#2127#4906#0" />
-            <element signature="e#4981#6038#0" />
-            <element signature="e#6136#7396#0" />
-            <element signature="e#7525#8823#0" />
-            <element signature="e#8921#9426#0" />
-            <element signature="e#11831#12096#0" />
-            <element signature="e#12208#12974#0" />
-            <element signature="e#13193#14161#0" />
-            <element signature="e#14589#15183#0" />
-            <element signature="e#15247#15555#0" />
-            <element signature="e#15618#15622#0" />
-            <element signature="e#15685#15689#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -1089,10 +1057,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/JobManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="e#2#12#0" expanded="true" />
+            <element signature="e#703#1141#0" />
+            <element signature="e#1242#1543#0" />
+            <element signature="e#2834#3349#0" />
+            <element signature="e#3450#4488#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding>
+            <element signature="e#2#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="123" column="33" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="37" />
+          <folding>
+            <element signature="e#18#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="119" column="70" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Automation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="122" column="22" lean-forward="true" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#424#1086#0" />
+            <element signature="e#1161#1676#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="175">
+            <caret line="61" selection-start-line="61" selection-end-line="61" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/Help.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
         </state>
       </provider>
     </entry>

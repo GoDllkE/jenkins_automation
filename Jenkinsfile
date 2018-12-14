@@ -53,15 +53,15 @@ pipeline {
                 stage('Teste composto') {
                     steps {
                         script {
-                            sh "./dist/automation --create=project --name=teste_prj_automacao --id=PUP --debug"
-                            sh "./dist/automation --create=deploy_jobs --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
-                            sh "./dist/automation --check=deploy_jobs --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --create=project --id=PI --debug"
+                            sh "./dist/automation --create=deploy_jobs --id=PI --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --check=deploy_jobs --id=PI --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
 
-                            sh "./dist/automation --delete=deploy_jobs --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
-                            sh "./dist/automation --check=deploy_jobs --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
-                            sh "./dist/automation --delete=deploy_jobs --name=teste_prj_automacao --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --delete=deploy_jobs --id=PI --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --check=deploy_jobs --id=PI --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
+                            sh "./dist/automation --delete=deploy_jobs --id=PI --repo=https://stash.pontoslivelo.com.br/scm/pup/puppet-enc-livelocmdb.git --debug"
 
-                            sh "./dist/automation --delete=project --name=teste_prj_automacao --id=PUP --debug"
+                            sh "./dist/automation --delete=project --id=PI --debug"
                         }
                     }
                 }

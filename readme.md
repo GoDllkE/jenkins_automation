@@ -56,6 +56,11 @@ Requisitos de construção do modulo:
 
 ### Changelog
 
+**Versão: 5.0.0**
+- Removido parametro essencial de execução (name)
+- Adicionado e implementado nova classe de requisições do Bitbucket
+- Atualizado funções da automação para compatibilidade da nova implementação.
+
 **Versão: 4.2.13**
 - Corrigido template do job de deploy [job](automation/resources/job_config.xml). Agora adicionado ao interpretador do jenkins os parametros além da declaração via pipeline.
 
