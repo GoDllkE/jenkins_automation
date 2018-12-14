@@ -90,7 +90,11 @@ def automate():
     #
     if debug:
         print("Debug: enabled.")
-        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['id']))
+        if action['id']:
+            dado = action['id']
+        else:
+            dado = action['name']
+        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'],dado))
 
     # Cria instancias
     jnk = JenkinsCore()
