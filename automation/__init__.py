@@ -4,6 +4,7 @@ import getopt
 
 # Internal imports
 from automation.Help import Help
+from automation.StashCore import StashCore
 from automation.Automation import Automation
 from automation.JenkinsCore import JenkinsCore
 from automation.Configurator import Configurator
@@ -89,19 +90,28 @@ def automate():
     #
     if debug:
         print("Debug: enabled.")
-        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['name']))
+        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['id']))
 
     # Cria instancias
     jnk = JenkinsCore()
+    stash = StashCore(jenkins=jnk, debug=debug)
     auto = Automation(jenkins=jnk, configuration=global_config, debug=debug)
+
+    # Formata conteudo de dicionario
+    action['id'] = action['id'].lower()
+
+    # Recupera nome do projeto no stash atravéz da ID
+    if not action.get('name') and action.get('id'):
+        action['name'] = stash.get_project_name(project_id=action['id'].lower())
+        action['name'] = action['name'].replace(' ', '_')
 
     # Realiza procedimento de automacao
     if 'create' in action['acao']:
         if 'project' in action['dado']:
-            auto.create_project_structure(project=action['name'])
-            auto.create_project_roles(project=action['name'], project_id=action['id'])
-            if not auto.check_imported_folder(project=action['name']):
-                auto.import_project_builds(project=action['name'], project_id=action['id'], dados=action)
+            auto.create_project_structure(project=action['id'])
+            auto.create_project_roles(project_id=action['id'])
+            if not auto.check_imported_folder(project=action['id']):
+                auto.import_project_builds(project_id=action['id'], dados=action)
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'deploy_jobs' in action['dado']:
@@ -111,8 +121,8 @@ def automate():
 
     elif 'delete' in action['acao']:
         if 'project' in action['dado']:
-            auto.delete_project_roles(project=action['id'])
-            auto.delete_project_structure(project=action['name'])
+            auto.delete_project_roles(project_id=action['id'])
+            auto.delete_project_structure(project=action['name'], project_id=action['id'])
         elif 'role' in action['dado']:
             auto.delete_role(data=action)
         elif 'deploy_jobs' in action['dado']:
@@ -125,7 +135,7 @@ def automate():
             status = auto.check_deploy_jobs(project=action['name'], repositorio=action['repo'])
             if type(status) is list and status != []:
                 print("\nCriando jobs de deploy faltantes...")
-                auto.create_missing_deploy_jobs(projeto=action['name'], ambiente= status, repositorio=action['repo'])
+                auto.create_missing_deploy_jobs(projeto=action['id'].lower(), ambiente= status, repositorio=action['repo'])
             else:
                 print("\nINFO: Jobs de deploy já existem!")
                 sys.exit(0)
