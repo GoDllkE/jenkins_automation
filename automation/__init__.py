@@ -115,7 +115,7 @@ def automate():
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'deploy_jobs' in action['dado']:
-            auto.create_deploy_jobs(projeto=action['name'], repositorio=action['repo'])
+            auto.create_deploy_jobs(project_id=action['id'], repositorio=action['repo'])
         else:
             pass
 

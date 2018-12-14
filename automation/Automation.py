@@ -137,16 +137,17 @@ class Automation:
         print("concluido!")
         # End of function
 
-    def create_deploy_jobs(self, projeto: str = None, repositorio: str = None) -> None:
+    def create_deploy_jobs(self, project_id: str = None, repositorio: str = None) -> None:
         """
             Funcao que cria jobs de deploy dado um projeto e um repositorio em especifico
+            :param project_id:
             :param projeto:                     Nome do projeto a na estrutura do jenkins
             :param repositorio:                 Nome do repositorio da qual deseja criar os jobs de deploy.
             :return:                            Retorna nada
         """
         # Core
         name = repositorio.split('/')[-1].split('.', 1)[0]
-        path = "/job/{0}/job/deploy/job/<env>".format(projeto)
+        path = "/job/{0}/job/deploy/job/<env>".format(project_id.lower())
 
         #
         for env in self.jenkins.get_environments():
