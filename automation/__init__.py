@@ -130,13 +130,13 @@ def automate():
         elif 'role' in action['dado']:
             auto.delete_role(data=action)
         elif 'deploy_jobs' in action['dado']:
-            auto.delete_deploy_jobs(projeto=action['name'], repositorio=action['repo'])
+            auto.delete_deploy_jobs(projeto=action['id'], repositorio=action['repo'])
         else:
             pass
 
     elif 'check' in action['acao']:
         if 'deploy_jobs' in action['dado']:
-            status = auto.check_deploy_jobs(project=action['name'], repositorio=action['repo'])
+            status = auto.check_deploy_jobs(project=action['id'], repositorio=action['repo'])
             if type(status) is list and status != []:
                 print("\nCriando jobs de deploy faltantes...")
                 auto.create_missing_deploy_jobs(projeto=action['id'].lower(), ambiente= status, repositorio=action['repo'])

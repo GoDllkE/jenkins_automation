@@ -17,8 +17,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="96" column="86" selection-start-line="96" selection-start-column="86" selection-end-line="96" selection-end-column="86" />
+            <state relative-caret-position="34">
+              <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -29,14 +29,19 @@
       <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/Automation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="146" column="11" lean-forward="true" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
+            <state relative-caret-position="74">
+              <caret line="191" column="36" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#424#1086#0" />
                 <element signature="e#1161#1676#0" />
                 <element signature="e#2139#4901#0" />
                 <element signature="e#4996#6057#0" />
+                <element signature="e#6207#7475#0" />
+                <element signature="e#9524#11771#0" />
+                <element signature="e#11850#12115#0" />
+                <element signature="e#12206#12978#0" />
+                <element signature="e#13179#13880#0" />
               </folding>
             </state>
           </provider>
@@ -134,6 +139,7 @@
       <find>PYTHON_VERSION</find>
       <find>check_deploy_jobs</find>
       <find>.lower()</find>
+      <find>check_depl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -326,20 +332,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Definindo padrões. Sem necessidade de parametrização de alguns itens">
-      <created>1544209323365</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1544209323365</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Adicionando chamada da feature de importação do projeto bitbucket a pasta build da estrutura do jenkins">
-      <created>1544209381374</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1544209381374</updated>
     </task>
     <task id="LOCAL-00120" summary="Adicionando feature da automação de importação de projeto do bitbucket">
       <created>1544209402624</created>
@@ -670,7 +662,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544822626661</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Corrigindo mensagem de debug no inicializador">
+      <created>1544822843063</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1544822843063</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Corrigindo mensagem de debug no inicializador">
+      <created>1544823221756</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1544823221757</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -684,7 +690,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50104165" side_tool="true" weight="0.42604503" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32869378" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" weight="0.33440515" />
+      <window_info anchor="bottom" x="-1910" y="307" width="1906" height="428" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.33440515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -735,7 +741,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket." />
     <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
     <MESSAGE value="Corrigindo XML. (bug de encode)" />
     <MESSAGE value="Corrigindo parametro declarativo no inicializador" />
@@ -760,7 +765,8 @@
     <MESSAGE value="Refatorando funções da automação para compatibilidade da nova implementação" />
     <MESSAGE value="Atualizando arquivos do projeto para nova implementação" />
     <MESSAGE value="Corrigindo função de criação de jobs de deploy para utilizar ID ao invés do nome" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo função de criação de jobs de deploy para utilizar ID ao invés do nome" />
+    <MESSAGE value="Corrigindo mensagem de debug no inicializador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo mensagem de debug no inicializador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1112,22 +1118,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/Automation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="146" column="11" lean-forward="true" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
+        <state relative-caret-position="74">
+          <caret line="191" column="36" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#424#1086#0" />
             <element signature="e#1161#1676#0" />
             <element signature="e#2139#4901#0" />
             <element signature="e#4996#6057#0" />
+            <element signature="e#6207#7475#0" />
+            <element signature="e#9524#11771#0" />
+            <element signature="e#11850#12115#0" />
+            <element signature="e#12206#12978#0" />
+            <element signature="e#13179#13880#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="96" column="86" selection-start-line="96" selection-start-column="86" selection-end-line="96" selection-end-column="86" />
+        <state relative-caret-position="34">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>
