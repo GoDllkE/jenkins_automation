@@ -87,15 +87,6 @@ def automate():
         Help()
         sys.exit(1)
 
-    #
-    if debug:
-        print("Debug: enabled.")
-        if action.get('id'):
-            dado = action.get('id')
-        else:
-            dado = action.get('name')
-        print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], dado))
-
     # Cria instancias
     jnk = JenkinsCore()
     stash = StashCore(jenkins=jnk, debug=debug)

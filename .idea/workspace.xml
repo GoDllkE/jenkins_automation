@@ -17,8 +17,8 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -332,20 +332,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00120" summary="Adicionando feature da automação de importação de projeto do bitbucket">
-      <created>1544209402624</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1544209402624</updated>
-    </task>
-    <task id="LOCAL-00121" summary="Adicionando função de importação da nova feature.">
-      <created>1544209428457</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1544209428457</updated>
     </task>
     <task id="LOCAL-00122" summary="Redefinindo lista de argumentos.">
       <created>1544209451895</created>
@@ -676,7 +662,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544823221757</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Corrigindo parametros das funções de automação">
+      <created>1544823574424</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1544823574424</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Workaround">
+      <created>1544823812209</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1544823812209</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -741,8 +741,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Alterando nome das roles para ID do projeto no bitbucket na criação das roles." />
-    <MESSAGE value="Corrigindo XML. (bug de encode)" />
     <MESSAGE value="Corrigindo parametro declarativo no inicializador" />
     <MESSAGE value="Removendo caracteres especiais" />
     <MESSAGE value="Atualizando mensagens" />
@@ -766,7 +764,9 @@
     <MESSAGE value="Atualizando arquivos do projeto para nova implementação" />
     <MESSAGE value="Corrigindo função de criação de jobs de deploy para utilizar ID ao invés do nome" />
     <MESSAGE value="Corrigindo mensagem de debug no inicializador" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo mensagem de debug no inicializador" />
+    <MESSAGE value="Corrigindo parametros das funções de automação" />
+    <MESSAGE value="Workaround" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workaround" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1137,8 +1137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/automation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>
