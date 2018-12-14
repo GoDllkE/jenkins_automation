@@ -57,10 +57,10 @@ class Automation:
             :return:                Retorna Nada
         """
         # Core
-        if project_id is not None:
+        if project is None:
+            project = project_id.lower()
             project_id = project_id.upper()
-        else:
-            project_id = project
+
         role_config = self.config_manger.load_config()['role_strategy']
 
         print('Criando role de view')
@@ -110,23 +110,24 @@ class Automation:
             )
         # End of function
 
-    def delete_project_roles(self, project: str = None) -> None:
+    def delete_project_roles(self, project_id: str = None) -> None:
         """
             Funcao para remocao das roles padroes de um projeto especificado
-            :param project:     Recebe o nome do projeto
+            :param project_id:  Recebe o ID do projeto
             :return:            Retorna Nada
         """
         # Core
+        project_id = project_id.upper()
         role_config = self.config_manger.load_config()['role_strategy']
 
         # Dynamic project roles name list generation (don't blame me)
         role_list = []
         for item in list(role_config.keys()):
             if 'env' not in role_config[item]['name']:
-                role_list.append(str(role_config[item]['name']).replace('<project>', project))
+                role_list.append(str(role_config[item]['name']).replace('<project>', project_id))
             else:
                 for env in self.role_manager.environments:
-                    role_list.append(str(role_config[item]['name']).replace('<project>', project).replace('<env>', env))
+                    role_list.append(str(role_config[item]['name']).replace('<project>', project_id).replace('<env>', env))
                 continue
             continue
         #
@@ -247,15 +248,15 @@ class Automation:
             pass
         # End of function
 
-    def delete_project_structure(self, project: str = None) -> None:
+    def delete_project_structure(self, project: str = None, project_id: str =None) -> None:
         # Core
-        response = self.folder_manager.delete_structure(name=project)
+        response = self.folder_manager.delete_structure(name=project_id)
         #
         print("Deletando estrutura do projeto {0}...".format(project), end='')
         self.folder_manager.validate(status_code=response.status_code, folder=project)
         pass
 
-    def import_project_builds(self, project: str = None, project_id: str = None, dados: dict = None):
+    def import_project_builds(self, project_id: str = None, dados: dict = None):
         # Core
         data = {}
         data.setdefault('project_owner', project_id)
@@ -273,15 +274,15 @@ class Automation:
             data.setdefault('intervalo', 120000)
 
         print("Importando projeto do stash para o jenkins...", end='')
-        response = self.job_manager.import_project_jobs(projeto=project, data=data)
-        self.job_manager.validate(status_code=response.status_code, job=project)
+        response = self.job_manager.import_project_jobs(projeto=project_id, data=data)
+        self.job_manager.validate(status_code=response.status_code, job=project_id)
         pass
 
     # ================================================================================================================ #
 
     def check_imported_folder(self, project: str = None) -> bool:
         # Core
-        url = "{0}/jobs/projects/job/{1}/build/api/json".format(self.jenkins.get_burl(), project)
+        url = "{0}/jobs/projects/job/{1}/build/api/json".format(self.jenkins.get_burl(), project.lower())
 
         print("Verificando existencia da importaçao...", end='')
         response = requests.get(url=url)
