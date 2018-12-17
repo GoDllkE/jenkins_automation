@@ -5,6 +5,9 @@ import requests
 from automation.JenkinsCore import JenkinsCore
 from automation.Configurator import Configurator
 
+# Variavel de controle de desenvolvimento e depuração
+development_control = False
+
 
 class JobManager:
 
@@ -17,6 +20,13 @@ class JobManager:
         self.b_url = b_url = 'http://{0}@{1}/job/projects'.format(self.jenkins.get_bauth(), self.jenkins.get_url())
 
     def create_deploy_job(self, configuration: str = None, caminho: str = None, repositorio: str = None) -> requests:
+        """
+            Funcao que cria os jobs de deploy de um repositorio especifico
+            :param configuration:           Recebe a configuracao padrao da automacao
+            :param caminho:                 Recebe o caminho de acesso onde o job deve ser criado
+            :param repositorio:             Recebe a URL do repositorio
+            :return:                        Retorna objeto response
+        """
         # Core
         header = {"Content-Type": "text/xml"}
 
@@ -29,6 +39,12 @@ class JobManager:
         return response
 
     def delete_deploy_job(self, caminho: str = None, repositorio: str = None) -> requests:
+        """
+            Funcao que delete os jobs de deploy de um repositorio especifico
+            :param caminho:             Recebe o caminho de acesso ao job de deploy
+            :param repositorio:         Recebe a URL do repositorio
+            :return:                    Retorna objeto response
+        """
         # Core
         name = repositorio.split('/')[-1].split('.', 1)[0]
         #
@@ -38,7 +54,13 @@ class JobManager:
             self.analise_content(response=response, data={})
         return response
 
-    def import_project_jobs(self, projeto: str = None, data: dict = None):
+    def import_project_jobs(self, projeto: str = None, data: dict = None) -> requests:
+        """
+            Funcao que importa projeto do bitbucket para o jenkins.
+            :param projeto:         Recebe o ID do projeto para formação da URL
+            :param data:            Recebe um dicionario contendo todos os dados para importação
+            :return:                Retorna objeto response
+        """
         # Core
         header = {"Content-Type": "text/xml"}
 
@@ -66,7 +88,8 @@ class JobManager:
         """
         print("\nData gathered:")
         print("- Data: {0}".format(str(data)))
-        print("- Request URL: {0}".format(response.url))
+        if development_control:
+            print("- Request URL: {0}".format(response.url))
         print("- Response:")
         print("\t- Code: {0}".format(response.status_code))
         print("\t- Content: {0}".format(str(response.content)))
