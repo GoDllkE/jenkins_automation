@@ -1,11 +1,10 @@
 Gerenciando projetos no jenkins
 ---
-```
-De: 17/12/2018
-Versão atual: 5.1.2
-Por: Gustavo Toledo
-```
----
+> De: 17/12/2018
+
+> Versão atual: 5.1.2
+
+> Por: Gustavo Toledo
 
 Este modulo permite o fácil gerenciamento entre projetos que vão entrar ou sair do jenkins de forma centralizada e a 
 facilitar o controle e gestão do que ocorre no nosso jenkins.
@@ -21,7 +20,6 @@ Após inserir e prosseguir com o job, o mesmo vai garantir que seu projeto no je
 repositorios atuais e futuros e também (em implementação) vai garantir o deploy da sua aplicação!
 Seu projeto no jenkins vai seguir a seguinte estrutura:
 
-``` 
 projects
 └── seu_projeto
     ├── build
@@ -62,3 +60,4 @@ no jenkins da forma que foi explicado anteriormente, onde você perderá todo o 
 
 Conforme a API for atualizando e novas funcionalidades implementadas, uma maneira melhor de autalizar projetos será 
 planejado e implementado nesse programa. 
+

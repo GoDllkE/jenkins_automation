@@ -1,11 +1,10 @@
 Gerenciando projetos no jenkins
 ---
-```
-De: 17/12/2018
-Versão atual: 5.1.2
-Por: Gustavo Toledo
-```
----
+> De: 17/12/2018
+
+> Versão atual: 5.1.2
+
+> Por: Gustavo Toledo
 
 Este modulo permite também o gerenciamento dos jobs de deploy de um repositorio do seu projeto, tanto de forma apartada 
 quanto integrada ao CI. Nesse arquivo, você verá como criar e/ou deletar os jobs de deploy de uma aplicação/repositorio. 
