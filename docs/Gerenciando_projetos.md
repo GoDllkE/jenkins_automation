@@ -20,6 +20,7 @@ Após inserir e prosseguir com o job, o mesmo vai garantir que seu projeto no je
 repositorios atuais e futuros e também (em implementação) vai garantir o deploy da sua aplicação!
 Seu projeto no jenkins vai seguir a seguinte estrutura:
 
+```
 projects
 └── seu_projeto
     ├── build

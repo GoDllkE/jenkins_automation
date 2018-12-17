@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Gerenciando_projetos.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando_projetos.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +27,8 @@
         <entry file="file://$PROJECT_DIR$/docs/Gerenciando_projetos.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="34">
-                <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+              <first_editor relative-caret-position="221">
+                <caret line="22" selection-start-line="22" selection-end-line="35" selection-end-column="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -40,9 +38,9 @@
       <file leaf-file-name="Gerenciando_jobs-de-deploy.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="102">
-                <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
@@ -135,8 +133,8 @@
         <option value="$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md" />
         <option value="$PROJECT_DIR$/automation/StashCore.py" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/docs/Gerenciando_projetos.md" />
         <option value="$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md" />
+        <option value="$PROJECT_DIR$/docs/Gerenciando_projetos.md" />
         <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
@@ -284,20 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00142" summary="Alterando nome das roles para ID do projeto no bitbucket.">
-      <created>1544548449094</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1544548449095</updated>
-    </task>
-    <task id="LOCAL-00143" summary="Alterando nome das roles para ID do projeto no bitbucket na criação das roles.">
-      <created>1544548477726</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1544548477726</updated>
     </task>
     <task id="LOCAL-00144" summary="Corrigindo XML. (bug de encode)">
       <created>1544548727605</created>
@@ -628,7 +612,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545068045439</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Atualizando documentação">
+      <created>1545068387895</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1545068387896</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Atualizando documentos">
+      <created>1545073964898</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1545073964898</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -693,8 +691,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementando classe Stash" />
-    <MESSAGE value="Atualizando parametros de inicialização aceitáveis" />
     <MESSAGE value="Refatorando funções da automação para compatibilidade da nova implementação" />
     <MESSAGE value="Atualizando arquivos do projeto para nova implementação" />
     <MESSAGE value="Corrigindo função de criação de jobs de deploy para utilizar ID ao invés do nome" />
@@ -718,7 +714,9 @@
     <MESSAGE value="Atualizando arquivos do projeto" />
     <MESSAGE value="Corrigindo validação da classe de comunicações Stash" />
     <MESSAGE value="Atualizando versões de distribuição nos documentos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando versões de distribuição nos documentos" />
+    <MESSAGE value="Atualizando documentação" />
+    <MESSAGE value="Atualizando documentos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando documentos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1062,23 +1060,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_projetos.md">
+    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="34">
-            <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="3" />
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md">
+    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_projetos.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="102">
-            <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="221">
+            <caret line="22" selection-start-line="22" selection-end-line="35" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>
