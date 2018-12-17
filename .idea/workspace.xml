@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/Configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Configurator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/FoldersPlus.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/FoldersPlus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/JenkinsCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JenkinsCore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/JobManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JobManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/RoleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/RoleStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/StashCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/StashCore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Alterando permissoes padrões.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Criando novas roles.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando projetos.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Deletando roles.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando roles.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,125 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StashCore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-              <folding>
-                <element signature="e#2#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="123" column="64" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="64" />
-              <folding>
-                <element signature="e#18#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FoldersPlus.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Automation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/Automation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="191" column="19" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#424#1086#0" />
-                <element signature="e#1161#1676#0" />
-                <element signature="e#2139#4906#0" />
-                <element signature="e#4984#6085#0" />
-                <element signature="e#6186#7488#0" />
-                <element signature="e#7617#8915#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gerenciando roles.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/Gerenciando roles.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gerenciando jobs de deploy.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="136">
-                <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret selection-end-line="28" selection-end-column="35" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gerenciando projetos.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/Gerenciando projetos.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="51">
-                <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleStrategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="98" selection-start-line="98" selection-end-line="99" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -362,55 +235,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00125" summary="Adicionando arquivo de configuraçao a lista de upload para o nexus.">
-      <created>1544210097548</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1544210097548</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Atualizando dados do projeto.">
-      <created>1544210123228</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1544210123228</updated>
-    </task>
-    <task id="LOCAL-00127" summary="Corrigindo parametros de teste de execução do pipeline">
-      <created>1544210407912</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1544210407912</updated>
-    </task>
-    <task id="LOCAL-00128" summary="Corrigindo conteudo dos jobs de deploy">
-      <created>1544213937479</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1544213937479</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Incrementando e corrigindo funcionalidade para CI/CD de verificação de jobs. Correção de mensagens">
-      <created>1544540491026</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1544540491027</updated>
-    </task>
-    <task id="LOCAL-00130" summary="Incrementando funcionalidade da automação da nova feature">
-      <created>1544540522081</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1544540522082</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Adicionado protocolo padrão de uso">
-      <created>1544540543300</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1544540543300</updated>
     </task>
     <task id="LOCAL-00132" summary="Removido protocolo de comunicação estatico da criação de projetos">
       <created>1544540574753</created>
@@ -706,12 +530,60 @@
       <option name="project" value="LOCAL" />
       <updated>1545053468838</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="Atualizando versão do modulo e conteudo dos arquivos do projeto">
+      <created>1545059529827</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059529827</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Adicionando manuais de uso do programa">
+      <created>1545059551907</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059551907</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Adicionando funcionalidade de desenvolvimento. Alterado visibilidade de função core da classe e implementado busca reversa (nome para id).">
+      <created>1545059619037</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059619037</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Adicionando funcionalidade de desenvolvimento.">
+      <created>1545059631303</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059631303</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Adicionando funcionalidade de desenvolvimento. Adicionado docstring das funcionalidades">
+      <created>1545059656422</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059656422</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Adicionado docstring das funcionalidades">
+      <created>1545059673223</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059673223</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Atualizando help-me para nova versão do modulo">
+      <created>1545059699739</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1545059699739</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Jenkins" order="3" weight="0.46266472" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14787701" />
@@ -771,13 +643,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Corrigido regex das roles estar diferente da estrutura criada." />
-    <MESSAGE value="Corrigindo variavel de identificação do projeto podendo estar nula quebrar a execução." />
-    <MESSAGE value="Adicionado saida com falha do algoritimo em casos de erro 404 ou desconhecido." />
-    <MESSAGE value="Atualizado help-me com exemplos mais atuais a versão." />
-    <MESSAGE value="Adicionado saida de erro do algoritimo em caso de retorno 404 ou desconhecido." />
-    <MESSAGE value="Atualizado versão do modulo devido as correções" />
-    <MESSAGE value="Atualizado documento do modulo" />
     <MESSAGE value="Removendo linhas desnecessárias" />
     <MESSAGE value="Atualizando arquivos do projeto." />
     <MESSAGE value="Corrigindo utilização de parametros do job de deploy" />
@@ -796,7 +661,14 @@
     <MESSAGE value="Removed debug message" />
     <MESSAGE value="Added conditional to key" />
     <MESSAGE value="Added default credential to automation function at stash project import" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added default credential to automation function at stash project import" />
+    <MESSAGE value="Atualizando versão do modulo e conteudo dos arquivos do projeto" />
+    <MESSAGE value="Adicionando manuais de uso do programa" />
+    <MESSAGE value="Adicionando funcionalidade de desenvolvimento. Alterado visibilidade de função core da classe e implementado busca reversa (nome para id)." />
+    <MESSAGE value="Adicionando funcionalidade de desenvolvimento." />
+    <MESSAGE value="Adicionando funcionalidade de desenvolvimento. Adicionado docstring das funcionalidades" />
+    <MESSAGE value="Adicionado docstring das funcionalidades" />
+    <MESSAGE value="Atualizando help-me para nova versão do modulo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando help-me para nova versão do modulo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1090,13 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="98" selection-start-line="98" selection-end-line="99" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/Automation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1147,29 +1012,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Gerenciando roles.md">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Gerenciando projetos.md">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="51">
-            <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md">
+    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1184,6 +1027,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_roles.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Gerenciando_projetos.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/RoleStrategy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="98" selection-start-line="98" selection-end-line="99" selection-end-column="60" />
         </state>
       </provider>
     </entry>
