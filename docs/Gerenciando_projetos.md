@@ -1,7 +1,7 @@
 Gerenciando projetos no jenkins
 ---
 De: 17/12/2018
-Versão atual: 5.1.0
+Versão atual: 5.1.2
 Por: Gustavo Toledo
 ---
 

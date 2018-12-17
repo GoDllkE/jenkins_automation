@@ -1,7 +1,7 @@
 Jenkins Automation
 ---
-Stable version: 5.0.8
-Latest version: 5.1.2
+Stable version: 5.1.2
+Latest version: 5.1.3
 ---
 
 Modulo python criado com o proposito de automatizar o processo de criação e remoção de projetos na ferramenta.
