@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automation/StashCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/StashCore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,6 +16,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StashCore.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+              <folding>
+                <element signature="e#2#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FoldersPlus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/FoldersPlus.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -28,14 +42,14 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="51">
-                <caret line="3" selection-start-line="3" selection-end-line="3" />
+                <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -120,11 +134,11 @@
         <option value="$PROJECT_DIR$/automation/JenkinsCore.py" />
         <option value="$PROJECT_DIR$/automation/Configurator.py" />
         <option value="$PROJECT_DIR$/docs/Gerenciando roles.md" />
-        <option value="$PROJECT_DIR$/automation/StashCore.py" />
         <option value="$PROJECT_DIR$/docs/Gerenciando projetos.md" />
         <option value="$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/automation/StashCore.py" />
       </list>
     </option>
   </component>
@@ -153,7 +167,7 @@
             <path>
               <item name="jenkins_automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="jenkins_automation" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="automation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,13 +285,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Corrigindo parametro do CI">
-      <created>1544541668531</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1544541668531</updated>
     </task>
     <task id="LOCAL-00138" summary="Corrigindo validação de parametros">
       <created>1544542671357</created>
@@ -615,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545060678548</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="Atualizando arquivos do projeto">
+      <created>1545060699977</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1545060699977</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,9 +717,9 @@
     <MESSAGE value="Adicionando funcionalidade de desenvolvimento." />
     <MESSAGE value="Adicionando funcionalidade de desenvolvimento. Adicionado docstring as funcionalidades" />
     <MESSAGE value="Alterado chamada de criação de jobs de deploy para também verificar." />
-    <MESSAGE value="Atualizando arquivos do projeto" />
     <MESSAGE value="Atualizando arquivo descritivo principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivo descritivo principal" />
+    <MESSAGE value="Atualizando arquivos do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivos do projeto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1022,16 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#2#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1083,7 +1087,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="51">
-            <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>
@@ -1093,6 +1097,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/StashCore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+          <folding>
+            <element signature="e#2#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
