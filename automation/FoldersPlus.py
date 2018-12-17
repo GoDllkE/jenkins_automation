@@ -5,6 +5,9 @@ import requests
 # Internal imports
 from automation import JenkinsCore
 
+# Variavel de controle de desenvolvimento e depuração
+development_control = False
+
 
 class FoldersPlus:
 
@@ -51,7 +54,8 @@ class FoldersPlus:
         """
         print("Data gathered:")
         print("- Data: {0}".format(str(data)))
-        print("- Request URL: {0}".format(response.url))
+        if development_control:
+            print("- Request URL: {0}".format(response.url))
         print("- Response:")
         print("\t- Code: {0}".format(response.status_code))
         print("\t- Content: {0}".format(str(response.content)))
