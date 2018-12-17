@@ -266,7 +266,7 @@ class Automation:
         if dados.get('credenciais'):
             data.setdefault('credencial', dados.get('credenciais'))
         else:
-            data.setdefault('credencial', 'jenkins-user')
+            data.setdefault('credencial', 'botlivelo-oud_user')
 
         # Valida se existe intervalo customizado
         if dados.get('intervalo'):
