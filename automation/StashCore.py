@@ -25,7 +25,7 @@ class StashCore:
         """
         data = dict(limit=1000, size=1000)
         response = requests.get(url='{0}/projects'.format(self.b_url), params=data)
-        self.validate(response=response, data=data)
+        self.validate(status_code=response.status_code, data=data)
         if self.debug:
             self.analise_content(response=response, data=data)
         return response.json()
@@ -58,7 +58,7 @@ class StashCore:
                 return project['id']
         return None
 
-    def validate(self, status_code: int = None, id: str = None, name: str = None) -> None:
+    def validate(self, status_code: int = None, name: str = None) -> None:
         """
             Funcao que valida o status_code das requisicoes
             :param id:              Recebe o id do objeto
@@ -68,7 +68,7 @@ class StashCore:
         """
         if status_code == 200:
             if name is None:
-                print('erro. Não foi possivel localizar o nome do projeto referente ao ID: {0}'.format(id))
+                print('erro. Não foi possivel localizar o nome do projeto')
                 sys.exit(1)
             else:
                 print('concluido com sucesso!')
