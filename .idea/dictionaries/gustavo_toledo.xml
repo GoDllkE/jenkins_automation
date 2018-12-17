@@ -27,6 +27,7 @@
       <w>alterado</w>
       <w>alterando</w>
       <w>alterar</w>
+      <w>alterações</w>
       <w>altere</w>
       <w>além</w>
       <w>ambiente</w>
@@ -80,6 +81,7 @@
       <w>botlivelo</w>
       <w>botão</w>
       <w>burlar</w>
+      <w>busca</w>
       <w>buscar</w>
       <w>básica</w>
       <w>cada</w>
@@ -101,6 +103,7 @@
       <w>chamadas</w>
       <w>changelogs</w>
       <w>chatbot</w>
+      <w>chaves</w>
       <w>classe</w>
       <w>cloudbees</w>
       <w>codig</w>
@@ -132,6 +135,7 @@
       <w>construindo</w>
       <w>construtor</w>
       <w>construção</w>
+      <w>consultado</w>
       <w>contem</w>
       <w>contendo</w>
       <w>conteudo</w>
@@ -215,6 +219,7 @@
       <w>encontrado</w>
       <w>encontranda</w>
       <w>encontrar</w>
+      <w>encontre</w>
       <w>engatilha</w>
       <w>ento</w>
       <w>entram</w>
@@ -223,11 +228,13 @@
       <w>entrypoint</w>
       <w>então</w>
       <w>erro</w>
+      <w>erros</w>
       <w>especiais</w>
       <w>especifica</w>
       <w>especificado</w>
       <w>especificas</w>
       <w>especifico</w>
+      <w>essas</w>
       <w>esse</w>
       <w>essencial</w>
       <w>estagio</w>
@@ -259,6 +266,7 @@
       <w>explicado</w>
       <w>extenso</w>
       <w>exterminados</w>
+      <w>externo</w>
       <w>facilitar</w>
       <w>falha</w>
       <w>falhou</w>
@@ -339,6 +347,7 @@
       <w>inserir</w>
       <w>insira</w>
       <w>instalando</w>
+      <w>instalar</w>
       <w>instalação</w>
       <w>instancia</w>
       <w>instancias</w>
@@ -377,6 +386,7 @@
       <w>maneira</w>
       <w>manipulacao</w>
       <w>manter</w>
+      <w>manutenção</w>
       <w>mapeamento</w>
       <w>maquina</w>
       <w>melhor</w>
@@ -415,7 +425,9 @@
       <w>obrigacoes</w>
       <w>observacoes</w>
       <w>ocorre</w>
+      <w>ocorrer</w>
       <w>oficiais</w>
+      <w>olha</w>
       <w>oliveira</w>
       <w>onde</w>
       <w>onefile</w>
@@ -463,8 +475,13 @@
       <w>podendo</w>
       <w>pontoslivelo</w>
       <w>possivel</w>
+      <w>possui</w>
       <w>possuir</w>
+      <w>possíveis</w>
+      <w>precisa</w>
+      <w>preferencia</w>
       <w>prepara</w>
+      <w>primeiro</w>
       <w>prioridade</w>
       <w>prioritários</w>
       <w>problema</w>
@@ -523,9 +540,11 @@
       <w>requisita</w>
       <w>requisitado</w>
       <w>requisitados</w>
+      <w>requisitantes</w>
       <w>requisitos</w>
       <w>requisição</w>
       <w>requisições</w>
+      <w>respectiva</w>
       <w>respectivo</w>
       <w>respectivos</w>
       <w>responsavel</w>
@@ -536,6 +555,7 @@
       <w>retorna</w>
       <w>retornar</w>
       <w>retorno</w>
+      <w>reversa</w>
       <w>rnatp</w>
       <w>rnetp</w>
       <w>rnetpo</w>
@@ -553,6 +573,7 @@
       <w>seguida</w>
       <w>seguinte</w>
       <w>seguir</w>
+      <w>seja</w>
       <w>sejam</w>
       <w>selecione</w>
       <w>sendo</w>
@@ -582,6 +603,7 @@
       <w>tarefas</w>
       <w>tela</w>
       <w>tenha</w>
+      <w>tentará</w>
       <w>tentativa</w>
       <w>testado</w>
       <w>testando</w>
@@ -593,12 +615,14 @@
       <w>todas</w>
       <w>todos</w>
       <w>tratar</w>
+      <w>troca</w>
       <w>tudo</w>
       <w>ultima</w>
       <w>unassing</w>
       <w>unica</w>
       <w>usar</w>
       <w>usuario</w>
+      <w>utiliza</w>
       <w>utilizados</w>
       <w>utilizar</w>
       <w>utilização</w>

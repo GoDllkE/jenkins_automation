@@ -1,4 +1,7 @@
-Jenkins automation module
+Jenkins Automation
+---
+Stable version: 5.1.0
+Latest version: 5.1.0
 ---
 
 Modulo python criado com o proposito de automatizar o processo de criação e remoção de projetos na ferramenta.
@@ -26,24 +29,38 @@ sendo eles (em ordem de prioridade):
 2) Do caminho no host: */etc/jenkins_automations/config.yaml*
 3) *Carregamento interno do modulo*
 
+Ou seja, no momento de executar, este programa olha primeiro se existe uma VARIAVEL DE AMBIENTE LINUX respectiva a
+configuração que ele precisa, que se existir, deve ter o valor para um caminho onde possui um YAML com as chaves que
+pode ser consultado [aqui](automation/resources/config.yaml). Caso não encontre essa variavel ou arquivo, ele vai buscar
+essas configurações em */etc/jenkins_automations/config.yaml*. Caso também não encontre nesse local, ele tentará fazer o
+carregamento interno, que devido as possíveis alterações de ambiente pode ocorrer erros.
+
 ### O que contem nas configurações?
 
 Basicamente, tudo!
-No arquivo de configuração é guardado toda configuração baseada na arquitetura estrutural definida
-no jenkins, que pode ser encontranda no confluence.
+No arquivo de configuração é guardado toda configuração baseada na arquitetura estrutural definida no jenkins, que 
+pode ser encontranda no confluence.
+
 Nele, existe a configuração da criação de estrutura de pastas por projeto e também o padrão das roles 
-de projeto, isto é, role de *view*, *build*, *deploy* e etc. 
+de projeto, isto é, role de *view*, *build*, *deploy* e etc.
+ 
 **Então, caso precise alterar o padrão. Altere nesse arquivo**.
 
-### Template do arquivo de configuração
+### Configurações da automação
 
-Na verdade não é um template, mas voce pode usar o arquivo de configuração interna do modulo como um template 
-para sua necessidade, que se encontra [aqui](automation/resources/config.yaml) 
+Este programa utiliza um arquivo externo de configurações para facilitar a manutenção e troca de padrões.
+O mesmo pode ser consultado [aqui](automation/resources/config.yaml)
+
+Além do arquivo externo de configurações gerais, existe o arquivo de configuração dos jobs de deploy,
+que pode ser consultado [aqui](automation/resources/job_config.xml)
+
+E também, tem o arquivo externo de configurações da importação do projeto no stash para o jenkins,
+que pode ser consultado [aqui](automation/resources/project_config.xml)
 
 ### Requisitos
 
 Requisitos de execução do modulo:
-- Python 3.7.1
+- Python 3.6 (preferencia para versão latest)
 - PyYaml
 - Requests
 
@@ -53,8 +70,23 @@ Requisitos de construção do modulo:
 - PyYaml
 - Requests
 
+#### Instalando requisitos
+
+Para instalar os modulos requisitantes, rode o seguinte comando:
+
+    $ python3 -m pip install -r requirements.txt  
+
 
 ### Changelog
+
+**Versão: 5.1.0**
+- Adicionado funcionalidade de busca reversa do projeto stash.
+- Adicionado manual de operação do programa.
+- Adicionado docstring das funcionalidades especificas.
+- Adicionado feature de desenvolvimento individual.
+
+**Versão: 5.0.8**
+- Corrigido alguns bugs
 
 **Versão: 5.0.0**
 - Removido parametro essencial de execução (name)
