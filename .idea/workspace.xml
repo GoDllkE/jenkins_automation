@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +23,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -32,6 +31,15 @@
                 <caret line="3" selection-start-line="3" selection-end-line="3" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -115,8 +123,8 @@
         <option value="$PROJECT_DIR$/automation/StashCore.py" />
         <option value="$PROJECT_DIR$/docs/Gerenciando projetos.md" />
         <option value="$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -263,13 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542995789075</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Corrigindo bug de syntax">
-      <created>1544541431398</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1544541431398</updated>
     </task>
     <task id="LOCAL-00137" summary="Corrigindo parametro do CI">
       <created>1544541668531</created>
@@ -607,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545059790595</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Atualizando arquivo descritivo principal">
+      <created>1545060678548</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1545060678548</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,7 +680,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando construção de imagens com TAG respectivo a versão do modulo" />
     <MESSAGE value="Corrigindo mal formação do XML template de jobs de deploy" />
     <MESSAGE value="Adicionado recurso de verificação de importação de projeto" />
     <MESSAGE value="Adicionado classe gerenciadora de requisições para o Stash" />
@@ -697,7 +704,8 @@
     <MESSAGE value="Adicionando funcionalidade de desenvolvimento. Adicionado docstring as funcionalidades" />
     <MESSAGE value="Alterado chamada de criação de jobs de deploy para também verificar." />
     <MESSAGE value="Atualizando arquivos do projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivos do projeto" />
+    <MESSAGE value="Atualizando arquivo descritivo principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualizando arquivo descritivo principal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1035,13 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/Gerenciando_roles.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1085,6 +1086,13 @@
             <caret line="3" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
