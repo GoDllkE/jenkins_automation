@@ -111,7 +111,10 @@ def automate():
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'deploy_jobs' in action['dado']:
-            auto.create_deploy_jobs(project_id=action['id'], repositorio=action['repo'])
+            status = auto.check_deploy_jobs(project=action['id'], repositorio=action['repo'])
+            if type(status) is list and status != []:
+                print("\nCriando jobs de deploy faltantes...")
+                auto.create_missing_deploy_jobs(projeto=action['id'].lower(), ambiente= status, repositorio=action['repo'])
         else:
             pass
 
