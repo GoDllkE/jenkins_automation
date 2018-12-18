@@ -16,6 +16,10 @@ Requisitos de construção do modulo:
 - PyYaml
 - Requests
 
+#### Antes de usar....
+
+Antes de usar ou fazer o fork este modulo, tenha em mente que **precisa alterar a linha 95 do [inicializador](automation/__init__.py) e adicionar a URL do seu jenkins, o username de acesso e a password**. Recomendo que seja de um usuário de serviço. Esta abordagem foi adotada por segurança onde uma vez empacotado como binário esse recurso fica inacessivel.
+
 #### Instalando dependencias 
 
 Execute o comando:
