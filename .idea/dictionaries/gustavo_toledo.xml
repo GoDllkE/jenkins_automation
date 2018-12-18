@@ -26,6 +26,7 @@
       <w>alguns</w>
       <w>alinhamento</w>
       <w>alterado</w>
+      <w>alterados</w>
       <w>alterando</w>
       <w>alterar</w>
       <w>alterações</w>
@@ -38,6 +39,7 @@
       <w>apartada</w>
       <w>apena</w>
       <w>apenas</w>
+      <w>aplica</w>
       <w>aplicacao</w>
       <w>aplicação</w>
       <w>apos</w>
@@ -68,6 +70,7 @@
       <w>automaçao</w>
       <w>automação</w>
       <w>automações</w>
+      <w>auxilio</w>
       <w>avançad</w>
       <w>avançados</w>
       <w>banco</w>
@@ -77,6 +80,7 @@
       <w>basicos</w>
       <w>bauth</w>
       <w>biblioteca</w>
+      <w>binario</w>
       <w>binário</w>
       <w>bitbucket</w>
       <w>blocos</w>
@@ -118,6 +122,7 @@
       <w>coleta</w>
       <w>collpased</w>
       <w>comando</w>
+      <w>compara</w>
       <w>compatibilidade</w>
       <w>compilando</w>
       <w>compilação</w>
@@ -191,6 +196,8 @@
       <w>definir</w>
       <w>definição</w>
       <w>deleta</w>
+      <w>deletada</w>
+      <w>deletadas</w>
       <w>deletando</w>
       <w>deletar</w>
       <w>dentro</w>
@@ -205,6 +212,7 @@
       <w>deseja</w>
       <w>desejada</w>
       <w>desejadas</w>
+      <w>desejados</w>
       <w>desenvolvimento</w>
       <w>desnecessarias</w>
       <w>desnecessárias</w>
@@ -226,6 +234,7 @@
       <w>documentação</w>
       <w>documento</w>
       <w>documentos</w>
+      <w>dois</w>
       <w>eles</w>
       <w>elimina</w>
       <w>empresa</w>
@@ -244,6 +253,7 @@
       <w>então</w>
       <w>erro</w>
       <w>erros</w>
+      <w>escrito</w>
       <w>especiais</w>
       <w>especifica</w>
       <w>especificado</w>
@@ -267,6 +277,7 @@
       <w>estável</w>
       <w>excredenciais</w>
       <w>execucao</w>
+      <w>executando</w>
       <w>executar</w>
       <w>execuçao</w>
       <w>execução</w>
@@ -284,6 +295,7 @@
       <w>exterminados</w>
       <w>externo</w>
       <w>facilitar</w>
+      <w>facilmente</w>
       <w>falha</w>
       <w>falhou</w>
       <w>falta</w>
@@ -321,6 +333,7 @@
       <w>gerais</w>
       <w>geral</w>
       <w>gerando</w>
+      <w>gerar</w>
       <w>gerenciadora</w>
       <w>gerenciadores</w>
       <w>gerenciamento</w>
@@ -397,6 +410,7 @@
       <w>limitacoes</w>
       <w>limitações</w>
       <w>limpeza</w>
+      <w>linha</w>
       <w>linhas</w>
       <w>lista</w>
       <w>livelo</w>
@@ -437,6 +451,7 @@
       <w>nesse</w>
       <w>neste</w>
       <w>nomeclatura</w>
+      <w>nomeclaturas</w>
       <w>nosso</w>
       <w>notificacao</w>
       <w>notificação</w>
@@ -497,6 +512,7 @@
       <w>pesquisa</w>
       <w>planejado</w>
       <w>pode</w>
+      <w>podem</w>
       <w>podendo</w>
       <w>pontos</w>
       <w>pontoslivelo</w>
@@ -508,6 +524,7 @@
       <w>preferencia</w>
       <w>prepara</w>
       <w>primeiro</w>
+      <w>primeiros</w>
       <w>prioridade</w>
       <w>prioritários</w>
       <w>problema</w>
@@ -600,6 +617,7 @@
       <w>secundarios</w>
       <w>seguida</w>
       <w>seguinte</w>
+      <w>seguintes</w>
       <w>seguir</w>
       <w>seja</w>
       <w>sejam</w>
@@ -608,6 +626,7 @@
       <w>senha</w>
       <w>separa</w>
       <w>separadamente</w>
+      <w>separadas</w>
       <w>sequencia</w>
       <w>sequencial</w>
       <w>servidor</w>
@@ -681,6 +700,7 @@
       <w>versão</w>
       <w>versões</w>
       <w>verá</w>
+      <w>virgula</w>
       <w>visualizacao</w>
       <w>visualização</w>
       <w>voce</w>

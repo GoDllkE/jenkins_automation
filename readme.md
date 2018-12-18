@@ -18,8 +18,9 @@ Requisitos de construção do modulo:
 
 #### Instalando dependencias 
 
+Execute o comando:
+
     $ pip install -r requirements.txt
-    
 
 #### Compilando esse modulo para um unico arquivo
 
@@ -32,7 +33,7 @@ A seguir, execute:
 
     $ pyinstaller --onefile --path automation/ --console bin/automation
 
-Obs: O "binário" será gerado de acordo com a sua distribuição linux e as versões do GCC e LIBC. 
+**Obs:** *O "binário" será gerado de acordo com a sua distribuição linux e as versões do GCC e LIBC.* 
 
 #### Gerando a imagem docker com este binário
 
@@ -40,11 +41,11 @@ Na raiz do projeto, Execute:
 
     $ docker build . -t GoDlikE/jenkins_automation:latest -f docker/Dockerfile
 
-Para testar a imagem, execute:
+Assim, vai gerar uma imagem com o binario. Para testar a imagem, execute:
 
     $ docker run -it --rm --name jenkins_automation GoDlikE/jenkins_automation:latest '-h' 
 
-Após executar o comando anterior, o help-me deve aparecer.
+Após executar o comando anterior, o help-me deve aparecer conforme o que foi escrito na [classe de auxilio](automation/Help.py).
 
 
 #### Sobre os arquivos de configurações
@@ -54,10 +55,16 @@ O modulo carrega as configurações a partir de um arquivo YAML de três pontos 
 2) Do caminho no host: */etc/jenkins_automations/config.yaml*
 3) *Carregamento interno do modulo*
 
+Os dois primeiros podem ser alterados facilmente, atualizando os valores da [classe de configuração](automation/Configurator.py) para as nomeclaturas ou caminhos desejados, assim como os parametros e outros.
+
 Ou seja, no momento de executar, este programa olha primeiro se existe uma VARIAVEL DE AMBIENTE LINUX respectiva a
 configuração que ele precisa, que se existir, deve ter o valor para um caminho onde possui um YAML com as chaves que
-pode ser consultado [aqui](automation/resources/config.yaml). Caso não encontre essa variavel ou arquivo, ele vai buscar
-essas configurações em */etc/jenkins_automations/config.yaml*. Caso também não encontre nesse local, ele tentará fazer o
+pode ser consultado [aqui](automation/resources/config.yaml).
+
+Caso não encontre essa variavel ou arquivo, ele vai buscar
+essas configurações em */etc/jenkins_automations/config.yaml*
+
+Caso também não encontre nesse local, ele tentará fazer o
 carregamento interno, que devido as possíveis alterações de ambiente pode ocorrer erros.
 
 #### O que contem nas configurações?
