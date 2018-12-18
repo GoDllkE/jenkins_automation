@@ -5,7 +5,6 @@ import requests
 # Internal imports
 from automation import JenkinsCore
 
-# Variavel de controle de desenvolvimento e depuração
 development_control = False
 
 

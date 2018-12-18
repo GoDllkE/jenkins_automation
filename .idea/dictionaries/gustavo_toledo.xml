@@ -8,6 +8,7 @@
       <w>acesso</w>
       <w>acoes</w>
       <w>acordo</w>
+      <w>adaptar</w>
       <w>adiciona</w>
       <w>adicionadas</w>
       <w>adicionado</w>
@@ -33,12 +34,14 @@
       <w>ambiente</w>
       <w>ambientes</w>
       <w>anteriormente</w>
+      <w>aparecer</w>
       <w>apartada</w>
       <w>apena</w>
       <w>apenas</w>
       <w>aplicacao</w>
       <w>aplicação</w>
       <w>apos</w>
+      <w>aproximadamente</w>
       <w>após</w>
       <w>aqui</w>
       <w>argumentos</w>
@@ -57,6 +60,7 @@
       <w>atualizando</w>
       <w>atualizar</w>
       <w>atualização</w>
+      <w>atualmente</w>
       <w>autalizar</w>
       <w>automacao</w>
       <w>automations</w>
@@ -73,6 +77,7 @@
       <w>basicos</w>
       <w>bauth</w>
       <w>biblioteca</w>
+      <w>binário</w>
       <w>bitbucket</w>
       <w>blocos</w>
       <w>bloqueios</w>
@@ -103,6 +108,7 @@
       <w>chamadas</w>
       <w>changelogs</w>
       <w>chatbot</w>
+      <w>chave</w>
       <w>chaves</w>
       <w>classe</w>
       <w>cloudbees</w>
@@ -113,7 +119,9 @@
       <w>collpased</w>
       <w>comando</w>
       <w>compatibilidade</w>
+      <w>compilando</w>
       <w>compilação</w>
+      <w>complementa</w>
       <w>completamente</w>
       <w>completo</w>
       <w>complexidade</w>
@@ -137,6 +145,7 @@
       <w>construtor</w>
       <w>construção</w>
       <w>consultado</w>
+      <w>contato</w>
       <w>contem</w>
       <w>contendo</w>
       <w>conteudo</w>
@@ -200,6 +209,7 @@
       <w>desnecessarias</w>
       <w>desnecessárias</w>
       <w>dessa</w>
+      <w>deste</w>
       <w>destes</w>
       <w>deve</w>
       <w>devido</w>
@@ -217,6 +227,7 @@
       <w>documento</w>
       <w>documentos</w>
       <w>eles</w>
+      <w>elimina</w>
       <w>empresa</w>
       <w>encontra</w>
       <w>encontrada</w>
@@ -251,6 +262,7 @@
       <w>estrutura</w>
       <w>estrutural</w>
       <w>estruturas</w>
+      <w>está</w>
       <w>estágio</w>
       <w>estável</w>
       <w>excredenciais</w>
@@ -305,8 +317,10 @@
       <w>garantia</w>
       <w>garantir</w>
       <w>gerada</w>
+      <w>gerado</w>
       <w>gerais</w>
       <w>geral</w>
+      <w>gerando</w>
       <w>gerenciadora</w>
       <w>gerenciadores</w>
       <w>gerenciamento</w>
@@ -357,6 +371,7 @@
       <w>instancias</w>
       <w>integrada</w>
       <w>integrar</w>
+      <w>integração</w>
       <w>interfaciamento</w>
       <w>interfacioamento</w>
       <w>interfacionamento</w>
@@ -377,6 +392,7 @@
       <w>itens</w>
       <w>itera</w>
       <w>jenkinsci</w>
+      <w>jira</w>
       <w>leitura</w>
       <w>limitacoes</w>
       <w>limitações</w>
@@ -390,6 +406,7 @@
       <w>maneira</w>
       <w>manipulacao</w>
       <w>manter</w>
+      <w>manuais</w>
       <w>manutenção</w>
       <w>mapeamento</w>
       <w>maquina</w>
@@ -400,9 +417,11 @@
       <w>mesmo</w>
       <w>mesmos</w>
       <w>metodo</w>
+      <w>modelo</w>
       <w>modo</w>
       <w>modulos</w>
       <w>momento</w>
+      <w>monitoria</w>
       <w>monta</w>
       <w>montada</w>
       <w>mostrado</w>
@@ -416,6 +435,7 @@
       <w>necessário</w>
       <w>nele</w>
       <w>nesse</w>
+      <w>neste</w>
       <w>nomeclatura</w>
       <w>nosso</w>
       <w>notificacao</w>
@@ -428,6 +448,7 @@
       <w>objeto</w>
       <w>obrigacoes</w>
       <w>observacoes</w>
+      <w>observações</w>
       <w>ocorre</w>
       <w>ocorrer</w>
       <w>oficiais</w>
@@ -477,6 +498,7 @@
       <w>planejado</w>
       <w>pode</w>
       <w>podendo</w>
+      <w>pontos</w>
       <w>pontoslivelo</w>
       <w>possivel</w>
       <w>possui</w>
@@ -492,12 +514,14 @@
       <w>procedimento</w>
       <w>processa</w>
       <w>processo</w>
+      <w>processos</w>
       <w>programa</w>
       <w>projeto</w>
       <w>projetos</w>
       <w>proposito</w>
       <w>propositos</w>
       <w>propostido</w>
+      <w>proprietária</w>
       <w>proprios</w>
       <w>prosseguir</w>
       <w>protocolo</w>
@@ -595,6 +619,7 @@
       <w>simplificando</w>
       <w>simulando</w>
       <w>siterepo</w>
+      <w>sobre</w>
       <w>sobrescrever</w>
       <w>subindo</w>
       <w>substituida</w>
@@ -609,8 +634,10 @@
       <w>tenha</w>
       <w>tentará</w>
       <w>tentativa</w>
+      <w>terá</w>
       <w>testado</w>
       <w>testando</w>
+      <w>testar</w>
       <w>teste</w>
       <w>tipo</w>
       <w>tipos</w>
@@ -620,10 +647,12 @@
       <w>todos</w>
       <w>tratar</w>
       <w>troca</w>
+      <w>três</w>
       <w>tudo</w>
       <w>ultima</w>
       <w>unassing</w>
       <w>unica</w>
+      <w>unico</w>
       <w>usar</w>
       <w>usuario</w>
       <w>utiliza</w>

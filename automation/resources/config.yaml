@@ -1,6 +1,7 @@
 projects:
   folder_structure:
     - '<project>'
+    - '<project>/build'
     - '<project>/deploy'
     - '<project>/deploy/<env>'
     - '<project>/tests'
