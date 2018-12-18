@@ -92,7 +92,7 @@ def automate():
         print("- Action: {0} {1} {2}\n\n".format(action['acao'], action['dado'], action['name']))
 
     # Cria instancias
-    jnk = JenkinsCore()
+    jnk = JenkinsCore(url='', username='', password='')
     auto = Automation(jenkins=jnk, configuration=global_config, debug=debug)
 
     # Realiza procedimento de automacao
