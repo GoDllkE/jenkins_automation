@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fb4cef3-4960-4471-ad2f-df138cd3064e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gustavo_toledo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KubernetesPod.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Automation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/Configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Configurator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/FoldersPlus.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/FoldersPlus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/Help.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/Help.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/JenkinsCore.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JenkinsCore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/JobManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/JobManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/RoleStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/RoleStrategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/StashCore.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/automation/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/automation/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/resources/job_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/automation/resources/job_config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automation/resources/project_config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Gerenciando_projetos.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Gerenciando_projetos.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="299">
+              <caret line="35" column="58" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -55,8 +40,8 @@
       <file leaf-file-name="config.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -66,15 +51,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="93" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -97,12 +73,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="465">
-                <caret line="97" column="4" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+              <first_editor relative-caret-position="380">
+                <caret line="96" column="16" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -136,6 +112,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="GoDllkE" />
+        <option value="GoDllkEr" />
+        <option value="gustavot53@gmail.com" />
         <option value="Gustavo Toledo de Oliveira &lt;gustavo.toledo@compasso.com.br&gt;" />
         <option value="Gustavo Toledo de Oliveira" />
         <option value="gustavo.toledo" />
@@ -165,7 +144,6 @@
         <option value="$PROJECT_DIR$/docs/Gerenciando projetos.md" />
         <option value="$PROJECT_DIR$/docs/Gerenciando jobs de deploy.md" />
         <option value="$PROJECT_DIR$/docs/Gerenciando_jobs-de-deploy.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/docs/Gerenciando_projetos.md" />
         <option value="$PROJECT_DIR$/automation/Automation.py" />
         <option value="$PROJECT_DIR$/automation/Help.py" />
@@ -181,6 +159,7 @@
         <option value="$PROJECT_DIR$/automation/StashCore.py" />
         <option value="$PROJECT_DIR$/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -221,6 +200,12 @@
               <item name="jenkins_automation_os" type="b2602c69:ProjectViewProjectNode" />
               <item name="jenkins_automation_os" type="462c0819:PsiDirectoryNode" />
               <item name="automation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jenkins_automation_os" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jenkins_automation_os" type="462c0819:PsiDirectoryNode" />
+              <item name="automation" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -737,7 +722,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Atualizando arquivos do projeto para nova implementação" />
     <MESSAGE value="Corrigindo função de criação de jobs de deploy para utilizar ID ao invés do nome" />
     <MESSAGE value="Corrigindo mensagem de debug no inicializador" />
     <MESSAGE value="Corrigindo parametros das funções de automação" />
@@ -762,7 +746,8 @@
     <MESSAGE value="Atualizando documentação" />
     <MESSAGE value="Atualizando documentos" />
     <MESSAGE value="Corrigindo documentação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigindo documentação" />
+    <MESSAGE value="Refatorando para versão OS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatorando para versão OS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1053,13 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/automation/Configurator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -1074,24 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1131,13 +1095,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/job_config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automation/resources/config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="12" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="465">
-            <caret line="97" column="4" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
+          <first_editor relative-caret-position="380">
+            <caret line="96" column="16" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="58" />
         </state>
       </provider>
     </entry>

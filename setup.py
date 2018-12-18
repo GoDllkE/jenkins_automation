@@ -6,10 +6,10 @@ from setuptools import setup
 
 setup(
     name='automation',
-    version='5.1.6',
+    version='5.1.7',
     packages=["automation"],
-    url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
-    download_url='https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/archive/master.zip',
+    url='https://github.com/GoDllkE/jenkins_automation',
+    download_url='https://github.com/GoDllkE/jenkins_automation/archive/master.zip',
     description='A python module to automate project creations on jenkins.',
     author='Gustavo Toledo de Oliveira',
     author_email='gustavot53@gmail.com',
@@ -33,11 +33,11 @@ setup(
     ],
     project_urls={
         'Source':
-            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy',
+            'https://github.com/GoDllkE/jenkins_automation',
         'Documentation':
-            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/docs',
+            'https://github.com/GoDllkE/jenkins_automation/tree/master/docs',
         'Tracker':
-            'https://stash.pontoslivelo.com.br/projects/JNK/repos/automation_role-strategy/issues'
+            'https://github.com/GoDllkE/jenkins_automation/issues'
     },
     long_description="""
     Jenkins Role-Strategy & Folders-Plus automation

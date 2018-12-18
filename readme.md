@@ -94,5 +94,5 @@ O mesmo pode ser consultado [aqui](automation/resources/config.yaml)
 Além do arquivo externo de configurações gerais, existe o arquivo de configuração dos jobs de deploy,
 que pode ser consultado [aqui](automation/resources/job_config.xml)
 
-##### Observações
+#### Observações
 *Existe a versão proprietária deste modulo que complementa a integração jenkins <-> stash/bitbucket e também elimina aproximadamente 90% dos processos manuais que nesta versão Open Source possui, além de possuir monitoria e integração com Jira.*
