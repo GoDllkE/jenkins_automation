@@ -49,18 +49,14 @@ class Automation:
     #                                       Funcoes de automação                                                       #
     # ================================================================================================================ #
 
-    def create_project_roles(self, project: str = None, project_id: str = None) -> None:
+    def create_project_roles(self, project: str = None) -> None:
         """
             Funcao para criacao do padrao de roles de um projeto especificado.
             :param project:         Recebe o nome do projeto
-            :param project_id:      Recebe o ID do projeto no bitbucket
             :return:                Retorna Nada
         """
         # Core
-        if project_id is not None:
-            project_id = project_id.upper()
-        else:
-            project_id = project
+        project_id = project
         role_config = self.config_manger.load_config()['role_strategy']
 
         print('Criando role de view')

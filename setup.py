@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='automation',
-    version='5.1.8',
+    version='5.2.0',
     packages=["automation"],
     url='https://github.com/GoDllkE/jenkins_automation',
     download_url='https://github.com/GoDllkE/jenkins_automation/archive/master.zip',

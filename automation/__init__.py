@@ -68,9 +68,7 @@ def automate():
                     action['overwrite'] = True
                 elif opt in ['-r', '--repo', '--repository']:
                     action['repo'] = value
-                elif opt in ['-i', '--id', '--project_id', '--project_stash_id']:
-                    action['id'] = value
-                elif opt in ['-u', '--intervalo']:
+                elif opt in ['-i', '--intervalo']:
                     action['intervalo'] = value
                 elif opt in ['-s', '--credential']:
                     action['credenciais'] = value
@@ -98,8 +96,13 @@ def automate():
     # Realiza procedimento de automacao
     if 'create' in action['acao']:
         if 'project' in action['dado']:
-            auto.create_project_structure(project=action['name'])
-            auto.create_project_roles(project=action['name'], project_id=action['id'])
+            if ',' in action['name']:
+                for name in action['name'].split(','):
+                    auto.create_project_structure(project=name)
+                    auto.create_project_roles(project=name)
+            else:
+                auto.create_project_structure(project=action['name'])
+                auto.create_project_roles(project=action['name'])
         elif 'role' in action['dado']:
             auto.create_role(data=action)
         elif 'deploy_jobs' in action['dado']:
@@ -109,8 +112,13 @@ def automate():
 
     elif 'delete' in action['acao']:
         if 'project' in action['dado']:
-            auto.delete_project_roles(project=action['id'])
-            auto.delete_project_structure(project=action['name'])
+            if ',' in action['name']:
+                for name in action['name'].split(','):
+                    auto.delete_project_roles(project=name)
+                    auto.delete_project_structure(project=name)
+            else:
+                auto.delete_project_roles(project=action['name'])
+                auto.delete_project_structure(project=action['name'])
         elif 'role' in action['dado']:
             auto.delete_role(data=action)
         elif 'deploy_jobs' in action['dado']:

@@ -9,6 +9,10 @@ Nesse arquivo, você verá como criar, deletar e atualizar um projeto no jenkins
 Para criar um novo projeto no jenkins, execute o binario com estes parametros:
 
     $ jenkins_automation --create=project --name=seu_projeto
+    
+    ou
+    
+    $ jenkins_automation --create=project --name=seu_projeto1,seu_projeto2,seu_projetoN
 
 Executando a linha, a seguinte estrutura deve aparecer: 
 
@@ -36,6 +40,10 @@ Na pasta **QA/testes**, você vai encontrar todos os jobs referente a testes.
 Para deletar um projeto no jenkins, execute o binario com estes parametros:
 
     $ jenkins_automation --delete=project --name=seu_projeto
+    
+    ou
+    
+    $ jenkins_automation --delete=project --name=seu_projeto1,seu_projeto2,seu_projetoN
 
 Após inserir e prosseguir com o job, o mesmo vai garantir que todas as coisas referentes a esse projeto
 no jenkins sejam *exterminados* (isso inclui jobs em execução)

@@ -42,14 +42,13 @@ class Configurator:
         pass
 
     def get_collpased_execution_parameters(self) -> str:
-        return 'cdg:rnietpoukqs:hd'
+        return 'cdg:rnietpokqs:hd'
 
     def get_expanded_execution_parameters(self) -> list:
         return [
             'check=', 'create=', 'delete=', 'get=',
             'repo=', 'repository=',
             'name=',
-            'id=', 'project_id=', 'project_stash_id=',
             'env=', 'environment=',
             'type=', 'role-type=',
             'regex=', 'pattern=',
