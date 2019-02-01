@@ -1,3 +1,7 @@
+jenkins:
+  url: '<jenkins_url>'
+  username: '<jenkins_login_username>'
+  password: '<jenkins_login_password>'
 projects:
   folder_structure:
     - '<project>'
